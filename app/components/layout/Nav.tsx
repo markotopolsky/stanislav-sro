@@ -27,7 +27,7 @@ export default function Nav() {
       const heroLogo = document.querySelector(".hero-logo") as HTMLElement | null;
       if (heroLogo) {
         const targetY = 36 - window.innerHeight / 2;
-        const scale = 1 - (1 - 52 / 220) * easedProgress;
+        const scale = 1 - (1 - 52 / 130) * easedProgress; // 130px → 52px (nav logo size)
 
         // Stay fully visible for first 60% of travel, then fade out quickly
         const opacity = rawProgress < 0.6 ? 1 : 1 - (rawProgress - 0.6) / 0.4;
