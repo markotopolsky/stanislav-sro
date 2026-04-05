@@ -47,16 +47,12 @@ export default function HeroSection() {
             alt=""
             width={360}
             height={20}
+            style={{ height: "auto" }}
             aria-hidden
             unoptimized
           />
 
           <h1 className="hero-headline">Pečivo, ktoré si pamätáte</h1>
-
-          {/* Subtitle — between headline and tagline */}
-          <p className="hero-subtitle">
-            Tradičná slovenská pekáreň · Bratislava
-          </p>
 
           <p className="hero-tagline">
             Poctivé remeslo od roku 1991. Každý bochník pečieme
