@@ -28,38 +28,48 @@ export default function HeroSection() {
         }}
       />
 
-      {/* Bottom-left content */}
-      <div className="absolute bottom-32 left-24 z-10 flex flex-col max-w-3xl">
-        <Image
-          src="/logo-wordmark-hero.svg"
-          alt="Kráľovská pekáreň"
-          width={520}
-          height={200}
-          className="mb-4"
-          unoptimized
-        />
+      {/* Centered content */}
+      <div className="absolute inset-0 z-10 flex flex-col items-center justify-center px-6">
+        <div className="flex flex-col items-center text-center max-w-3xl">
 
-        <Image
-          src="/something-element-hero.svg"
-          alt=""
-          width={768}
-          height={20}
-          className="mb-6"
-          aria-hidden
-          unoptimized
-        />
+          {/* 1. Badge logo — animates on scroll */}
+          <Image
+            src="/logo-badge-s.svg"
+            alt="Kráľovská pekáreň"
+            width={220}
+            height={220}
+            className="hero-logo"
+            priority
+            unoptimized
+          />
 
-        <p className="font-heading text-ui-background text-[20px] leading-relaxed mb-8 max-w-2xl">
-          Reprehenderit eu veniam consequat ullamco laboris non Lorem. Excepteur Lorem eu sunt laborum ea anim aliquip sunt ullamco amet ad
-        </p>
+          {/* 2. Decorative divider */}
+          <Image
+            src="/something-element-hero.svg"
+            alt=""
+            width={768}
+            height={20}
+            className="mb-6"
+            style={{ width: 768, height: 20 }}
+            aria-hidden
+            unoptimized
+          />
 
-        <div className="flex items-center gap-3">
-          <button className="bg-[var(--color-brand-orange)] text-white font-heading font-medium px-6 py-3 text-sm cursor-pointer rounded-[4px]">
-            Tlačidlo na akciu
-          </button>
-          <button className="w-12 h-12 rounded-full bg-[var(--color-brand-orange)] text-white flex items-center justify-center cursor-pointer">
-            <ArrowUpRight size={20} />
-          </button>
+          {/* 3. Body text */}
+          <p className="font-heading text-ui-background text-[20px] leading-relaxed mb-8 max-w-2xl">
+            Reprehenderit eu veniam consequat ullamco laboris non Lorem. Excepteur Lorem eu sunt laborum ea anim aliquip sunt ullamco amet ad
+          </p>
+
+          {/* 4. CTA buttons */}
+          <div className="flex items-center gap-3 justify-center">
+            <button className="bg-[var(--color-brand-orange)] text-white font-heading font-medium px-6 py-3 text-sm cursor-pointer rounded-[4px]">
+              Tlačidlo na akciu
+            </button>
+            <button className="w-12 h-12 rounded-full bg-[var(--color-brand-orange)] text-white flex items-center justify-center cursor-pointer">
+              <ArrowUpRight size={20} />
+            </button>
+          </div>
+
         </div>
       </div>
 

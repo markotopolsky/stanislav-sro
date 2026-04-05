@@ -1,16 +1,20 @@
 import type { Metadata } from "next";
-import { Geist, Host_Grotesk } from "next/font/google";
+import { Playfair_Display, DM_Sans } from "next/font/google";
 import "./globals.css";
 
-const geist = Geist({
-  variable: "--font-geist",
-  subsets: ["latin"],
+const playfair = Playfair_Display({
+  variable: "--font-display",
+  subsets: ["latin", "latin-ext"],
+  weight: ["400", "700"],
+  style: ["normal", "italic"],
+  display: "swap",
 });
 
-const hostGrotesk = Host_Grotesk({
-  variable: "--font-host-grotesk",
-  subsets: ["latin"],
-  weight: ["400", "500", "600", "700", "800"],
+const dmSans = DM_Sans({
+  variable: "--font-body",
+  subsets: ["latin", "latin-ext"],
+  weight: ["300", "400", "500", "600"],
+  display: "swap",
 });
 
 export const metadata: Metadata = {
@@ -26,7 +30,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${geist.variable} ${hostGrotesk.variable} h-full antialiased`}
+      className={`${playfair.variable} ${dmSans.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col">{children}</body>
     </html>

@@ -7,10 +7,10 @@ const stats = [
 import Image from "next/image";
 
 const partners = [
-  { name: "Billa", logo: "https://seeklogo.com/images/B/Billa-logo-02C6D5D8F0-seeklogo.com.png" },
-  { name: "Tesco", logo: "https://seeklogo.com/images/T/Tesco-logo-6C41F2C2EC-seeklogo.com.png" },
-  { name: "COOP Jednota", logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/48/COOP_Jednota_Slovensko.png/1024px-COOP_Jednota_Slovensko.png" },
-  { name: "Kaufland", logo: "https://seeklogo.com/images/K/Kaufland-logo-9A87E09C3E-seeklogo.com.png" },
+  { name: "Billa", logo: "https://res.cloudinary.com/dl6xldrhk/image/upload/v1774851412/billa-logo_l9l9fi.png" },
+  { name: "Tesco", logo: "https://res.cloudinary.com/dl6xldrhk/image/upload/v1774851413/tesco-logo_jugfwu.png" },
+  { name: "COOP Jednota", logo: "https://res.cloudinary.com/dl6xldrhk/image/upload/v1774851412/coop-logo_oeeijm.png" },
+  { name: "Kaufland", logo: "https://res.cloudinary.com/dl6xldrhk/image/upload/v1774851412/kaufland-logo_dzccl4.png" },
 ];
 
 export default function StorySection() {
