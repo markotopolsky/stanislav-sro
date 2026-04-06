@@ -2,7 +2,7 @@
 
 :root {
   /* Typography — Fonts */
-  --font-display: 'Playfair Display', Georgia, serif;
+  --font-display: 'Cormorant Garamond', Georgia, serif;
   --font-body: 'DM Sans', system-ui, sans-serif;
 
   /* Font sizes */
@@ -16,6 +16,8 @@
   --text-4xl:  2.25rem;    /* 36px */
   --text-5xl:  3rem;       /* 48px */
   --text-6xl:  3.75rem;    /* 60px */
+  --text-7xl: 4.5rem;    /* 72px */
+  --text-8xl: 6rem;      /* 96px */
 
   /* Font weights */
   --weight-light:    300;
@@ -38,23 +40,26 @@
   --tracking-widest:   0.15em;
 
   /* Colors — brand */
-  --color-brand-gold: #C8922A;
-  --color-brand-maroon: #571313;
-  --color-brand-red: #d92d27;
-  --color-brand-orange: #f59127;
-  --color-brand-green: #598527;
+  --color-brand-primary: #F08E26;       /* buttons default */
+  --color-brand-primary-hover: #EB8B25; /* buttons hover */
+  --color-brand-maroon: #571313;        /* len logo */
+  
+
+  /* Colors — background */
+  --color-bg-dark: #0f0d0a;             /* hero, nav, footer */
+  --color-bg-primary: #F2F2F2;          /* hlavné pozadie stránky */
+  --color-bg-surface: #FFFFFF;          /* karty, sekcie */
+  --color-bg-subtle: #E8E5E2;           /* jemné oddelenie sekcií */
 
   /* Colors — text */
-  --color-text-primary: #241f1c;
-  --color-text-secondary: #4f433e;
-  --color-text-tertiary: #807c78;
-  --color-text-white: #ffffff;
+  --color-text-primary: #1A1714;        /* nadpisy */
+  --color-text-secondary: #4A4440;      /* body text */
+  --color-text-muted: #8C8580;          /* popisky, meta info */
 
   /* Colors — UI */
-  --color-ui-border: #a6a098;
-  --color-ui-background: #ede8e6;
-  --color-ui-white: #ffffff;
-}
+  --color-border: #D9D5D1;
+  --color-white: #FFFFFF;
+  }
 
 html {
   font-family: var(--font-body);
@@ -69,189 +74,4 @@ body {
   font-family: var(--font-body);
   font-weight: var(--weight-regular);
   line-height: var(--leading-normal);
-}
-
-h1, h2, h3, h4, h5, h6 {
-  font-family: var(--font-display);
-  font-weight: var(--weight-bold);
-  line-height: var(--leading-tight);
-  letter-spacing: var(--tracking-tight);
-}
-
-p, span, a, li, button, input, textarea {
-  font-family: var(--font-body);
-  font-weight: var(--weight-regular);
-  line-height: var(--leading-normal);
-}
-
-/* ── Hero Section ─────────────────────────── */
-
-.hero-overlay {
-  background: rgba(0, 0, 0, 0.65);
-}
-
-.hero-vignette {
-  background: radial-gradient(ellipse at center, transparent 30%, rgba(0, 0, 0, 0.72) 100%);
-}
-
-.hero-headline {
-  font-family: var(--font-display);
-  font-size: clamp(32px, 5vw, 52px);
-  font-style: italic;
-  font-weight: var(--weight-bold);
-  color: #ffffff;
-  line-height: 1.05;
-  letter-spacing: -0.02em;
-  text-align: center;
-}
-
-.hero-tagline {
-  font-size: clamp(15px, 1.8vw, 18px);
-  font-weight: var(--weight-regular);
-  color: var(--color-text-tertiary);
-  line-height: 1.8;
-  max-width: 480px;
-  text-align: center;
-}
-
-.hero-cta {
-  background: var(--color-brand-orange);
-  color: var(--color-text-white);
-  border: none;
-  border-radius: 4px;
-  padding: 12px 28px;
-  font-size: 11px;
-  font-weight: var(--weight-medium);
-  letter-spacing: var(--tracking-wider);
-  text-transform: uppercase;
-  cursor: pointer;
-  transition: opacity 0.3s ease;
-}
-
-.hero-cta:hover {
-  opacity: 0.85;
-}
-
-.hero-badge {
-  display: inline-flex;
-  align-items: center;
-  gap: 12px;
-  font-size: 11px;
-  font-weight: var(--weight-medium);
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
-  color: var(--color-brand-gold);
-  margin-bottom: 20px;
-}
-
-.hero-badge-line {
-  display: block;
-  width: 32px;
-  height: 1px;
-  background: rgba(200, 146, 42, 0.5);
-}
-
-
-.hero-scroll-btn {
-  position: absolute;
-  bottom: 28px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 36px;
-  height: 36px;
-  border-radius: 50%;
-  background: var(--color-brand-orange);
-    border: none;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  z-index: 10;
-  transition: opacity 0.2s ease;
-}
-
-.hero-scroll-btn:hover {
-  opacity: 0.8;
-}
-
-/* Trust badges bar */
-.hero-badges {
-  border-top: 1px solid rgba(255, 255, 255, 0.07);
-}
-
-.hero-badge-icon {
-  color: var(--color-brand-gold);
-  opacity: 0.8;
-}
-
-.hero-badge-value {
-  font-family: var(--font-display);
-  font-size: clamp(26px, 3.5vw, 36px);
-  font-style: italic;
-  font-weight: var(--weight-bold);
-  color: var(--color-brand-gold);
-  line-height: 1;
-}
-
-.hero-badge-stars {
-  display: flex;
-  gap: 3px;
-  color: var(--color-brand-gold);
-}
-
-.hero-badge-label {
-  font-size: 9px;
-  font-weight: var(--weight-medium);
-  letter-spacing: 0.2em;
-  color: rgba(255, 255, 255, 0.45);
-  text-transform: uppercase;
-  text-align: center;
-  line-height: var(--leading-normal);
-}
-
-.hero-badge-divider {
-  width: 1px;
-  background: rgba(255, 255, 255, 0.07);
-  margin: 20px 0;
-}
-
-/* ── Logo animations ─────────────────────── */
-.hero-logo {
-  width: 240px;
-  height: 240px;
-  flex-shrink: 0;
-  margin-bottom: 0px;
-  transform-origin: center center;
-  /* No CSS transition — JS sets transform/opacity directly on scroll */
-}
-
-.nav-logo {
-  width: 52px;
-  height: 52px;
-  opacity: 0;
-  visibility: hidden;
-  pointer-events: none;
-  /* Spring cubic-bezier gives a subtle overshoot → snaps into place */
-  transition:
-    opacity 0.45s ease,
-    visibility 0.45s ease,
-    transform 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%) scale(0.7);
-}
-
-.nav-logo.logo-visible {
-  opacity: 1;
-  visibility: visible;
-  pointer-events: auto;
-  transform: translateX(-50%) scale(1);
-}
-
-/* Responsive hero logo */
-@media (max-width: 768px) {
-  .hero-logo {
-    width: 100px;
-    height: 100px;
-  }
 }
