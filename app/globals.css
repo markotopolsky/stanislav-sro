@@ -169,10 +169,11 @@ body {
 
 .hero-eyebrow {
   color: var(--color-brand-primary);
-  font-size: var(--text-sm);
-  letter-spacing: var(--tracking-wide);
+  font-size: var(--text-xs);
+  letter-spacing: var(--tracking-wider);
+  text-transform: uppercase;
   margin-bottom: 16px;
-  font-weight: var(--weight-semibold);
+  font-weight: var(--weight-medium);
 }
 
 .hero-heading {
@@ -297,7 +298,7 @@ body {
 
 .stats {
   height: 120px;
-  background: var(--color-bg-primary);
+  background: var(--color-bg-subtle);
   border-top: 1px solid var(--color-border);
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -378,11 +379,12 @@ body {
 }
 
 .products-eyebrow {
-  color: var(--color-brand-primary);
-  font-size: var(--text-sm);
-  letter-spacing: var(--tracking-wide);
+  color: var(--color-text-muted);
+  font-size: var(--text-xs);
+  letter-spacing: var(--tracking-wider);
+  text-transform: uppercase;
   margin-bottom: 16px;
-  font-weight: var(--weight-semibold);
+  font-weight: var(--weight-medium);
 }
 
 .products-heading {
@@ -393,7 +395,7 @@ body {
   margin-top: 8px;
 }
 
-.nigger{
+.products-heading-em {
   color: var(--color-brand-primary);
   font-style: italic;
   font-weight: var(--weight-semibold);
@@ -506,6 +508,7 @@ body {
   text-transform: uppercase;
   color: var(--color-text-muted);
   letter-spacing: var(--tracking-wider);
+  font-weight: var(--weight-medium);
 }
 
 .about-heading {
@@ -613,4 +616,259 @@ body {
   color: var(--color-text-secondary);
   margin-top: 16px;
   line-height: var(--leading-normal);
+}
+
+/* ── Why Us ─────────────────────────────────────────── */
+
+.whyus {
+  background: var(--color-bg-primary);
+  padding: 80px 48px;
+}
+
+.whyus-layout {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 64px;
+}
+
+.whyus-left {
+  position: sticky;
+  top: 100px;
+  align-self: start;
+}
+
+.whyus-eyebrow {
+  font-size: var(--text-xs);
+  text-transform: uppercase;
+  color: var(--color-text-muted);
+  letter-spacing: var(--tracking-wider);
+  font-weight: var(--weight-medium);
+  display: block;
+}
+
+.whyus-heading {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: var(--text-4xl);
+  color: var(--color-text-primary);
+  margin-top: 8px;
+}
+
+.whyus-subtext {
+  font-size: var(--text-lg);
+  color: var(--color-text-secondary);
+  margin-top: 12px;
+}
+
+.whyus-cta {
+  display: inline-block;
+  margin-top: 24px;
+  font-size: var(--text-sm);
+  color: var(--color-brand-primary);
+  text-decoration: none;
+  transition: color 200ms ease;
+}
+
+.whyus-cta:hover {
+  text-shadow: 0.5px 0 0 currentColor, -0.5px 0 0 currentColor;
+}
+
+.whyus-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+}
+
+.whyus-card {
+  background: var(--color-bg-primary);
+  border: 0.5px solid var(--color-border);
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.whyus-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--color-brand-primary);
+}
+
+.whyus-card-icon {
+  width: 24px;
+  height: 24px;
+}
+
+.whyus-card-title {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: var(--text-xl);
+  color: var(--color-text-primary);
+  margin-top: 16px;
+}
+
+.whyus-card-text {
+  font-size: var(--text-sm);
+  color: var(--color-text-secondary);
+  line-height: var(--leading-normal);
+  margin-top: 8px;
+}
+
+/* ── Footer ──────────────────────────────────────────── */
+
+.footer {
+  background: var(--color-bg-dark);
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: repeat(6, auto);
+  justify-content: space-between;
+  gap: 48px;
+  padding: 48px 80px;
+}
+
+.footer-logo-col {
+  display: flex;
+  align-items: flex-start;
+}
+
+.footer-logo {
+  width: 80px;
+  height: auto;
+  object-fit: contain;
+  filter: brightness(0) invert(1);
+}
+
+.footer-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-col-title {
+  font-size: var(--text-sm);
+  font-weight: var(--weight-semibold);
+  color: var(--color-white);
+  margin-bottom: 20px;
+}
+
+.footer-col-links {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.footer-col-links a {
+  font-size: var(--text-sm);
+  color: rgba(255, 255, 255, 0.5);
+  text-decoration: none;
+  transition: color 200ms ease;
+}
+
+.footer-col-links a:hover {
+  color: var(--color-white);
+}
+
+.footer-copyright-col {
+  font-size: var(--text-xs);
+  color: rgba(255, 255, 255, 0.4);
+  margin-top: 24px;
+  line-height: var(--leading-normal);
+}
+
+.footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 24px 48px;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.footer-bottom-left {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: var(--text-sm);
+  color: rgba(255, 255, 255, 0.4);
+}
+
+.footer-bottom-left a {
+  color: rgba(255, 255, 255, 0.4);
+  text-decoration: underline;
+  transition: color 200ms ease;
+}
+
+.footer-bottom-left a:hover {
+  color: var(--color-white);
+}
+
+.footer-bottom-sep {
+  color: rgba(255, 255, 255, 0.2);
+}
+
+.footer-bottom-socials {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.footer-bottom-socials a {
+  color: rgba(255, 255, 255, 0.4);
+  transition: color 200ms ease;
+  display: flex;
+  align-items: center;
+}
+
+.footer-bottom-socials a:hover {
+  color: var(--color-white);
+}
+
+/* ── CTA Band ──────────────────────────────────────── */
+
+.cta-band {
+  background: var(--color-bg-dark);
+  padding: 80px 48px;
+  text-align: center;
+}
+
+.cta-band-heading {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: var(--text-4xl);
+  color: var(--color-white);
+}
+
+.cta-band-text {
+  font-size: var(--text-lg);
+  color: rgba(255, 255, 255, 0.6);
+  margin-top: 12px;
+}
+
+.cta-band-btn {
+  display: inline-block;
+  margin-top: 32px;
+  font-size: var(--text-sm);
+  font-weight: var(--weight-medium);
+  color: var(--color-text-primary);
+  background: var(--color-brand-primary);
+  padding: 12px 28px;
+  text-decoration: none;
+  transition: background 200ms ease;
+}
+
+.cta-band-btn:hover {
+  background: var(--color-brand-primary-hover);
+  color: var(--color-bg-surface);
+}
+
+/* ── Scroll Animations ─────────────────────────────── */
+
+.fade-up {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 500ms ease, transform 500ms ease;
+}
+
+.fade-up.visible {
+  opacity: 1;
+  transform: translateY(0);
 }

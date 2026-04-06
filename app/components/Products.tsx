@@ -1,3 +1,7 @@
+'use client'
+
+import { useEffect, useRef } from 'react'
+
 const categories = [
   {
     image: '/b1.png',
@@ -26,18 +30,45 @@ const categories = [
 ]
 
 export default function Products() {
+  const cardRefs = useRef<(HTMLDivElement | null)[]>([])
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible')
+            observer.unobserve(entry.target)
+          }
+        })
+      },
+      { threshold: 0.1 }
+    )
+
+    cardRefs.current.forEach((el) => {
+      if (el) observer.observe(el)
+    })
+
+    return () => observer.disconnect()
+  }, [])
+
   return (
     <section className="products" id="produkty">
       <div className="products-header">
         <span className="products-eyebrow">Náš sortiment</span>
         <h2 className="products-heading">
-          Pečivo pre každý <em className="nigger">typ prevádzky</em>
+          Pečivo pre každý <em className="products-heading-em">typ prevádzky</em>
         </h2>
       </div>
 
       <div className="products-grid">
-        {categories.map(({ image, sku, name, examples }) => (
-          <div key={name} className="product-card">
+        {categories.map(({ image, sku, name, examples }, i) => (
+          <div
+            key={name}
+            ref={(el) => { cardRefs.current[i] = el }}
+            className="product-card fade-up"
+            style={{ transitionDelay: `${i * 100}ms` }}
+          >
             <img src={image} alt={name} className="product-card-img" />
             <div className="product-card-body">
               <span className="product-card-sku">{sku}</span>
