@@ -17,6 +17,11 @@ export default function CtaBand() {
           <p className="cta-band-lede">
             Napíšte základné parametre — segment, mesto, odhadované denné množstvo. Ozve sa obchodný manažér s ponukou pre váš typ prevádzky.
           </p>
+          <div className="cta-band-meta">
+            <div><strong>—</strong>doplniť (napr. odpoveď s cenníkom)</div>
+            <div><strong>—</strong>doplniť (napr. čas do pilotnej dodávky)</div>
+            <div><strong>—</strong>doplniť (napr. podmienky pilotnej šarže)</div>
+          </div>
         </div>
 
         <form

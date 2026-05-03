@@ -14,7 +14,7 @@ const cards = [
   {
     stat: '03',
     title: 'Inovácie a receptúry',
-    text: 'Nové kombinácie chutí, viac náplní, jednoduchšie zloženie a snaha eliminovať prídavné látky.',
+    text: 'Nové kombinácie chutí, viac náplní, jednoduchšie zloženie a taktiež snaha eliminovať prídavné látky.',
     list: ['Sezónne a limitované novinky', 'Sortiment aj bez konzervačných látok'],
   },
   {
