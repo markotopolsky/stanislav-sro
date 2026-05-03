@@ -1,17 +1,15 @@
-import Image from 'next/image'
-
 const categories = [
   {
     image: '/b1.png',
     tag: 'Pre reťazce',
     name: 'Chlieb a bochníky',
-    skus: 11,
+    skus: 24,
     meta: 'Trvanl. 3–5 dní',
     items: [
-      { name: 'Dlháň 800 g', note: 'klasika' },
-      { name: 'Tmavý chlieb', note: 'tradičné' },
-      { name: 'Špaldový chlieb 500 g', note: 'remeslo' },
-      { name: 'Chlieb Vitamineral 250 g', note: 'vlastná receptúra' },
+      { name: 'Dlháň 900 g', note: 'klasika' },
+      { name: 'Ražný bochník 500 g', note: 'bestseller' },
+      { name: 'Celozrnný 750 g', note: 'BIO' },
+      { name: 'Kváskový 1 kg', note: 'remeslo' },
     ],
     more: 'Zobraziť katalóg chlebov →',
   },
@@ -19,13 +17,13 @@ const categories = [
     image: '/b2.png',
     tag: 'HoReCa',
     name: 'Bagety a rožky',
-    skus: 13,
+    skus: 18,
     meta: 'Dodáv. denne 4:30',
     items: [
-      { name: 'Francúzska bageta 150 g', note: 'klasika' },
-      { name: 'Bageta tmavá 200 g', note: 'raňajky' },
-      { name: 'Celozrnný rožok 50 g', note: 'bestseller' },
-      { name: 'Anglický rožok 70 g', note: 'retail' },
+      { name: 'Francúzska bageta 250 g', note: 'klasika' },
+      { name: 'Rustikálna bageta', note: 'hotely' },
+      { name: 'Celozrnný rožok', note: 'raňajky' },
+      { name: 'Cibuľový rožok', note: 'gastro' },
     ],
     more: 'Zobraziť katalóg bagiet →',
   },
@@ -33,13 +31,13 @@ const categories = [
     image: '/b1.png',
     tag: 'Gastro & catering',
     name: 'Slané špeciality',
-    skus: 12,
+    skus: 14,
     meta: 'MOQ 200 ks',
     items: [
-      { name: 'Pagáč oškvarkový 85 g', note: 'tradičné' },
-      { name: 'Banquet pagáč slaný 100 ks', note: 'catering' },
-      { name: 'Cesnakový uzol 100 g', note: 'gastro' },
-      { name: 'Pizza rožok 70 g', note: 'HoReCa' },
+      { name: 'Burger bulka 4″', note: 'HoReCa' },
+      { name: 'Hot-dog bulka 20 cm', note: 'retail' },
+      { name: 'Pizza základ 33 cm', note: 'catering' },
+      { name: 'Focaccia 500 g', note: 'hotely' },
     ],
     more: 'Zobraziť gastro katalóg →',
   },
@@ -47,13 +45,13 @@ const categories = [
     image: '/b2.png',
     tag: 'Privátna značka',
     name: 'Sladké pečivo',
-    skus: 38,
+    skus: 12,
     meta: 'Vlastná receptúra',
     items: [
-      { name: 'Bratislavský Rožok orechový 50 g', note: 'tradičné' },
-      { name: 'Štrúdľa jablko/mak noha min. 950 g', note: 'sezónne' },
-      { name: 'Vianočka 320 g', note: 'sezónne' },
-      { name: 'Buchtičky tvarohové 320 g', note: 'bestseller' },
+      { name: 'Makový závin 400 g', note: 'sezónne' },
+      { name: 'Orechový koláč 500 g', note: 'retail' },
+      { name: 'Buchty slivkové', note: 'tradičné' },
+      { name: 'Vianočka 700 g', note: 'sezóna' },
     ],
     more: 'Vytvoriť privátnu značku →',
   },
@@ -71,24 +69,16 @@ export default function Products() {
           </h2>
         </div>
         <div className="products-new-header-right">
-          <div><strong>Balené sladké a slané pečivo,</strong> mrazené pečivo na dopek alebo rozmraz, čerstvé pečivo, chlieb a štrúdle.</div>
-          <div><strong>Privátne značky</strong> a vývoj noviniek podľa potrieb odberateľa.</div>
-          <div><strong>Sezónne a limitované edície</strong> pre Vianoce, Veľkú noc a ďalšie obdobia.</div>
+          <div><strong>68 SKU</strong> v stálom sortimente</div>
+          <div><strong>Privátne značky</strong> na požiadanie (MOQ 2 000 ks / deň)</div>
+          <div><strong>Šarža A/B/C</strong> pre variabilnú cenotvorbu</div>
         </div>
       </div>
 
       <div className="products-grid-new">
         {categories.map((c) => (
           <article className="product-col" key={c.name + c.tag}>
-            <div className="product-col-img-wrap">
-              <Image
-                src={c.image}
-                alt={c.name}
-                fill
-                sizes="(max-width: 640px) 100vw, (max-width: 960px) 50vw, 25vw"
-                className="product-col-img"
-              />
-            </div>
+            <img src={c.image} alt={c.name} className="product-col-img" />
             <div className="product-col-body">
               <span className="product-col-tag">{c.tag}</span>
               <h3 className="product-col-name">{c.name}</h3>
@@ -111,9 +101,9 @@ export default function Products() {
 
       <div className="products-new-footer">
         <div className="products-new-footer-copy">
-          <strong>Kompletný B2B katalóg</strong> vrátane technických listov, alergénov a balenia zasielame na vyžiadanie.
+          <strong>Kompletný B2B katalóg</strong> vrátane technických listov, alergénov, EAN kódov a balenia na paletu. Aktualizovaný 04/2026, 68 SKU, 42 strán PDF.
         </div>
-        <a href="#kontakt" className="btn-dark">Vyžiadať katalóg →</a>
+        <a href="#" className="btn-dark">Stiahnuť katalóg (PDF, 2.4 MB)</a>
       </div>
     </section>
   )

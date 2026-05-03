@@ -6,13 +6,13 @@ import Process from './components/Process'
 import Certifications from './components/Certifications'
 import WhyUs from './components/WhyUs'
 import About from './components/About'
+import Faq from './components/Faq'
 import CtaBand from './components/CtaBand'
 import Footer from './components/Footer'
 
 export default function HomePage() {
   return (
-    <main id="main">
-      <a href="#main" className="skip-link">Preskočiť na obsah</a>
+    <main>
       <Hero />
       <Stats />
       <Partners />
@@ -21,6 +21,7 @@ export default function HomePage() {
       <Certifications />
       <WhyUs />
       <About />
+      <Faq />
       <CtaBand />
       <Footer />
     </main>

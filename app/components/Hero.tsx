@@ -1,9 +1,10 @@
 'use client'
 
+import Image from 'next/image'
 import { useEffect, useState } from 'react'
 
 const images = ['/b1.png', '/b2.png']
-const badges = ['HACCP', 'ISO 22000', 'DENNÁ DISTRIBÚCIA']
+const badges = ['IFS FOOD', 'ZNAČKA KVALITY', 'BRATISLAVSKÉ ROŽKY – ZTŠ']
 
 export default function Hero() {
   const [activeIndex, setActiveIndex] = useState(0)
@@ -27,13 +28,15 @@ export default function Hero() {
         </h1>
 
         <p className="hero-subtext">
-          Čerstvé pečivo každý deň pre supermarkety, hotely a <br />
-          reštaurácie po celom Slovensku
+          Tradičný slovenský výrobca pekárenských výrobkov<br />
+          pre moderný obchod a HoReCa
         </p>
 
         <div className="hero-buttons">
           <a href="#kontakt" className="hero-cta-primary">Vyžiadať ponuku</a>
-          <a href="#katalog" className="hero-cta-secondary">Katalóg produktov</a>
+          <a href="#produkty" className="hero-cta-secondary">
+            Náš sortiment <span aria-hidden>→</span>
+          </a>
         </div>
 
         <div className="hero-badges">
@@ -46,10 +49,13 @@ export default function Hero() {
       {/* Right — Carousel */}
       <div className="hero-carousel">
         {images.map((src, i) => (
-          <img
+          <Image
             key={src}
             src={src}
             alt=""
+            fill
+            sizes="(max-width: 768px) 100vw, 50vw"
+            priority={i === 0}
             className="hero-carousel-img"
             style={{ opacity: i === activeIndex ? 1 : 0 }}
           />
@@ -58,9 +64,11 @@ export default function Hero() {
           {images.map((_, i) => (
             <button
               key={i}
+              type="button"
               className={`hero-dot${i === activeIndex ? ' active' : ''}`}
               onClick={() => setActiveIndex(i)}
-              aria-label={`Slide ${i + 1}`}
+              aria-label={`Snímka ${i + 1} z ${images.length}`}
+              aria-current={i === activeIndex}
             />
           ))}
         </div>

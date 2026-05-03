@@ -1,18 +1,10 @@
-import Image from 'next/image'
-
 export default function Footer() {
   return (
     <footer className="footer-new">
       <div className="footer-new-grid">
         <div className="footer-new-brand">
-          <Image
-            src="/logo-nav-XL.svg"
-            alt="Kráľovská pekáreň"
-            width={120}
-            height={56}
-            unoptimized
-          />
-          <p>Tradičný slovenský výrobca pekárenských výrobkov od roku 1991. Kráľová pri Senci.</p>
+          <img src="/logo-nav-XL.svg" alt="Kráľovská pekáreň" />
+          <p>B2B dodávateľ čerstvého pečiva od 1991. Bratislava, Slovensko.</p>
         </div>
         <div className="footer-new-col">
           <h4>Produkty</h4>
@@ -38,13 +30,14 @@ export default function Footer() {
         </div>
         <div className="footer-new-col">
           <h4>Kontakt</h4>
-          <a href="#">STANISLAV, s. r. o.</a>
-          <a href="#">Kráľová pri Senci 61</a>
-          <a href="#">900 50 Kráľová pri Senci</a>
+          <a href="#">+421 903 123 456</a>
+          <a href="#">obchod@kralovskapekaren.sk</a>
+          <a href="#">Pekárenská 12, Bratislava</a>
+          <a href="#">IČO 12 345 678</a>
         </div>
       </div>
       <div className="footer-new-bottom">
-        <span>© 2026 STANISLAV, s. r. o. · Všetky práva vyhradené.</span>
+        <span>© 2026 Kráľovská pekáreň s.r.o. · Všetky práva vyhradené.</span>
         <span>GDPR · Obchodné podmienky · Cookies</span>
       </div>
     </footer>
