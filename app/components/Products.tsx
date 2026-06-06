@@ -57,6 +57,20 @@ const categories = [
     ],
     more: 'Vytvoriť privátnu značku →',
   },
+  {
+    image: '/b1.png',
+    tag: 'Zdravé koncepty',
+    name: 'Špeciálne pečivo',
+    skus: 4,
+    meta: 'Funkčné zloženie',
+    items: [
+      { name: 'Chlieb Vitamineral 250 g', note: 'vlastná receptúra' },
+      { name: 'Sezamový bochník 125 g', note: 'špeciality' },
+      { name: 'Zemiakový chlieb', note: 'tradičné' },
+      { name: 'Sendvič 320 g', note: 'retail' },
+    ],
+    more: 'Zobraziť špeciálne pečivo →',
+  },
 ]
 
 export default function Products() {
@@ -85,7 +99,7 @@ export default function Products() {
                 src={c.image}
                 alt={c.name}
                 fill
-                sizes="(max-width: 640px) 100vw, (max-width: 960px) 50vw, 25vw"
+                sizes="(max-width: 640px) 100vw, (max-width: 960px) 50vw, 20vw"
                 className="product-col-img"
               />
             </div>

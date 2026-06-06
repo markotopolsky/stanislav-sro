@@ -38,9 +38,10 @@ export default function Footer() {
         </div>
         <div className="footer-new-col">
           <h4>Kontakt</h4>
-          <a href="#">STANISLAV, s. r. o.</a>
-          <a href="#">Kráľová pri Senci 61</a>
-          <a href="#">900 50 Kráľová pri Senci</a>
+          <a href="/kontakt">STANISLAV, s. r. o.</a>
+          <a href="/kontakt">Kráľová pri Senci 61</a>
+          <a href="/kontakt">900 50 Kráľová pri Senci</a>
+          <a href="tel:+421918562092">+421 918 562 092</a>
         </div>
       </div>
       <div className="footer-new-bottom">

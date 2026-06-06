@@ -4,10 +4,10 @@ import Image from 'next/image'
 import { useState } from 'react'
 
 const navLinks = [
-  { label: 'Produkty', href: '#produkty' },
-  { label: 'O nás', href: '#o-nas' },
-  { label: 'Certifikáty', href: '#certifikaty' },
-  { label: 'Partneri', href: '#partneri' },
+  { label: 'Sortiment', href: '/produkty' },
+  { label: 'O nás', href: '/#o-nas' },
+  { label: 'Certifikáty', href: '/#certifikaty' },
+  { label: 'Kontakt', href: '/kontakt' },
 ]
 
 export default function Navbar() {
@@ -16,8 +16,8 @@ export default function Navbar() {
   return (
     <header className={`navbar${open ? ' navbar--open' : ''}`}>
       <div className="navbar-inner">
-        <a href="#" className="navbar-logo" aria-label="Kráľovská pekáreň">
-          <Image src="/logo-nav-XL.svg" alt="" width={80} height={80} unoptimized priority />
+        <a href="/" className="navbar-logo" aria-label="Kráľovská pekáreň">
+          <Image src="/logo-wordmark-s.svg" alt="" width={320} height={64} unoptimized priority />
         </a>
 
         <nav className="navbar-links" aria-label="Hlavná navigácia">
