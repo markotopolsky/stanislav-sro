@@ -5,7 +5,7 @@ const milestones = [
   { year: '—', title: 'Míľnik (doplniť)', text: 'Krátky popis udalosti — doplniť po konzultácii s klientom.' },
   { year: '—', title: 'Míľnik (doplniť)', text: 'Krátky popis udalosti — doplniť po konzultácii s klientom.' },
   { year: '—', title: 'Míľnik (doplniť)', text: 'Krátky popis udalosti — doplniť po konzultácii s klientom.' },
-  { year: '2026', title: 'Dnes', text: 'Tradičný slovenský výrobca pekárenských výrobkov pre moderný obchod a HoReCa.' },
+  { year: '2026', title: 'Dnes', text: 'Tradičný slovenský výrobca pekárenských výrobkov pre obchodné reťazce a B2B odberateľov.' },
 ]
 
 export default function About() {
@@ -22,7 +22,7 @@ export default function About() {
           </div>
           <div className="about-new-head-right">
             <p>
-              STANISLAV, s. r. o. — Kráľovská pekáreň so sídlom v Kráľovej pri Senci. Výrobca kvalitných a bezpečných pekárenských výrobkov pre moderný obchod, HoReCa a ďalších obchodných partnerov. Značka stavia na tradičných receptúrach, čerstvosti a remeselnosti.
+              STANISLAV, s. r. o. — Kráľovská pekáreň so sídlom v Kráľovej pri Senci. Výrobca kvalitných a bezpečných pekárenských výrobkov pre obchodné reťazce a firemných odberateľov. Značka stavia na tradičných receptúrach, konzistentnej kvalite a čerstvosti.
             </p>
           </div>
         </div>

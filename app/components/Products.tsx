@@ -1,31 +1,34 @@
 import Image from 'next/image'
+import Link from 'next/link'
 
 const categories = [
   {
     image: '/b1.png',
-    tag: 'Pre reťazce',
+    tag: 'Balené & krájané',
     name: 'Chlieb a bochníky',
+    href: '/produkty#chlieb-pecivo',
     skus: 11,
     meta: 'Trvanl. 3–5 dní',
     items: [
-      { name: 'Dlháň 800 g', note: 'klasika' },
-      { name: 'Tmavý chlieb', note: 'tradičné' },
-      { name: 'Špaldový chlieb 500 g', note: 'remeslo' },
-      { name: 'Chlieb Vitamineral 250 g', note: 'vlastná receptúra' },
+      { name: 'Dlháň 800 g', note: 'krájaný, balený' },
+      { name: 'Tmavý chlieb', note: 'ražná múka' },
+      { name: 'Špaldový chlieb 500 g', note: 'špaldová múka' },
+      { name: 'Chlieb Vitamineral 250 g', note: 'semienka & obilniny' },
     ],
     more: 'Zobraziť katalóg chlebov →',
   },
   {
     image: '/b2.png',
-    tag: 'HoReCa',
+    tag: 'Čerstvá dodávka',
     name: 'Bagety a rožky',
+    href: '/produkty#slane-pecivo',
     skus: 13,
     meta: 'Dodáv. denne 4:30',
     items: [
-      { name: 'Francúzska bageta 150 g', note: 'klasika' },
-      { name: 'Bageta tmavá 200 g', note: 'raňajky' },
-      { name: 'Celozrnný rožok 50 g', note: 'bestseller' },
-      { name: 'Anglický rožok 70 g', note: 'retail' },
+      { name: 'Francúzska bageta 150 g', note: 'pšeničná múka' },
+      { name: 'Bageta tmavá 200 g', note: 'ražný podiel' },
+      { name: 'Celozrnný rožok 50 g', note: 'celozrnná múka' },
+      { name: 'Anglický rožok 70 g', note: 'mäkký, balený' },
     ],
     more: 'Zobraziť katalóg bagiet →',
   },
@@ -33,41 +36,44 @@ const categories = [
     image: '/b1.png',
     tag: 'Gastro & catering',
     name: 'Slané špeciality',
+    href: '/produkty#slane-pecivo',
     skus: 12,
     meta: 'MOQ 200 ks',
     items: [
-      { name: 'Pagáč oškvarkový 85 g', note: 'tradičné' },
-      { name: 'Banquet pagáč slaný 100 ks', note: 'catering' },
-      { name: 'Cesnakový uzol 100 g', note: 'gastro' },
-      { name: 'Pizza rožok 70 g', note: 'HoReCa' },
+      { name: 'Pagáč oškvarkový 85 g', note: 'bravčové oškvarky' },
+      { name: 'Banquet pagáč slaný 100 ks', note: 'balenie 100 ks' },
+      { name: 'Cesnakový uzol 100 g', note: 'čerstvý cesnak' },
+      { name: 'Pizza rožok 70 g', note: 'paradajka & syr' },
     ],
     more: 'Zobraziť gastro katalóg →',
   },
   {
     image: '/b2.png',
-    tag: 'Privátna značka',
+    tag: 'Vlastná receptúra',
     name: 'Sladké pečivo',
+    href: '/produkty#sladke-pecivo',
     skus: 38,
     meta: 'Vlastná receptúra',
     items: [
-      { name: 'Bratislavský Rožok orechový 50 g', note: 'tradičné' },
-      { name: 'Štrúdľa jablko/mak noha min. 950 g', note: 'sezónne' },
-      { name: 'Vianočka 320 g', note: 'sezónne' },
-      { name: 'Buchtičky tvarohové 320 g', note: 'bestseller' },
+      { name: 'Bratislavský Rožok orechový 50 g', note: 'orechová náplň' },
+      { name: 'Štrúdľa jablko/mak noha min. 950 g', note: 'jablko / mak' },
+      { name: 'Vianočka 320 g', note: 'sezónna edícia' },
+      { name: 'Buchtičky tvarohové 320 g', note: 'tvarohová náplň' },
     ],
     more: 'Vytvoriť privátnu značku →',
   },
   {
     image: '/b1.png',
-    tag: 'Zdravé koncepty',
+    tag: 'Špeciálne zloženie',
     name: 'Špeciálne pečivo',
+    href: '/produkty#specialne-pecivo',
     skus: 4,
     meta: 'Funkčné zloženie',
     items: [
-      { name: 'Chlieb Vitamineral 250 g', note: 'vlastná receptúra' },
-      { name: 'Sezamový bochník 125 g', note: 'špeciality' },
-      { name: 'Zemiakový chlieb', note: 'tradičné' },
-      { name: 'Sendvič 320 g', note: 'retail' },
+      { name: 'Chlieb Vitamineral 250 g', note: 'semienka & obilniny' },
+      { name: 'Sezamový bochník 125 g', note: 'sezamové semienka' },
+      { name: 'Zemiakový chlieb', note: 'zemiakový podiel' },
+      { name: 'Sendvič 320 g', note: 'balený, krájený' },
     ],
     more: 'Zobraziť špeciálne pečivo →',
   },
@@ -93,7 +99,7 @@ export default function Products() {
 
       <div className="products-grid-new">
         {categories.map((c) => (
-          <article className="product-col" key={c.name + c.tag}>
+          <Link className="product-col" href={c.href} key={c.name + c.tag}>
             <div className="product-col-img-wrap">
               <Image
                 src={c.image}
@@ -117,9 +123,9 @@ export default function Products() {
                   </li>
                 ))}
               </ul>
-              <a href="#" className="product-col-more">{c.more}</a>
+              <span className="product-col-more">{c.more}</span>
             </div>
-          </article>
+          </Link>
         ))}
       </div>
 

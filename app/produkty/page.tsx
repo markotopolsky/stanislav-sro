@@ -10,10 +10,10 @@ export const metadata = {
 
 // Krátke B2B popisy ku každej kategórii
 const KAT_POPIS: Record<string, string> = {
-  'chlieb-pecivo':    'Kváskové chleby, formové bochníky a rôzne druhy rožkov. Trvanlivosť 3–5 dní, vhodné pre retail aj gastro.',
+  'chlieb-pecivo':    'Chleby, formové bochníky a rôzne druhy rožkov. Trvanlivosť 3–5 dní, vhodné pre reťazce aj B2B.',
   'sladke-pecivo':    'Tradičné slovenské sladké špeciality — bratislavské rožky, buchtičky, záviíny a sezónne novinky.',
   'strudle':          'Ručne rolované štrúdle s ovocnou a tvarohovou náplňou. Porciové balenia aj celé nohy (min. 950 g).',
-  'slane-pecivo':     'Bagety, žemle, pagáče a uzly pre každodennú prevádzku HoReCa a catering.',
+  'slane-pecivo':     'Bagety, žemle, pagáče a uzly. Čerstvé denné dodávky pre reťazce a B2B odberateľov.',
   'specialne-pecivo': 'Špeciálne pečivo so sezamom, špaldom a Vitamineral — vhodné pre zdravé stravovacie koncepty.',
 }
 

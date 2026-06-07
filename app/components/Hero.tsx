@@ -4,7 +4,7 @@ import Image from 'next/image'
 import { useEffect, useState } from 'react'
 
 const images = ['/b1.png', '/b2.png']
-const badges = ['IFS FOOD', 'ZNAČKA KVALITY', 'BRATISLAVSKÉ ROŽKY – ZTŠ']
+const badges = ['IFS FOOD', 'ZNAČKA KVALITY', 'HACCP', 'ISO 22000']
 
 export default function Hero() {
   const [activeIndex, setActiveIndex] = useState(0)
@@ -29,7 +29,7 @@ export default function Hero() {
 
         <p className="hero-subtext">
           Tradičný slovenský výrobca pekárenských výrobkov<br />
-          pre moderný obchod a HoReCa
+          pre obchodné reťazce a firemných odberateľov
         </p>
 
         <div className="hero-buttons">

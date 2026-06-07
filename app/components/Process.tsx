@@ -9,7 +9,7 @@ const steps = [
   {
     num: 'Krok 02',
     title: ['Príprava', 'receptúr'],
-    text: 'Receptúry spájajú chuť, spracovateľnosť cesta, stabilitu a požiadavky retailu.',
+    text: 'Receptúry spájajú chuť, spracovateľnosť cesta, stabilitu a požiadavky odberateľov.',
   },
   {
     num: 'Krok 03',

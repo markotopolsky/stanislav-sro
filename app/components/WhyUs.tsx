@@ -33,7 +33,7 @@ export default function WhyUs() {
           <span className="eyebrow">Prečo s nami</span>
           <h2 className="h-section">
             Tradícia, kvalita<br />
-            a <em>moderný retail.</em>
+            a <em>obchodné reťazce.</em>
           </h2>
           <p className="whyus-new-lede">
             Spájame poctivé spracovanie cesta a overené suroviny s automatizovanou výrobou a presnými receptúrami. Výsledkom je stabilný sortiment, na ktorý sa odberateľ môže spoľahnúť.

@@ -18,7 +18,7 @@ const items = [
   },
   {
     q: 'Robíte privátne značky? Aký je proces?',
-    a: <>Áno. Proces: (1) zaslanie briefu + target cost, (2) návrh receptúry + pilotná šarža do 10 dní, (3) technický list, alergény, EAN, balenie podľa CI odberateľa, (4) nábeh výroby. Aktuálne vyrábame pod <strong>6 privátnymi značkami</strong> pre retail a HoReCa.</>,
+    a: <>Áno. Proces: (1) zaslanie briefu + target cost, (2) návrh receptúry + pilotná šarža do 10 dní, (3) technický list, alergény, EAN, balenie podľa CI odberateľa, (4) nábeh výroby. Aktuálne vyrábame pod <strong>6 privátnymi značkami</strong> pre obchodné reťazce aj firemných odberateľov.</>,
   },
   {
     q: 'Aké sú platobné podmienky a faktúrovací cyklus?',
