@@ -1,83 +1,2101 @@
 {
-  "_poznamka": "Kategorizovane data produktov. Nazvy, ceny a kategorie su realne (zo struktury webu); fotky doplnis vlastne, image je zatial placeholder. Potraviny su prazdna kategoria.",
+  "_poznamka": "Produkty z webu doplnené o zloženie/alergény/nutričné údaje z dvoch dokumentov (balené aj nebalené výrobky). Nové produkty z dokumentov majú _new: true a chýbajúcu kategóriu a obrázok — doplnia sa neskôr.",
   "categories": [
-    { "slug": "chlieb-pecivo", "name": "Chlieb a pečivo" },
-    { "slug": "sladke-pecivo", "name": "Sladké pečivo" },
-    { "slug": "strudle", "name": "Štrúdle" },
-    { "slug": "slane-pecivo", "name": "Slané pečivo" },
-    { "slug": "specialne-pecivo", "name": "Špeciálne pečivo" },
-    { "slug": "potraviny", "name": "Potraviny" }
+    {
+      "slug": "chlieb-pecivo",
+      "name": "Chlieb a pečivo"
+    },
+    {
+      "slug": "sladke-pecivo",
+      "name": "Sladké pečivo"
+    },
+    {
+      "slug": "strudle",
+      "name": "Štrúdle"
+    },
+    {
+      "slug": "slane-pecivo",
+      "name": "Slané pečivo"
+    },
+    {
+      "slug": "specialne-pecivo",
+      "name": "Špeciálne pečivo"
+    },
+    {
+      "slug": "potraviny",
+      "name": "Potraviny"
+    }
   ],
   "products": [
-    { "slug": "celozrnny-rozok", "name": "Celozrnný rožok 50g", "price": 0.23, "category": "chlieb-pecivo", "image": "https://placehold.co/600x400?text=Celozrnny+rozok" },
-    { "slug": "grahamovy-rohlik", "name": "Grahamový rohlík 50g", "price": 0.19, "category": "chlieb-pecivo", "image": "https://placehold.co/600x400?text=Grahamovy+rohlik" },
-    { "slug": "jacmenne-pecivo", "name": "Jačmenné pečivo 60g", "price": 0.34, "category": "chlieb-pecivo", "image": "https://placehold.co/600x400?text=Jacmenne+pecivo" },
-    { "slug": "lanovy-spic", "name": "Ľanový špic 60g", "price": 0.33, "category": "chlieb-pecivo", "image": "https://placehold.co/600x400?text=Lanovy+spic" },
-    { "slug": "spaldovy-chlieb", "name": "Špaldový chlieb 500g", "price": 3.38, "category": "chlieb-pecivo", "image": "https://placehold.co/600x400?text=Spaldovy+chlieb" },
-    { "slug": "tmavy-chlieb", "name": "Tmavý chlieb", "price": 1.11, "category": "chlieb-pecivo", "image": "https://placehold.co/600x400?text=Tmavy+chlieb" },
-    { "slug": "dlhan", "name": "Dlháň 800g", "price": 2.10, "category": "chlieb-pecivo", "image": "https://placehold.co/600x400?text=Dlhan" },
-    { "slug": "lanovy-chlieb", "name": "Ľanový chlieb 500g/300g", "price": 1.40, "category": "chlieb-pecivo", "image": "https://placehold.co/600x400?text=Lanovy+chlieb" },
-    { "slug": "rozok-rovny", "name": "Rožok rovný 50g", "price": 0.12, "category": "chlieb-pecivo", "image": "https://placehold.co/600x400?text=Rozok+rovny" },
-
-    { "slug": "chlieb-vitamineral", "name": "Chlieb Vitamineral 250g", "price": 1.57, "category": "specialne-pecivo", "image": "https://placehold.co/600x400?text=Vitamineral" },
-    { "slug": "sendvic", "name": "Sendvič 320g", "price": 0.99, "category": "specialne-pecivo", "image": "https://placehold.co/600x400?text=Sendvic" },
-    { "slug": "sezamovy-bochnik", "name": "Sezamový bochník 125g", "price": 0.45, "category": "specialne-pecivo", "image": "https://placehold.co/600x400?text=Sezamovy+bochnik" },
-    { "slug": "zemiakovy-chlieb", "name": "Zemiakový chlieb", "price": 1.10, "category": "specialne-pecivo", "image": "https://placehold.co/600x400?text=Zemiakovy+chlieb" },
-
-    { "slug": "bageta-tmava", "name": "Bageta tmavá 200g", "price": 0.84, "category": "slane-pecivo", "image": "https://placehold.co/600x400?text=Bageta+tmava" },
-    { "slug": "francuzska-bageta", "name": "Francúzska bageta 150g", "price": 0.45, "category": "slane-pecivo", "image": "https://placehold.co/600x400?text=Francuzska+bageta" },
-    { "slug": "kornspitz", "name": "Kornspitz 60g", "price": 0.33, "category": "slane-pecivo", "image": "https://placehold.co/600x400?text=Kornspitz" },
-    { "slug": "pletenka", "name": "Pletenka 150g", "price": 0.52, "category": "slane-pecivo", "image": "https://placehold.co/600x400?text=Pletenka" },
-    { "slug": "rozok-slany", "name": "Rožok slaný 50g", "price": 0.12, "category": "slane-pecivo", "image": "https://placehold.co/600x400?text=Rozok+slany" },
-    { "slug": "zemla-50g", "name": "Žemľa 50g", "price": 0.13, "category": "slane-pecivo", "image": "https://placehold.co/600x400?text=Zemla+50g" },
-    { "slug": "zemla-70g", "name": "Žemľa 70g", "price": 0.54, "category": "slane-pecivo", "image": "https://placehold.co/600x400?text=Zemla+70g" },
-    { "slug": "anglicky-rozok", "name": "Anglický rožok 70g", "price": 0.91, "category": "slane-pecivo", "image": "https://placehold.co/600x400?text=Anglicky+rozok" },
-    { "slug": "banquet-pagac-slany-100ks", "name": "Banquet pagáč slaný 100ks", "price": 37.73, "category": "slane-pecivo", "image": "https://placehold.co/600x400?text=Pagac+100ks" },
-    { "slug": "banquet-pagac-slany-50ks", "name": "Banquet pagáč slaný 50ks x 8g", "price": 24.00, "category": "slane-pecivo", "image": "https://placehold.co/600x400?text=Pagac+50ks" },
-    { "slug": "cesnakovy-uzol", "name": "Cesnakový uzol 100g", "price": 0.62, "category": "slane-pecivo", "image": "https://placehold.co/600x400?text=Cesnakovy+uzol" },
-    { "slug": "pagac-oskvarkovy-40g", "name": "Pagáč oškvarkový 40g", "price": 0.42, "category": "slane-pecivo", "image": "https://placehold.co/600x400?text=Pagac+40g" },
-    { "slug": "pagac-oskvarkovy-85g", "name": "Pagáč oškvarkový 85g", "price": 0.75, "category": "slane-pecivo", "image": "https://placehold.co/600x400?text=Pagac+85g" },
-    { "slug": "pizza-rozok", "name": "Pizza rožok 70g", "price": 0.63, "category": "slane-pecivo", "image": "https://placehold.co/600x400?text=Pizza+rozok" },
-    { "slug": "rozok-velky", "name": "Rožok veľký 100g", "price": 0.28, "category": "slane-pecivo", "image": "https://placehold.co/600x400?text=Rozok+velky" },
-
-    { "slug": "bratislavsky-rozok-makovy", "name": "Bratislavský rožok makový 50g", "price": 0.75, "category": "sladke-pecivo", "image": "https://placehold.co/600x400?text=Bratislavsky+mak" },
-    { "slug": "bratislavsky-rozok-orechovy", "name": "Bratislavský rožok orechový 50g", "price": 0.78, "category": "sladke-pecivo", "image": "https://placehold.co/600x400?text=Bratislavsky+orech" },
-    { "slug": "buchta-tvarohova-triangel", "name": "Buchta tvarohová triangel 70g", "price": 0.69, "category": "sladke-pecivo", "image": "https://placehold.co/600x400?text=Buchta+triangel" },
-    { "slug": "buchticky-makove", "name": "Buchtičky makové 320g", "price": 2.50, "category": "sladke-pecivo", "image": "https://placehold.co/600x400?text=Buchticky+mak" },
-    { "slug": "buchticky-slivkove", "name": "Buchtičky slivkové 320g", "price": 2.52, "category": "sladke-pecivo", "image": "https://placehold.co/600x400?text=Buchticky+slivka" },
-    { "slug": "buchticky-tvarohove", "name": "Buchtičky tvarohové 320g", "price": 2.86, "category": "sladke-pecivo", "image": "https://placehold.co/600x400?text=Buchticky+tvaroh" },
-    { "slug": "buchticky-tvarohovo-marhulove", "name": "Buchtičky tvarohovo/marhuľové 320g", "price": 2.90, "category": "sladke-pecivo", "image": "https://placehold.co/600x400?text=Buchticky+marhula" },
-    { "slug": "kralovske-rozky-mak", "name": "Kráľovské rožky mak 40g", "price": 0.49, "category": "sladke-pecivo", "image": "https://placehold.co/600x400?text=Kralovske+mak" },
-    { "slug": "kralovske-rozky-orech", "name": "Kráľovské rožky orech 40g", "price": 0.49, "category": "sladke-pecivo", "image": "https://placehold.co/600x400?text=Kralovske+orech" },
-    { "slug": "moravsky-kolac-mak", "name": "Moravský koláč mak 100g", "price": 0.83, "category": "sladke-pecivo", "image": "https://placehold.co/600x400?text=Moravsky+mak" },
-    { "slug": "moravsky-kolac-orech", "name": "Moravský koláč orech 100g", "price": 0.83, "category": "sladke-pecivo", "image": "https://placehold.co/600x400?text=Moravsky+orech" },
-    { "slug": "moravsky-kolac-tvaroh", "name": "Moravský koláč tvaroh 100g", "price": 0.99, "category": "sladke-pecivo", "image": "https://placehold.co/600x400?text=Moravsky+tvaroh" },
-    { "slug": "muffin-ribezlovy", "name": "Muffin ríbezľový 110g", "price": 1.20, "category": "sladke-pecivo", "image": "https://placehold.co/600x400?text=Muffin+ribezla" },
-    { "slug": "muffin-svetly", "name": "Muffin svetlý 110g", "price": 1.20, "category": "sladke-pecivo", "image": "https://placehold.co/600x400?text=Muffin+svetly" },
-    { "slug": "osie-hniezdo", "name": "Osie hniezdo 80g", "price": 0.75, "category": "sladke-pecivo", "image": "https://placehold.co/600x400?text=Osie+hniezdo" },
-    { "slug": "osie-hniezdo-spaldove", "name": "Osie hniezdo špaldové", "price": 0.95, "category": "sladke-pecivo", "image": "https://placehold.co/600x400?text=Osie+spaldove" },
-    { "slug": "parene-buchty-1ks", "name": "Parené buchty so slivkovou náplňou 1ks 60g", "price": 0.49, "category": "sladke-pecivo", "image": "https://placehold.co/600x400?text=Parene+1ks" },
-    { "slug": "parene-buchty-3ks", "name": "Parené buchty so slivkovou náplňou 3ks 180g", "price": 2.00, "category": "sladke-pecivo", "image": "https://placehold.co/600x400?text=Parene+3ks" },
-    { "slug": "parene-buchty-6ks", "name": "Parené buchty so slivkovou náplňou 6ks 360g", "price": 2.65, "category": "sladke-pecivo", "image": "https://placehold.co/600x400?text=Parene+6ks" },
-    { "slug": "pletenec-kakaovy", "name": "Pletenec kakaový 200g", "price": 1.73, "category": "sladke-pecivo", "image": "https://placehold.co/600x400?text=Pletenec+kakao" },
-    { "slug": "pletenec-makovy", "name": "Pletenec makový 200g", "price": 1.44, "category": "sladke-pecivo", "image": "https://placehold.co/600x400?text=Pletenec+mak" },
-    { "slug": "pletenec-orechovy", "name": "Pletenec orechový 200g", "price": 1.66, "category": "sladke-pecivo", "image": "https://placehold.co/600x400?text=Pletenec+orech" },
-    { "slug": "siska-kakaova", "name": "Šiška kakaová 60g", "price": 0.43, "category": "sladke-pecivo", "image": "https://placehold.co/600x400?text=Siska+kakao" },
-    { "slug": "siska-marhulova", "name": "Šiška marhuľová 60g", "price": 0.43, "category": "sladke-pecivo", "image": "https://placehold.co/600x400?text=Siska+marhula" },
-    { "slug": "makovy-rozok", "name": "Sladký makový rožok 60g", "price": 0.40, "category": "sladke-pecivo", "image": "https://placehold.co/600x400?text=Makovy+rozok" },
-    { "slug": "makovy-uzol", "name": "Sladký makový uzol 60g", "price": 0.40, "category": "sladke-pecivo", "image": "https://placehold.co/600x400?text=Makovy+uzol" },
-    { "slug": "vianocka", "name": "Vianočka 320g", "price": 1.86, "category": "sladke-pecivo", "image": "https://placehold.co/600x400?text=Vianocka" },
-    { "slug": "zavin-makovy-200g", "name": "Závin makový 200g", "price": 1.40, "category": "sladke-pecivo", "image": "https://placehold.co/600x400?text=Zavin+mak+200g" },
-    { "slug": "zavin-makovy-400g", "name": "Závin makový 400g", "price": 2.65, "category": "sladke-pecivo", "image": "https://placehold.co/600x400?text=Zavin+mak+400g" },
-    { "slug": "zavin-orechovy-200g", "name": "Závin orechový 200g", "price": 1.68, "category": "sladke-pecivo", "image": "https://placehold.co/600x400?text=Zavin+orech+200g" },
-    { "slug": "zavin-orechovy-400g", "name": "Závin orechový 400g", "price": 2.82, "category": "sladke-pecivo", "image": "https://placehold.co/600x400?text=Zavin+orech+400g" },
-    { "slug": "zavin-tvarohovy-200g", "name": "Závin tvarohový 200g", "price": 1.83, "category": "sladke-pecivo", "image": "https://placehold.co/600x400?text=Zavin+tvaroh+200g" },
-    { "slug": "zavin-tvarohovy-400g", "name": "Závin tvarohový 400g", "price": 3.07, "category": "sladke-pecivo", "image": "https://placehold.co/600x400?text=Zavin+tvaroh+400g" },
-
-    { "slug": "strudla-jablko-mak", "name": "Štrúdľa jablko/mak noha min. 950g", "price": 16.50, "category": "strudle", "image": "https://placehold.co/600x400?text=Strudla+jablko+mak" },
-    { "slug": "strudla-jablko-orech", "name": "Štrúdľa jablko/orech noha min. 950g", "price": 16.50, "category": "strudle", "image": "https://placehold.co/600x400?text=Strudla+jablko+orech" },
-    { "slug": "strudla-mak-visna", "name": "Štrúdľa mak/višňa noha min. 950g", "price": 18.00, "category": "strudle", "image": "https://placehold.co/600x400?text=Strudla+mak+visna" },
-    { "slug": "strudla-tvaroh-hrozienka", "name": "Štrúdľa tvaroh s hrozienkami noha min. 950g", "price": 17.00, "category": "strudle", "image": "https://placehold.co/600x400?text=Strudla+tvaroh+hrozienka" },
-    { "slug": "strudla-tvaroh-visna", "name": "Štrúdľa tvaroh/višňa noha min. 950g", "price": 18.00, "category": "strudle", "image": "https://placehold.co/600x400?text=Strudla+tvaroh+visna" }
+    {
+      "slug": "celozrnny-rozok",
+      "name": "Celozrnný rožok 50g",
+      "category": "chlieb-pecivo",
+      "image": "https://res.cloudinary.com/dl6xldrhk/image/upload/v1781533432/kralovska-pekaren/products/celozrnny-rozok.png",
+      "zlozenie": "PŠENIČNÁ MÚKA, voda, pekársky prípravok ( ľanové semeno, kukuričná zmes, SÓJOVÁ drť pražená, OVSENÉ vločky, SÓJOVÁ múka, jódovaná soľ, slnečnicové semeno, kukuričná vláknina, PŠENIČNÁ múka sladová, PŠENIČNÁ múka, SEZAM, cukor, emulgátory: E472e, E471, E322, slad JAČMENNÝ pražený, enzýmy ( PŠENIČNÁ múka), protihrudkujúca látka: E341, múku upravujúca látka: E300, regulátor kyslosti: E330) , droždie, jódovaná soľ, cukor, enzýmy (obsahujú LEPOK), múku upravujúca látka: E300",
+      "nutricne": {
+        "energiaKj": 1146,
+        "energiaKcal": 271,
+        "tuky": "4,8 g",
+        "nasMastneKys": "0,5 g",
+        "sacharidy": "48 g",
+        "cukry": "2,6 g",
+        "vlaknina": "2 g",
+        "bielkoviny": "10 g",
+        "sol": "1,4 g"
+      },
+      "gramaz": "50g"
+    },
+    {
+      "slug": "grahamovy-rohlik",
+      "name": "Grahamový rohlík 50g",
+      "category": "chlieb-pecivo",
+      "image": "https://res.cloudinary.com/dl6xldrhk/image/upload/v1781533436/kralovska-pekaren/products/grahamovy-rohlik.png",
+      "zlozenie": "PŠENIČNÁ MÚKA, voda, PŠENIČNÁ múka grahamová 11,6%, droždie, rastlinný olej (slnečnicový), jódovaná soľ, cukor, enzýmy (obsahujú LEPOK), múku upravujúca látka: E300",
+      "nutricne": {
+        "energiaKj": 1013,
+        "energiaKcal": 240,
+        "tuky": "2,9 g",
+        "nasMastneKys": "0,4 g",
+        "sacharidy": "44 g",
+        "cukry": "1,8 g",
+        "bielkoviny": "7,9 g",
+        "sol": "1,4 g"
+      },
+      "gramaz": "50g"
+    },
+    {
+      "slug": "jacmenne-pecivo",
+      "name": "Jačmenné pečivo 60g",
+      "category": "chlieb-pecivo",
+      "image": "https://res.cloudinary.com/dl6xldrhk/image/upload/v1781533437/kralovska-pekaren/products/jacmenne-pecivo.png",
+      "gramaz": "60g"
+    },
+    {
+      "slug": "lanovy-spic",
+      "name": "Ľanový špic 60g",
+      "category": "chlieb-pecivo",
+      "image": "https://res.cloudinary.com/dl6xldrhk/image/upload/v1781533442/kralovska-pekaren/products/lanovy-spic.png",
+      "zlozenie": "PŠENIČNÁ múka, voda, pekársky prípravok: (ľanové semeno žlté (min.25%), PŠENIČNÁ múka, kukuričná krupica, PŠENIČNÝ glutén, JAČMENNÝ sladový extrakt, PŠENIČNÉ klíčky, stabilizátor: E412, glukózový sirup, glukóza, pražená PŠENIČNÁ sladová múka, emulgátor: E472e, JAČMENNÁ sladová múka, regulátor kyslosti: E263, kyselina: E270, múku upravujúca látka: E300, enzýmy), posyp ( kukuričná krupica, ľanové semeno – žlté (34%). SEZAMOVÉ semeno, OVSENÉ vločky, PŠENIČNÁ vláknina), olej slnečnicový, droždie, jódovaná soľ",
+      "nutricne": {
+        "energiaKj": 1178,
+        "energiaKcal": 280,
+        "tuky": "8 g",
+        "nasMastneKys": "1,5 g",
+        "sacharidy": "45 g",
+        "cukry": "2,2 g",
+        "vlaknina": "5,3 g",
+        "bielkoviny": "9,7 g",
+        "sol": "1,4 g"
+      },
+      "gramaz": "60g"
+    },
+    {
+      "slug": "spaldovy-chlieb",
+      "name": "Špaldový chlieb 500g",
+      "category": "chlieb-pecivo",
+      "image": "https://res.cloudinary.com/dl6xldrhk/image/upload/v1781533464/kralovska-pekaren/products/spaldovy-chlieb.jpg",
+      "typVyrobku": "chlieb",
+      "zlozenie": "PŠENIČNÁ múka (36%), voda, pekárska zmes [ŠPALDOVÁ múka (40%), RAŽNÁ múka, celozrnná ŠPALDOVÁ múka (15%), sušený RAŽNÝ kvas, PŠENIČNÁ celozrnná múka, JAČMENNÁ sladová múka, sušená SRVÁTKA, zahusťovadlo: guarová guma; emulgátor: E471; sladová aróma, regulátory kyslosti: kyselina citrónová, kyselina pšeničná, kyselina mliečna, mliečnan vápenatý; glukózový sirup sušený, enzým, múku upravujúca látka: kyselina askorbová], zápara (19,4%) [nabobtnané zrná špaldy jodidovaná soľ], droždie, soľ jedlá [jedlá kamenná soľ (99,6%), jodičnan draselný], zlepšujúci prípravok (PŠENIČNÁ múka, PŠENIČNÝ lepok, emulgátor: E471; múku upravujúca látka: kyselina askorbová).",
+      "posyp": "zemiakové vločky (obsahujú SO2), SEZAMOVÉ semená, OVSENÁ múka, nejódovaná soľ.",
+      "alergeny": "SÓJU",
+      "nutricne": {
+        "energiaKj": 1031,
+        "energiaKcal": 244,
+        "tuky": "2 g",
+        "nasMastneKys": "0,46 g",
+        "sacharidy": "49 g",
+        "cukry": "3 g",
+        "vlaknina": "4,5 g",
+        "bielkoviny": "10,6 g",
+        "sol": "1,93 g"
+      },
+      "gramaz": "500g"
+    },
+    {
+      "slug": "tmavy-chlieb",
+      "name": "Tmavý chlieb",
+      "category": "chlieb-pecivo",
+      "image": "https://res.cloudinary.com/dl6xldrhk/image/upload/v1781533467/kralovska-pekaren/products/tmavy-chlieb.png",
+      "typVyrobku": "chlieb",
+      "zlozenie": "PŠENIČNÁ múka (36%), RAŽNÁ múka (20,5%), voda, jedlá soľ, droždie, sušená SRVÁTKA, pekársky prípravok (modifikovaný škrob E1414, enzýmy, antioxidant: E300; rastlinný olej repkový), pražený jačmenný slad, rasca.",
+      "alergeny": "VAJCIA, SÓJU, SEZAM",
+      "nutricne": {
+        "energiaKj": 1088,
+        "energiaKcal": 241,
+        "tuky": "1 g",
+        "nasMastneKys": "0,15 g",
+        "sacharidy": "51 g",
+        "cukry": "2,8 g",
+        "vlaknina": "3,5 g",
+        "bielkoviny": "7,3 g",
+        "sol": "1,5 g"
+      },
+      "gramaz": "—"
+    },
+    {
+      "slug": "lanovy-chlieb",
+      "name": "Ľanový chlieb 500g/300g",
+      "category": "chlieb-pecivo",
+      "image": "https://res.cloudinary.com/dl6xldrhk/image/upload/v1781533443/kralovska-pekaren/products/lanovy-chlieb.png",
+      "typVyrobku": "chlieb",
+      "zlozenie": "PŠENIČNÁ múka (49%), RAŽNÁ múka (7%), ľan (3%), voda, jedlá soľ [jedlá kamenná soľ (99,6%), jodičnan draselný], droždie, pekársky prípravok (PŠENIČNÁ múka, PŠENIČNÝ lepok, emulgátor: E471; múku upravujúca látka: kyselina askorbová).",
+      "alergeny": "SÓJU, SEZAM,MLIEKO",
+      "nutricne": {
+        "energiaKj": 921,
+        "energiaKcal": 220,
+        "tuky": "2,5 g",
+        "nasMastneKys": "0,27 g",
+        "sacharidy": "43 g",
+        "cukry": "2,2 g",
+        "vlaknina": "3,3 g",
+        "bielkoviny": "8 g",
+        "sol": "1,4 g"
+      },
+      "gramaz": "500g"
+    },
+    {
+      "slug": "rozok-rovny",
+      "name": "Rožok rovný 50g",
+      "category": "chlieb-pecivo",
+      "image": "https://res.cloudinary.com/dl6xldrhk/image/upload/v1781533461/kralovska-pekaren/products/rozok-rovny.png",
+      "zlozenie": "PŠENIČNÁ MÚKA, voda, droždie, rastlinný olej (slnečnicový), jódovaná soľ, enzýmy (obsahujú LEPOK), múku upravujúca látka: E300",
+      "nutricne": {
+        "energiaKj": 1273,
+        "energiaKcal": 301,
+        "tuky": "3,7 g",
+        "nasMastneKys": "0,6 g",
+        "sacharidy": "56 g",
+        "cukry": "2,4 g",
+        "bielkoviny": "9,8 g",
+        "sol": "1,5 g"
+      },
+      "gramaz": "50g"
+    },
+    {
+      "slug": "chlieb-vitamineral",
+      "name": "Chlieb Vitamineral 250g",
+      "category": "specialne-pecivo",
+      "image": "https://res.cloudinary.com/dl6xldrhk/image/upload/v1781533434/kralovska-pekaren/products/chlieb-vitamineral.png",
+      "typVyrobku": "chlieb",
+      "zlozenie": "PŠENIČNÁ múka (36%), voda, pekárska zmes [RAŽNÁ múka, JAČMENNÝ slad, PŠENIČNÉ vločky, sušený RAŽNÝ kvas, slnečnicové semená, ľanové semená, SEZAMOVÉ semená, OVSENÉ vločky, RAŽNÉ vločky, kukuričná krupica, ŠPALDOVÉ vločky, tekvicové semená, chlebové korenie, zmes vitamínov a minerálov (fosforečnan železitý, maltodextrín, síran zinočnatý monohydrát, vitamín B3 (niacín), vitamín B5 (kyselina pantoténová), vitamín B6 (pyridoxín hydrochlorid), vitamín B9 (kyselina listová), vitamín B7 (biotín), vitamín B12 (kyanokobalamín)], droždie, soľ jedlá [jedlá soľ (99,6%), jodičnan draselný], zlepšujúci pekársky prípravok (PŠENIČNÁ múka, PŠENIČNÝ lepok, emulgátor: E471; múku upravujúca látka: kyselina askorbová; enzýmy).",
+      "posyp": "ľan, amarant, SEZAM, slnečnica, maltodextrín",
+      "alergeny": "SÓJU, MLIEKO",
+      "nutricne": {
+        "energiaKj": 1146,
+        "energiaKcal": 273,
+        "tuky": "3,8 g",
+        "nasMastneKys": "0,45 g",
+        "sacharidy": "53 g",
+        "cukry": "0,9 g",
+        "bielkoviny": "7,5 g",
+        "sol": "1,36 g"
+      },
+      "gramaz": "250g"
+    },
+    {
+      "slug": "sendvic",
+      "name": "Sendvič 320g",
+      "category": "specialne-pecivo",
+      "image": "https://res.cloudinary.com/dl6xldrhk/image/upload/v1781533461/kralovska-pekaren/products/sendvic.jpg",
+      "gramaz": "320g"
+    },
+    {
+      "slug": "sezamovy-bochnik",
+      "name": "Sezamový bochník 125g",
+      "category": "specialne-pecivo",
+      "image": "https://res.cloudinary.com/dl6xldrhk/image/upload/v1781533462/kralovska-pekaren/products/sezamovy-bochnik.jpg",
+      "zlozenie": "PŠENIČNÁ MÚKA, voda, droždie, rastlinný olej (slnečnicový), SEZAMOVÉ semená, jódovaná soľ, enzýmy (obsahujú LEPOK), múku upravujúca látka: E300",
+      "nutricne": {
+        "energiaKj": 1297,
+        "energiaKcal": 308,
+        "tuky": "4,6 g",
+        "nasMastneKys": "0,8 g",
+        "sacharidy": "55 g",
+        "cukry": "2,4 g",
+        "bielkoviny": "10 g",
+        "sol": "1,5 g"
+      },
+      "gramaz": "125g"
+    },
+    {
+      "slug": "zemiakovy-chlieb",
+      "name": "Zemiakový chlieb",
+      "category": "specialne-pecivo",
+      "image": "https://res.cloudinary.com/dl6xldrhk/image/upload/v1781533468/kralovska-pekaren/products/zemiakovy-chlieb.png",
+      "typVyrobku": "chlieb",
+      "zlozenie": "PŠENIČNÁ múka (49%), voda, RAŽNÁ múka (11%), jedlá soľ, droždie, zemiaková múka (1%), pekársky prípravok (modifikovaný škrob E1414, enzýmy, antioxidant: E300; rastlinný olej repkový).",
+      "alergeny": "ORECHY, SEZAM, VAJCIA a MLIEKO",
+      "nutricne": {
+        "energiaKj": 1059,
+        "energiaKcal": 253,
+        "tuky": "1,1 g",
+        "nasMastneKys": "0,17 g",
+        "sacharidy": "53 g",
+        "cukry": "2 g",
+        "vlaknina": "3,1 g",
+        "bielkoviny": "8,1 g",
+        "sol": "1,5 g"
+      },
+      "gramaz": "—"
+    },
+    {
+      "slug": "bageta-tmava",
+      "name": "Bageta tmavá 200g",
+      "category": "slane-pecivo",
+      "image": "https://res.cloudinary.com/dl6xldrhk/image/upload/v1781533422/kralovska-pekaren/products/bageta-tmava.png",
+      "zlozenie": "PŠENIČNÁ MÚKA, voda, pekársky prípravok (SÓJOVÝ šrot, PŠENIČNÁ múka, PŠENIČNÉ vločky, PŠENIČNÝ LEPOK, JAČMENNÝ slad karamelový mletý, RAŽNÉ vločky, soľ, sušená SRVÁTKA, PŠENIČNÁ pražená sladová múka, pohánka mletá, rasca, kyselina: E330, emulgátory: E472e, E471, protihrudkujúca látka: E341, PŠENIČNÁ bobtnavá celozrnná múka, stabilizátor: E412, JAČMENNÁ sladová múka, kypriaca látka: E500(ii), enzýmy, múku upravujúca látka: E300), droždie, rastlinný olej (slnečnicový), jódovaná soľ, enzýmy (obsahujú LEPOK), múku upravujúca látka: E300",
+      "nutricne": {
+        "energiaKj": 1136,
+        "energiaKcal": 269,
+        "tuky": "3,5 g",
+        "nasMastneKys": "0,6 g",
+        "sacharidy": "50 g",
+        "cukry": "2,6 g",
+        "vlaknina": "3,4 g",
+        "bielkoviny": "11 g",
+        "sol": "1,5 g"
+      },
+      "gramaz": "200g"
+    },
+    {
+      "slug": "francuzska-bageta",
+      "name": "Francúzska bageta 150g",
+      "category": "slane-pecivo",
+      "image": "https://res.cloudinary.com/dl6xldrhk/image/upload/v1781533435/kralovska-pekaren/products/francuzska-bageta.png",
+      "gramaz": "150g"
+    },
+    {
+      "slug": "kornspitz",
+      "name": "Kornspitz 60g",
+      "category": "slane-pecivo",
+      "image": "https://res.cloudinary.com/dl6xldrhk/image/upload/v1781533438/kralovska-pekaren/products/kornspitz.png",
+      "gramaz": "60g"
+    },
+    {
+      "slug": "pletenka",
+      "name": "Pletenka 150g",
+      "category": "slane-pecivo",
+      "image": "https://res.cloudinary.com/dl6xldrhk/image/upload/v1781533459/kralovska-pekaren/products/pletenka.png",
+      "zlozenie": "PŠENIČNÁ MÚKA, voda, droždie, rastlinný olej (slnečnicový), SEZAMOVÉ semená, jódovaná soľ, enzýmy (obsahujú LEPOK), múku upravujúca látka: E300",
+      "nutricne": {
+        "energiaKj": 1297,
+        "energiaKcal": 308,
+        "tuky": "4,6 g",
+        "nasMastneKys": "0,8 g",
+        "sacharidy": "55 g",
+        "cukry": "2,4 g",
+        "bielkoviny": "10 g",
+        "sol": "1,5 g"
+      },
+      "gramaz": "150g"
+    },
+    {
+      "slug": "rozok-slany",
+      "name": "Rožok slaný 50g",
+      "category": "slane-pecivo",
+      "image": "https://res.cloudinary.com/dl6xldrhk/image/upload/v1781533459/kralovska-pekaren/products/rozok-slany.png",
+      "zlozenie": "PŠENIČNÁ MÚKA, voda, droždie, rastlinný olej (slnečnicový), soľ, jódovaná soľ, rasca, enzýmy (obsahujú LEPOK), múku upravujúca látka: E300",
+      "nutricne": {
+        "energiaKj": 1256,
+        "energiaKcal": 297,
+        "tuky": "3,7 g",
+        "nasMastneKys": "0,6 g",
+        "sacharidy": "55 g",
+        "cukry": "2,3 g",
+        "bielkoviny": "9,7 g",
+        "sol": "3,4 g"
+      },
+      "gramaz": "50g"
+    },
+    {
+      "slug": "zemla-50g",
+      "name": "Žemľa 50g",
+      "category": "slane-pecivo",
+      "image": "https://res.cloudinary.com/dl6xldrhk/image/upload/v1781533469/kralovska-pekaren/products/zemla-50g.png",
+      "zlozenie": "PŠENIČNÁ MÚKA, voda, droždie, rastlinný olej (slnečnicový), soľ, jódovaná soľ, rasca, enzýmy (obsahujú LEPOK), múku upravujúca látka: E300",
+      "nutricne": {
+        "energiaKj": 1256,
+        "energiaKcal": 297,
+        "tuky": "3,7 g",
+        "nasMastneKys": "0,6 g",
+        "sacharidy": "55 g",
+        "cukry": "2,3 g",
+        "bielkoviny": "9,7 g",
+        "sol": "3,4 g"
+      },
+      "gramaz": "50g"
+    },
+    {
+      "slug": "zemla-70g",
+      "name": "Žemľa 70g",
+      "category": "slane-pecivo",
+      "image": "https://res.cloudinary.com/dl6xldrhk/image/upload/v1781533470/kralovska-pekaren/products/zemla-70g.png",
+      "gramaz": "70g"
+    },
+    {
+      "slug": "anglicky-rozok",
+      "name": "Anglický rožok 70g",
+      "category": "slane-pecivo",
+      "image": "https://res.cloudinary.com/dl6xldrhk/image/upload/v1781533420/kralovska-pekaren/products/anglicky-rozok.png",
+      "gramaz": "70g"
+    },
+    {
+      "slug": "banquet-pagac-slany-100ks",
+      "name": "Banquet pagáč slaný 100ks",
+      "category": "slane-pecivo",
+      "image": "https://res.cloudinary.com/dl6xldrhk/image/upload/v1781533423/kralovska-pekaren/products/banquet-pagac-slany-100ks.png",
+      "gramaz": "100ks"
+    },
+    {
+      "slug": "banquet-pagac-slany-50ks",
+      "name": "Banquet pagáč slaný 50ks x 8g",
+      "category": "slane-pecivo",
+      "image": "https://res.cloudinary.com/dl6xldrhk/image/upload/v1781533423/kralovska-pekaren/products/banquet-pagac-slany-50ks.png",
+      "gramaz": "50ksx8g"
+    },
+    {
+      "slug": "cesnakovy-uzol",
+      "name": "Cesnakový uzol 100g",
+      "category": "slane-pecivo",
+      "image": "https://res.cloudinary.com/dl6xldrhk/image/upload/v1781533433/kralovska-pekaren/products/cesnakovy-uzol.png",
+      "zlozenie": "PŠENIČNÁ MÚKA, voda, rastlinné oleje a tuky (palmové), cesnak (13,0%), rastlinný olej (slnečnicový), cukor, droždie, pasterizovaná VAJEČNÁ MELANŽ, SUŠENÁ SRVÁTKA, jódovaná soľ, soľ, emulgátor: E472e, E471, múku upravujúca látka: E300, zahusťovadlo: E412, dextróza, protihrudkovacia látka: E170,kyselina: E330, rastlinný olej (palmový olej), arómy, farbivo: E160a, enzýmy",
+      "nutricne": {
+        "energiaKj": 1343,
+        "energiaKcal": 321,
+        "tuky": "16 g",
+        "nasMastneKys": "6,3 g",
+        "sacharidy": "36 g",
+        "cukry": "4,7 g",
+        "bielkoviny": "7 g",
+        "sol": "1,3 g"
+      },
+      "gramaz": "100g"
+    },
+    {
+      "slug": "pagac-oskvarkovy-40g",
+      "name": "Pagáč oškvarkový 40g",
+      "category": "slane-pecivo",
+      "image": "https://res.cloudinary.com/dl6xldrhk/image/upload/v1781533450/kralovska-pekaren/products/pagac-oskvarkovy-40g.png",
+      "zlozenie": "PŠENIČNÁ MÚKA, voda, rastlinné oleje a tuky (palmové), bravčové oškvarky (12,6%), pasterizovaná VAJEČNÁ MELANŽ, droždie, SUŠENÁ SRVÁTKA, jódovaná soľ, emulgátor: E472e,E471, múku upravujúca látka: E300, kyselina: E330, zahusťovadlo: E412, dextróza, protihrudkovacia látka: E170, rastlinný olej (palmový olej), aróma, farbivo: E160a, enzýmy",
+      "nutricne": {
+        "energiaKj": 1550,
+        "energiaKcal": 371,
+        "tuky": "22 g",
+        "nasMastneKys": "10 g",
+        "sacharidy": "31 g",
+        "cukry": "2,8 g",
+        "bielkoviny": "11 g",
+        "sol": "1,3 g"
+      },
+      "gramaz": "40g"
+    },
+    {
+      "slug": "pagac-oskvarkovy-85g",
+      "name": "Pagáč oškvarkový 85g",
+      "category": "slane-pecivo",
+      "image": "https://res.cloudinary.com/dl6xldrhk/image/upload/v1781533451/kralovska-pekaren/products/pagac-oskvarkovy-85g.png",
+      "zlozenie": "PŠENIČNÁ MÚKA, voda, rastlinné oleje a tuky (palmové), bravčové oškvarky (12,6%), pasterizovaná VAJEČNÁ MELANŽ, droždie, SUŠENÁ SRVÁTKA, jódovaná soľ, soľ, rasca celá, emulgátor: E472e,E471, múku upravujúca látka: E300, kyselina: E330, zahusťovadlo: E412, dextróza, protihrudkovacia látka: E170, rastlinný olej (palmový olej), aróma, farbivo: E160a, enzýmy",
+      "nutricne": {
+        "energiaKj": 1535,
+        "energiaKcal": 368,
+        "tuky": "22 g",
+        "nasMastneKys": "9,9 g",
+        "sacharidy": "31 g",
+        "cukry": "2,8 g",
+        "bielkoviny": "11 g",
+        "sol": "2,2 g"
+      },
+      "gramaz": "85g"
+    },
+    {
+      "slug": "pizza-rozok",
+      "name": "Pizza rožok 70g",
+      "category": "slane-pecivo",
+      "image": "https://res.cloudinary.com/dl6xldrhk/image/upload/v1781533455/kralovska-pekaren/products/pizza-rozok.png",
+      "zlozenie": "PŠENIČNÁ MÚKA, náplň 21% ( paradajkový pretlak, voda, cukor, modifikovaný škrob: E1422, ocot kvasný liehový (prírodne fermentovaný), repkový olej, sušená cibuľa, soľ jedlá jodidovaná, zmes korenia, konzrvačná látka: E202, chilli mleté), voda, syr ( pasterizované mlieko, jedlá soľ, bakteriálna mliečna kultúra, stabilizátor: E509, mikrobiálne syridlo), droždie, rastlinný olej (slnečnicový), jódovaná soľ, enzýmy (obsahujú LEPOK), múku upravujúca látka: E300",
+      "nutricne": {
+        "energiaKj": 1220,
+        "energiaKcal": 290,
+        "tuky": "7,7 g",
+        "nasMastneKys": "3,9 g",
+        "sacharidy": "43 g",
+        "cukry": "7,6 g",
+        "bielkoviny": "12 g",
+        "sol": "1,8 g"
+      },
+      "gramaz": "70g"
+    },
+    {
+      "slug": "rozok-velky",
+      "name": "Rožok veľký 100g",
+      "category": "slane-pecivo",
+      "image": "https://res.cloudinary.com/dl6xldrhk/image/upload/v1781533460/kralovska-pekaren/products/rozok-velky.png",
+      "zlozenie": "PŠENIČNÁ MÚKA, voda, droždie, rastlinný olej (slnečnicový), soľ, jódovaná soľ, rasca, enzýmy (obsahujú LEPOK), múku upravujúca látka: E300",
+      "nutricne": {
+        "energiaKj": 1256,
+        "energiaKcal": 297,
+        "tuky": "3,7 g",
+        "nasMastneKys": "0,6 g",
+        "sacharidy": "55 g",
+        "cukry": "2,3 g",
+        "bielkoviny": "9,7 g",
+        "sol": "3,4 g"
+      },
+      "gramaz": "100g"
+    },
+    {
+      "slug": "bratislavsky-rozok-makovy",
+      "name": "Bratislavský rožok makový 50g",
+      "category": "sladke-pecivo",
+      "image": "https://res.cloudinary.com/dl6xldrhk/image/upload/v1781533424/kralovska-pekaren/products/bratislavsky-rozok-makovy.png",
+      "zlozenie": "maková náplň 46% [mak modrý mletý 50%, cukor, pitná voda, sušené plnotučné MLIEKO, strúhanka (PŠENIČNÁ múka, voda, cukor, droždie, jedlá soľ), cukor vanilínový (cukor, aróma 0,2%), citrónová kôra], PŠENIČNÁ múka 26%, bravčová masť, spracované VAJEČNÉ žĺtka (slepačie VAJEČNÉ žĺtka 99%, konzervačná látka E202, regulátor kyslosti E330), voda, cukor, VAJEČNÁ melanž, sušené plnotučné MLIEKO, droždie, jedlá soľ jódovaná (jedlá soľ, jodičnan draselný), citrónová kôra, cukor vanilínový (cukor, aróma 0,2%), mletá škorica",
+      "nutricne": {
+        "energiaKj": 1741,
+        "energiaKcal": 417,
+        "tuky": "25 g",
+        "nasMastneKys": "5,5 g",
+        "sacharidy": "37 g",
+        "cukry": "14 g",
+        "bielkoviny": "9,8 g",
+        "sol": "0,04 g"
+      },
+      "gramaz": "50g"
+    },
+    {
+      "slug": "bratislavsky-rozok-orechovy",
+      "name": "Bratislavský rožok orechový 50g",
+      "category": "sladke-pecivo",
+      "image": "https://res.cloudinary.com/dl6xldrhk/image/upload/v1781533426/kralovska-pekaren/products/bratislavsky-rozok-orechovy.png",
+      "zlozenie": "orechová náplň 46% [VLAŠSKÉ ORECHY 51%, cukor, pitná voda, sušené plnotučné mlieko, strúhanka (pšeničná múka, voda, droždie, jedlá soľ), vanilínový cukor (cukor, aróma ), citrónová kôra], pšeničná múka 26%, bravčová masť, spracované VAJEČNÉ žĺtka (slepačie VAJEČNÉ žĺtka, konzervačná látka E202, regulátor kyslosti E330), pitná voda, cukor, VAJEČNÁ melanž, sušené polotučné MLIEKO, droždie, jedlá soľ jódovaná (jedlá soľ, jodičnan draselný), citrónová kôra, vanilínový cukor ( cukor, aróma 0,2%), škorica mletá",
+      "nutricne": {
+        "energiaKj": 1716,
+        "energiaKcal": 411,
+        "tuky": "25 g",
+        "nasMastneKys": "5,5 g",
+        "sacharidy": "37 g",
+        "cukry": "14 g",
+        "bielkoviny": "8,9 g",
+        "sol": "0,04 g"
+      },
+      "gramaz": "50g"
+    },
+    {
+      "slug": "buchta-tvarohova-triangel",
+      "name": "Buchta tvarohová triangel 70g",
+      "category": "sladke-pecivo",
+      "image": "https://res.cloudinary.com/dl6xldrhk/image/upload/v1781535487/kralovska-pekaren/products/buchta-tvarohova-triangel.png",
+      "zlozenie": "Tvarohová náplň 49% ( TVAROH hrudkovitý 65,7% (pasterizované kravské MLIEKO, bakteriálne kultúry), cukor, zemiakové vločky, prírodná vláknina, pasterizovaná VAJEČNÁ MELANŽ, slnečnicový olej, sušené hrozienka, arómy), PŠENIČNÁ MÚKA, voda, cukor, MASLO, rastlinný olej (slnečnicový), droždie, rafinovaný repkový olej, jódovaná soľ, emulgátor: E471, enzým (obsahuje GLUTÉN), antioxidant: E300",
+      "nutricne": {
+        "energiaKj": 1136,
+        "energiaKcal": 271,
+        "tuky": "10 g",
+        "nasMastneKys": "2,9 g",
+        "sacharidy": "35 g",
+        "cukry": "14 g",
+        "bielkoviny": "9,3 g",
+        "sol": "0,43 g"
+      },
+      "gramaz": "70g"
+    },
+    {
+      "slug": "buchticky-makove",
+      "name": "Buchtičky makové 320g",
+      "category": "sladke-pecivo",
+      "image": "https://res.cloudinary.com/dl6xldrhk/image/upload/v1781533428/kralovska-pekaren/products/buchticky-makove.png",
+      "gramaz": "320g"
+    },
+    {
+      "slug": "buchticky-slivkove",
+      "name": "Buchtičky slivkové 320g",
+      "category": "sladke-pecivo",
+      "image": "https://res.cloudinary.com/dl6xldrhk/image/upload/v1781533430/kralovska-pekaren/products/buchticky-slivkove.png",
+      "gramaz": "320g"
+    },
+    {
+      "slug": "buchticky-tvarohove",
+      "name": "Buchtičky tvarohové 320g",
+      "category": "sladke-pecivo",
+      "image": "https://res.cloudinary.com/dl6xldrhk/image/upload/v1781533431/kralovska-pekaren/products/buchticky-tvarohove.png",
+      "gramaz": "320g"
+    },
+    {
+      "slug": "buchticky-tvarohovo-marhulove",
+      "name": "Buchtičky tvarohovo/marhuľové 320g",
+      "category": "sladke-pecivo",
+      "image": "https://res.cloudinary.com/dl6xldrhk/image/upload/v1781533429/kralovska-pekaren/products/buchticky-tvarohovo-marhulove.png",
+      "gramaz": "320g"
+    },
+    {
+      "slug": "kralovske-rozky-mak",
+      "name": "Kráľovské rožky mak 40g",
+      "category": "sladke-pecivo",
+      "image": "https://res.cloudinary.com/dl6xldrhk/image/upload/v1781533439/kralovska-pekaren/products/kralovske-rozky-mak.png",
+      "zlozenie": "Maková náplň 38,4% ( Voda, cukor, semená maku modrého (25,2%), PŠENIČNÁ MÚKA, cukor krupica, droždie, konzervačná látka: E200 Kyselina sorbová, aróma etylvanilín), PŠENIČNÁ MÚKA, voda, rastlinné oleje a tuky (palmové), pasterizovaná VAJEČNÁ melanž, rastlinný olej (slnečnicový), cukor, droždie, pasterizovaná VAJEČNÁ MELANŽ, SUŠENÁ SRVÁTKA, jódovaná soľ, emulgátor: E472e, E471, múku upravujúca látka: E300, zahusťovadlo: E412, dextróza, protihrudkovacia látka: E170,kyselina: E330, rastlinný olej (palmový olej), arómy, farbivo: E160a, enzýmy",
+      "nutricne": {
+        "energiaKj": 1322,
+        "energiaKcal": 317,
+        "tuky": "22 g",
+        "nasMastneKys": "6,6 g",
+        "sacharidy": "25 g",
+        "cukry": "19 g",
+        "bielkoviny": "4,9 g",
+        "sol": "0,77 g"
+      },
+      "gramaz": "40g"
+    },
+    {
+      "slug": "kralovske-rozky-orech",
+      "name": "Kráľovské rožky orech 40g",
+      "category": "sladke-pecivo",
+      "image": "https://res.cloudinary.com/dl6xldrhk/image/upload/v1781533441/kralovska-pekaren/products/kralovske-rozky-orech.png",
+      "zlozenie": "Orechová náplň 38,4% ( VLAŠSKÉ ORECHY (33,8%), cukor, voda, PŠENIČNÁ MÚKA, cukor krupica, droždie, slepačie VAJEČNÉ bielka, konzervačná látka: E200 Kyselina sorbová, aróma etylvanilín, konzervačná látka: E202 Sorban draselný, regulátory kyslosti: E270 kyselina mliečna, E331 citrany sodné, stabilizátory: E415 xantánová guma, E520 síran hlinitý), PŠENIČNÁ MÚKA, voda, rastlinné oleje a tuky (palmové), pasterizovaná VAJEČNÁ melanž, rastlinný olej (slnečnicový), cukor, droždie, pasterizovaná VAJEČNÁ MELANŽ, SUŠENÁ SRVÁTKA, jódovaná soľ, emulgátor: E472e, E471, múku upravujúca látka: E300, zahusťovadlo: E412, dextróza, protihrudkovacia látka: E170,kyselina: E330, rastlinný olej (palmový olej), arómy, farbivo: E160a, enzýmy",
+      "nutricne": {
+        "energiaKj": 1469,
+        "energiaKcal": 350,
+        "tuky": "18 g",
+        "nasMastneKys": "5 g",
+        "sacharidy": "39 g",
+        "cukry": "15 g",
+        "bielkoviny": "7 g",
+        "sol": "0,55 g"
+      },
+      "gramaz": "40g"
+    },
+    {
+      "slug": "moravsky-kolac-mak",
+      "name": "Moravský koláč mak 100g",
+      "category": "sladke-pecivo",
+      "image": "https://res.cloudinary.com/dl6xldrhk/image/upload/v1781533444/kralovska-pekaren/products/moravsky-kolac-mak.png",
+      "zlozenie": "Maková náplň 45,8% ( Voda, cukor, semená maku modrého (25,2%), PŠENIČNÁ MÚKA, cukor krupica, droždie, konzervačná látka: E200 Kyselina sorbová, aróma etylvanilín), PŠENIČNÁ MÚKA, voda, cukor, MASLO, pasterizovaná VAJEČNÁ melanž, droždie, rafinovaný repkový olej, jódovaná soľ, emulgátor: E471, enzým (obsahuje GLUTÉN), antioxidant: E300",
+      "nutricne": {
+        "energiaKj": 1305,
+        "energiaKcal": 311,
+        "tuky": "11 g",
+        "nasMastneKys": "2,6 g",
+        "sacharidy": "44 g",
+        "cukry": "18 g",
+        "bielkoviny": "7,1 g",
+        "sol": "0,42 g"
+      },
+      "gramaz": "100g"
+    },
+    {
+      "slug": "moravsky-kolac-orech",
+      "name": "Moravský koláč orech 100g",
+      "category": "sladke-pecivo",
+      "image": "https://res.cloudinary.com/dl6xldrhk/image/upload/v1781533444/kralovska-pekaren/products/moravsky-kolac-orech.png",
+      "zlozenie": "Orechová náplň 45,8% ( VLAŠSKÉ ORECHY (33,8%), cukor (27,0%), voda, PŠENIČNÁ MÚKA, cukor krupica, droždie, slepačie VAJEČNÉ bielka (0,4%), konzervačná látka: E200 Kyselina sorbová, aróma etylvanilín, konzervačná látka: E202 Sorban draselný, regulátory kyslosti: E270 kyselina mliečna, E331 citrany sodné, stabilizátory: E415 xantánová guma, E520 síran hlinitý), PŠENIČNÁ MÚKA, voda, cukor, MASLO, pasterizovaná VAJEČNÁ melanž, droždie, rafinovaný repkový olej, jódovaná soľ, emulgátor: E471, enzým (obsahuje GLUTÉN), antioxidant: E300",
+      "nutricne": {
+        "energiaKj": 1426,
+        "energiaKcal": 339,
+        "tuky": "14 g",
+        "nasMastneKys": "2,9 g",
+        "sacharidy": "46 g",
+        "cukry": "19 g",
+        "bielkoviny": "7,1 g",
+        "sol": "0,42 g"
+      },
+      "gramaz": "100g"
+    },
+    {
+      "slug": "moravsky-kolac-tvaroh",
+      "name": "Moravský koláč tvaroh 100g",
+      "category": "sladke-pecivo",
+      "image": "https://res.cloudinary.com/dl6xldrhk/image/upload/v1781533445/kralovska-pekaren/products/moravsky-kolac-tvaroh.png",
+      "zlozenie": "Tvarohová náplň 45,8% ( TVAROH hrudkovitý 65,7% (pasterizované kravské MLIEKO, bakteriálne kultúry), cukor, zemiakové vločky, prírodná vláknina, pasterizovaná VAJEČNÁ MELANŽ, slnečnicový olej, sušené hrozienka, arómy), PŠENIČNÁ MÚKA, voda, cukor, MASLO, džem (Jahodová pulpa (50,00%), cukor, jablková dreň (2,50%), želírujúca látka: E440, regulátor kyslosti: E330 Kyselina citrónová, koncentrát z bazy čiernej, jahodová aróma, konzervačná látka: E202 Sorban draselný), pasterizovaná VAJEČNÁ melanž, droždie, rafinovaný repkový olej, jódovaná soľ, emulgátor: E471, enzým (obsahuje GLUTÉN), antioxidant: E300",
+      "nutricne": {
+        "energiaKj": 874,
+        "energiaKcal": 211,
+        "tuky": "7,1 g",
+        "nasMastneKys": "2,1 g",
+        "sacharidy": "29 g",
+        "cukry": "8 g",
+        "bielkoviny": "7 g",
+        "sol": "0,48 g"
+      },
+      "gramaz": "100g"
+    },
+    {
+      "slug": "muffin-ribezlovy",
+      "name": "Muffin ríbezľový 110g",
+      "category": "sladke-pecivo",
+      "image": "https://res.cloudinary.com/dl6xldrhk/image/upload/v1781533446/kralovska-pekaren/products/muffin-ribezlovy.png",
+      "zlozenie": "Voda, cukor, pekársky prípravok /cukor, modifikovaný škrob zemiakový E1414, sušené vaječné bielka, kypriace látky (E450i, E500ii), emulgátory (E472b, E477), glukózový sirup, sušené mlieko odtučnené, soľ, zahusťovadlo E415, farbivo E160a, aróma, regulátor kyslosti E450/, pšeničná múka, vaječná melanž, pšeničný škrob, rastlinný olej repkový, červené ríbezle 11,1%, stolný margarín /rastlinný tuk palmový, čiastočne hydrogenovaný rastlinný tuk palmový, voda, rastlinný olej repkový, jedlá soľ, emulgátory (E322, E471), konzervačná látka E200/.",
+      "nutricne": {
+        "energiaKj": 1194,
+        "energiaKcal": 284,
+        "tuky": "11 g",
+        "nasMastneKys": "1,8 g",
+        "sacharidy": "43 g",
+        "cukry": "21 g",
+        "vlaknina": "1,9 g",
+        "bielkoviny": "4,3 g",
+        "sol": "1 g"
+      },
+      "gramaz": "110g"
+    },
+    {
+      "slug": "muffin-svetly",
+      "name": "Muffin svetlý 110g",
+      "category": "sladke-pecivo",
+      "image": "https://res.cloudinary.com/dl6xldrhk/image/upload/v1781533447/kralovska-pekaren/products/muffin-svetly.png",
+      "zlozenie": "Voda, cukor, pekársky prípravok /cukor, modifikovaný škrob zemiakový E1414, sušené vaječné bielka, kypriace látky (E450i, E500ii), emulgátory (E472b, E477), glukózový sirup, sušené mlieko odtučnené, soľ, zahusťovadlo E415, farbivo E160a, aróma, regulátor kyslosti E450/, pšeničná múka, vaječná melanž, pšeničný škrob, rastlinný olej repkový, poleva tmavá /cukor, čiastočne hydrogenovaný rastlinný tuk palmový, čiastočne hydrogenované rastlinné oleje (úplne rafinovaný sójový olej, olej z orechov Shea), kakaový prášok, emulgátory (repkový lecitín, polyglycerolpolyricínoleát), aróma čokoládová/, stolný margarín /rastlinný tuk palmový, čiastočne hydrogenovaný rastlinný tuk palmový, voda, rastlinný olej repkový, jedlá soľ, emulgátory (E322, E471), konzervačná látka E200/.",
+      "nutricne": {
+        "energiaKj": 1419,
+        "energiaKcal": 341,
+        "tuky": "14 g",
+        "nasMastneKys": "3 g",
+        "sacharidy": "48 g",
+        "cukry": "25 g",
+        "bielkoviny": "4,5 g",
+        "sol": "0,88 g"
+      },
+      "gramaz": "110g"
+    },
+    {
+      "slug": "osie-hniezdo",
+      "name": "Osie hniezdo 80g",
+      "category": "sladke-pecivo",
+      "image": "https://res.cloudinary.com/dl6xldrhk/image/upload/v1781533448/kralovska-pekaren/products/osie-hniezdo.png",
+      "zlozenie": "Škoricová náplň 37,6% ( cukor, sušená SRVÁTKA, PŠENIČNÁ vláknina, modifikovaný škrob ( zemiakový), sušená VAJEČNÁ melanž, cukor vanilínový ( cukor, aróma ethylvanilín), škorica mletá 3%, instantná ryžová múka), PŠENIČNÁ MÚKA, voda, cukor, MASLO, ORECHY vlašské, pasterizovaná VAJEČNÁ melanž, droždie, rafinovaný repkový olej, jódovaná soľ, emulgátor: E471, enzým (obsahuje GLUTÉN), antioxidant: E300",
+      "nutricne": {
+        "energiaKj": 1410,
+        "energiaKcal": 334,
+        "tuky": "5,7 g",
+        "nasMastneKys": "1,9 g",
+        "sacharidy": "62 g",
+        "cukry": "31 g",
+        "bielkoviny": "7,8 g",
+        "sol": "0,58 g"
+      },
+      "gramaz": "80g"
+    },
+    {
+      "slug": "osie-hniezdo-spaldove",
+      "name": "Osie hniezdo špaldové",
+      "category": "sladke-pecivo",
+      "image": "https://res.cloudinary.com/dl6xldrhk/image/upload/v1781533449/kralovska-pekaren/products/osie-hniezdo-spaldove.png",
+      "zlozenie": "Voda, PŠENIČNÁ MÚKA, cukor, ŠPALDOVÁ MÚKA (11,4%), rastlinné oleje a tuky (palmové), hnedý cukor, slnečnicové semená, ŠPALDOVÉ VLOČKY (1,9%), droždie, VLAŠSKÉ ORECHY, modifikovaný škrob: E1414, rastlinné olej (repkový), ľanové semená, rastlinný olej (slnečnicový), fruktóza, kukuričný škrob, JAČMENNÁ SLADOVÁ MÚKA, rastlinný olej (palmový olej), kukuričná múka, soľ, RAŽ, citrusová vláknina, dextróza, SUŠENÁ SRVÁTKA, SUŠENÝ RAŽNÝ KVAS, LAKTÓZA, sušená sladká SRVÁTKA, glukózový sirup, enzým (obsahuje PŠENICU), prírodná aróma, múku upravujúca látka: E300, stabilizátory: E450i, E401, E450, javorový sirup, kyselina: E516, E330, MLIEČNA bielkovina, farbivo: E160a, emulgátor: E472a, E471, aróma",
+      "nutricne": {
+        "energiaKj": 1292,
+        "energiaKcal": 308,
+        "tuky": "12 g",
+        "nasMastneKys": "4,3 g",
+        "sacharidy": "44 g",
+        "cukry": "20 g",
+        "bielkoviny": "5,1 g",
+        "sol": "0,31 g"
+      },
+      "gramaz": "—"
+    },
+    {
+      "slug": "parene-buchty-1ks",
+      "name": "Parené buchty so slivkovou náplňou 1ks 60g",
+      "category": "sladke-pecivo",
+      "image": "https://res.cloudinary.com/dl6xldrhk/image/upload/v1781533453/kralovska-pekaren/products/parene-buchty-3ks.png",
+      "typVyrobku": "ostatný pekársky výrobok",
+      "zlozenie": "PŠENIČNÁ múka, voda, slivková náplň (21,8%) [slivkový lekvár (54,5% sliviek/1kg hotového výrobku), pitná voda, cukor, jablkové pyré, modifikovaný škrob, farbivo: obyčajný kulér, zahusťovadlo: celulózy, kyselina: kyselina citrónová, aróma, konzervačná látka: sorban draselný], VAJEČNÁ melanž pasterizovaná, rastlinný olej slnečnicový, PŠENIČNÁ múka - tepelne upravená, droždie, jedlá soľ [jedlá kamenná soľ (99,6%), jodičnan draselný], enzýmy.",
+      "alergeny": "ORECHY, SEZAM, MLIEKO, SÓJU",
+      "nutricne": {
+        "energiaKj": 962,
+        "energiaKcal": 241,
+        "tuky": "2,8 g",
+        "nasMastneKys": "0,34 g",
+        "sacharidy": "45 g",
+        "cukry": "9,4 g",
+        "bielkoviny": "5,9 g",
+        "sol": "0,83 g"
+      },
+      "gramaz": "1ks"
+    },
+    {
+      "slug": "parene-buchty-3ks",
+      "name": "Parené buchty so slivkovou náplňou 3ks 180g",
+      "category": "sladke-pecivo",
+      "image": "https://res.cloudinary.com/dl6xldrhk/image/upload/v1781533453/kralovska-pekaren/products/parene-buchty-3ks.png",
+      "gramaz": "3ks"
+    },
+    {
+      "slug": "parene-buchty-6ks",
+      "name": "Parené buchty so slivkovou náplňou 6ks 360g",
+      "category": "sladke-pecivo",
+      "image": "https://res.cloudinary.com/dl6xldrhk/image/upload/v1781533454/kralovska-pekaren/products/parene-buchty-6ks.png",
+      "gramaz": "6ks"
+    },
+    {
+      "slug": "pletenec-kakaovy",
+      "name": "Pletenec kakaový 200g",
+      "category": "sladke-pecivo",
+      "image": "https://res.cloudinary.com/dl6xldrhk/image/upload/v1781533456/kralovska-pekaren/products/pletenec-kakaovy.png",
+      "typVyrobku": "jemné pečivo",
+      "zlozenie": "PŠENIČNÁ múka, kakaová náplň (40%) [cukor, sušená SRVÁTKA, kakaový prášok so sníženým obsahom tuku (7,5%), modifikovaný škrob: E1414; acetylovaný diškrobfosfát (zemiakový), nehydrogenovaný rastlinný tuk (palmový), zahusťovadlo: E401; aróma, jedlá soľ jódovaná (jedlá soľ, jodičnan draselný)], voda, cukor, pekárenský prípravok (repkový olej, emulgátor: E471; antioxidant: kyselina askorbová), droždie, tekutá VAJEČNÁ melanž, stolný margarín (palmový tuk, čiastočne hydrogenovaný palmový tuk, voda, repkový olej, jedlá soľ, konzervačná látka: kyselina sorbová), jedlá soľ jódovaná (jedlá soľ, jodičnan draselný), konzervačná látka: kyselina sorbová.",
+      "alergeny": "SÓJU, ORECHY, SEZAM",
+      "nutricne": {
+        "energiaKj": 1357,
+        "energiaKcal": 324,
+        "tuky": "5,7 g",
+        "nasMastneKys": "1,3 g",
+        "sacharidy": "59 g",
+        "cukry": "19 g",
+        "bielkoviny": "8,7 g",
+        "sol": "0,77 g"
+      },
+      "gramaz": "200g"
+    },
+    {
+      "slug": "pletenec-makovy",
+      "name": "Pletenec makový 200g",
+      "category": "sladke-pecivo",
+      "image": "https://res.cloudinary.com/dl6xldrhk/image/upload/v1781533456/kralovska-pekaren/products/pletenec-makovy.png",
+      "typVyrobku": "jemné pečivo",
+      "zlozenie": "PŠENIČNÁ múka, maková náplň (40%) [voda, cukor, mak modrý (25,2%), strúhanka (PŠENIČNÁ múka, voda, cukor, droždie, soľ), cukor vanilínový (cukor, aróma), konzervačná látka: E 200), voda, kukuričný škrob, škorica, aróma, voda, kryštálový cukor, tuk (rastlinný olej repkový, emulgátor: E471; antioxidant: E300; enzýmy), droždie, margarín (rastlinný palmový tuk, čiastočne hydrogenovaný rastlinný palmový tuk, rastlinný olej repkový, soľ jedlá, emulgátor: E471; konzervačná látka kyselina sorbová), soľ jedlá, kyselina , VAJCIA.",
+      "alergeny": "ORECHY, SEZAM, SÓJU",
+      "nutricne": {
+        "energiaKj": 1415,
+        "energiaKcal": 338,
+        "tuky": "11 g",
+        "nasMastneKys": "1,5 g",
+        "sacharidy": "57 g",
+        "cukry": "15 g",
+        "bielkoviny": "8,8 g",
+        "sol": "0,75 g"
+      },
+      "gramaz": "200g"
+    },
+    {
+      "slug": "pletenec-orechovy",
+      "name": "Pletenec orechový 200g",
+      "category": "sladke-pecivo",
+      "image": "https://res.cloudinary.com/dl6xldrhk/image/upload/v1781533458/kralovska-pekaren/products/pletenec-orechovy.png",
+      "typVyrobku": "jemné pečivo",
+      "zlozenie": "PŠENIČNÁ múka, orechová náplň (40%) [sekané vlašské ORECHY (20%), žemľová strúhanka (PŠENIČNÁ múka, voda, droždie, jedlá soľ), pekárenský prípravok (PŠENIČNÁ múka, antioxidant kyselina: askorbová), voda, SÓJOVÁ drť, napúčavý škrob, jedlá soľ, regulátor kyslosti: octan vápenatý; aróma (obsahuje MLIEKO, karamel)], voda, cukor, pekárenský prípravok (repkový olej, emulgátor: E471; antioxidant: kyselina askorbová; droždie, VAJEČNÁ melanž tekutá, stolný margarín (palmový tuk, voda, olej repkový, jedlá soľ, konzervačná látka: kyselina sorbová), jedlá soľ jódovaná (jedlá soľ, jodičnan draselný), konzervačná látka: kyselina sorbová.",
+      "alergeny": "SEZAM",
+      "nutricne": {
+        "energiaKj": 1415,
+        "energiaKcal": 345,
+        "tuky": "8,9 g",
+        "nasMastneKys": "1,3 g",
+        "sacharidy": "57 g",
+        "cukry": "17 g",
+        "bielkoviny": "8,9 g",
+        "sol": "0,77 g"
+      },
+      "gramaz": "200g"
+    },
+    {
+      "slug": "siska-kakaova",
+      "name": "Šiška kakaová 60g",
+      "category": "sladke-pecivo",
+      "image": "https://res.cloudinary.com/dl6xldrhk/image/upload/v1781533463/kralovska-pekaren/products/siska-kakaova.jpg",
+      "gramaz": "60g",
+      "typVyrobku": "jemné pečivo",
+      "zlozenie": "Pšeničná múka, voda, pekárenský prípravok: /cukor, sušená vaječná zmes, pšeničná múka, pšeničný lepok, kypriace látky: (E450, E500), soľ, sušená srvátka, emulgátory: (E471, E472e), rastlinný tuk (palmový), aróma, zahusťovadlo: (E466), antioxidant: (E300), farbivo: (E160a)/, droždie, stolný margarín: /rastlinný olej (palmový), (repkový), čiastočne stužený palmový tuk, emulgátory: mono-diglyceridy mastných kyselín (E471), konzervačná látka (E200), regulátor kyslosti: kyselina citrónová (E330), aróma, farbivo: annatto (E160b)/, Náplň: kakaová 30%: modifikovaný škrob E1414, kakaový prášok prírodný 10,4%, mliečna bielkovina, cukor vanilínový, sušený vaječný bielok, pšeničná vláknina.",
+      "posyp": "Poleva: čiastočne hydrogenovaný rastlinný tuk palmový, čiastočne hydrogenované rastlinné oleje: sójový, olej z orechov Shea, kakaový prášok 2%, aróma, práškový cukor.",
+      "alergeny": "orechy a sezam",
+      "nutricne": {
+        "energiaKj": 1041,
+        "energiaKcal": 247,
+        "tuky": "4,9 g",
+        "nasMastneKys": "1,1 g",
+        "sacharidy": "42 g",
+        "cukry": "11 g",
+        "bielkoviny": "7,4 g",
+        "sol": "0,9 g"
+      }
+    },
+    {
+      "slug": "siska-marhulova",
+      "name": "Šiška marhuľová 60g",
+      "category": "sladke-pecivo",
+      "image": "https://res.cloudinary.com/dl6xldrhk/image/upload/v1781534501/kralovska-pekaren/products/siska-marhulova.jpg",
+      "gramaz": "60g",
+      "typVyrobku": "jemné pečivo",
+      "zlozenie": "Pšeničná múka, voda, pekárenský prípravok: /cukor, sušená vaječná zmes, pšeničná múka, pšeničný lepok, kypriace látky:(E450, E500), soľ, sušená srvátka, emulgátory: (E471, E472e), rastlinný tuk (palmový), aróma, zahusťovadlo: (E466), antioxidant: (E300), farbivo: (E160a)/, droždie, stolný margarín: /rastlinný olej (palmový), (repkový), čiastočne stužený palmový tuk, emulgátory: mono-diglyceridy mastných kyselín (E471), konzervačná látka (E200), regulátor kyslosti: kyselina citrónová (E330), aróma, farbivo: annatto (E160b)/, Náplň: marhuľová 30%: pretlak marhuľový a jablkový, modifikovaný škrob E1414, kyselina E330, želírujúca látka E440i, aróma.",
+      "posyp": "práškový cukor",
+      "alergeny": "orechy, vajcia, sóju a sezam",
+      "nutricne": {
+        "energiaKj": 1224,
+        "energiaKcal": 292,
+        "tuky": "10,0 g",
+        "nasMastneKys": "4,9 g",
+        "sacharidy": "45 g",
+        "cukry": "17 g",
+        "vlaknina": "1,4 g",
+        "bielkoviny": "6,1 g",
+        "sol": "0,8 g"
+      }
+    },
+    {
+      "slug": "makovy-rozok",
+      "name": "Sladký makový rožok 60g",
+      "category": "sladke-pecivo",
+      "image": "https://res.cloudinary.com/dl6xldrhk/image/upload/v1781534647/kralovska-pekaren/products/makovy-rozok.jpg",
+      "gramaz": "60g",
+      "typVyrobku": "jemné pečivo",
+      "zlozenie": "Múka pšeničná, voda, cukor kryštálový, droždie, rastlinný olej (repkový), vaječná melanž: /celé vajcia pasterizované, kyselina E330/, soľ jedlá, zlepšujúci prípravok: /rastlinné oleje repkový a palmový, pšeničná sladová múka, emulgátory E471, E472e, zahusťovadlo E412, jačmenná sladová múka, múku upravujúca látka E300, pšeničný enzým, regulátor kyslosti E516/.",
+      "posyp": "mak modrý",
+      "alergeny": "orechy, sóju, mlieko a sezam",
+      "nutricne": {
+        "energiaKj": 1546,
+        "energiaKcal": 368,
+        "tuky": "11,0 g",
+        "nasMastneKys": "0,9 g",
+        "sacharidy": "57 g",
+        "cukry": "11 g",
+        "bielkoviny": "10,0 g",
+        "sol": "0,67 g"
+      }
+    },
+    {
+      "slug": "makovy-uzol",
+      "name": "Sladký makový uzol 60g",
+      "category": "sladke-pecivo",
+      "image": "https://res.cloudinary.com/dl6xldrhk/image/upload/v1781534675/kralovska-pekaren/products/makovy-uzol.jpg",
+      "zlozenie": "Múka pšeničná, voda, cukor kryštálový, droždie, rastlinný olej (repkový), vaječná melanž: /celé vajcia pasterizované, kyselina E330/, soľ jedlá, zlepšujúci prípravok: /rastlinné oleje repkový a palmový, pšeničná sladová múka, emulgátory E471, E472e, zahusťovadlo E412, jačmenná sladová múka, múku upravujúca látka E300, pšeničný enzým, regulátor kyslosti E516/.",
+      "nutricne": {
+        "energiaKj": 1546,
+        "energiaKcal": 368,
+        "tuky": "11,0 g",
+        "nasMastneKys": "0,9 g",
+        "sacharidy": "57 g",
+        "cukry": "11 g",
+        "bielkoviny": "10,0 g",
+        "sol": "0,67 g"
+      },
+      "gramaz": "60g",
+      "typVyrobku": "jemné pečivo",
+      "posyp": "mak modrý",
+      "alergeny": "orechy, sóju, mlieko a sezam"
+    },
+    {
+      "slug": "vianocka",
+      "name": "Vianočka 320g",
+      "category": "sladke-pecivo",
+      "image": "https://res.cloudinary.com/dl6xldrhk/image/upload/v1781535495/kralovska-pekaren/products/vianocka.jpg",
+      "typVyrobku": "jemné pečivo",
+      "zlozenie": "PŠENIČNÁ múka, voda, cukor, MASLO (4,6%), droždie, rafinovaný repkový olej, pasterizovaná VAJEČNÁ melanž, jodidovaná soľ, emulgátor: E471; enzým (obsahuje GLUTÉN), antioxidant: E300.",
+      "alergeny": "ORECHY, SEZAM, MLIEKO, SÓJU",
+      "nutricne": {
+        "energiaKj": 1226,
+        "energiaKcal": 291,
+        "tuky": "7,2 g",
+        "nasMastneKys": "2,9 g",
+        "sacharidy": "48 g",
+        "cukry": "9,2 g",
+        "bielkoviny": "7,5 g",
+        "sol": "0,8 g"
+      },
+      "gramaz": "320g"
+    },
+    {
+      "slug": "zavin-makovy-200g",
+      "name": "Závin makový 200g",
+      "category": "sladke-pecivo",
+      "image": "https://res.cloudinary.com/dl6xldrhk/image/upload/v1781535496/kralovska-pekaren/products/zavin-makovy-200g.jpg",
+      "typVyrobku": "jemné pečivo",
+      "zlozenie": "PŠENIČNÁ múka, maková náplň (40%) [voda, cukor, mak modrý (25,2%), strúhanka (PŠENIČNÁ múka, voda, cukor, droždie, soľ), cukor vanilínový (cukor, aróma), konzervačná látka: E 200], voda, cukor, pekárenský prípravok (repkový olej, emulgátor: E471; antioxidant: kyselina askorbová), droždie, VAJEČNÁ melanž tekutá, stolný margarín (palmový tuk, čiastočne hydrogenovaný palmový tuk, voda, repkový olej, jedlá soľ, konzervačná látka: kyselina sorbová), jedlá soľ jódovaná (jedlá soľ, jodičnan draselný), konzervačná látka: kyselina sorbová.",
+      "alergeny": "ORECHY, SEZAM",
+      "nutricne": {
+        "energiaKj": 1415,
+        "energiaKcal": 338,
+        "tuky": "11 g",
+        "nasMastneKys": "1,5 g",
+        "sacharidy": "57 g",
+        "cukry": "15 g",
+        "bielkoviny": "8,8 g",
+        "sol": "0,75 g"
+      },
+      "gramaz": "200g"
+    },
+    {
+      "slug": "zavin-makovy-400g",
+      "name": "Závin makový 400g",
+      "category": "sladke-pecivo",
+      "image": "https://res.cloudinary.com/dl6xldrhk/image/upload/v1781535496/kralovska-pekaren/products/zavin-makovy-200g.jpg",
+      "typVyrobku": "jemné pečivo",
+      "zlozenie": "PŠENIČNÁ múka, maková náplň (40%) [voda, cukor, mak modrý (25,2%), strúhanka (PŠENIČNÁ múka, voda, cukor, droždie, soľ), cukor vanilínový (cukor, aróma), konzervačná látka: E 200], voda, cukor, pekárenský prípravok (repkový olej, emulgátor: E471; antioxidant: kyselina askorbová), droždie, VAJEČNÁ melanž tekutá, stolný margarín (palmový tuk, čiastočne hydrogenovaný palmový tuk, voda, repkový olej, jedlá soľ, konzervačná látka: kyselina sorbová), jedlá soľ jódovaná (jedlá soľ, jodičnan draselný), konzervačná látka: kyselina sorbová.",
+      "alergeny": "ORECHY, SEZAM",
+      "nutricne": {
+        "energiaKj": 1415,
+        "energiaKcal": 338,
+        "tuky": "11 g",
+        "nasMastneKys": "1,5 g",
+        "sacharidy": "57 g",
+        "cukry": "15 g",
+        "bielkoviny": "8,8 g",
+        "sol": "0,75 g"
+      },
+      "gramaz": "400g"
+    },
+    {
+      "slug": "zavin-orechovy-200g",
+      "name": "Závin orechový 200g",
+      "category": "sladke-pecivo",
+      "image": "https://res.cloudinary.com/dl6xldrhk/image/upload/v1781535496/kralovska-pekaren/products/zavin-orechovy-200g.jpg",
+      "typVyrobku": "jemné pečivo",
+      "zlozenie": "PŠENIČNÁ múka, orechová náplň (40%) [cukor, sekané vlašské ORECHY (20%), žemľová strúhanka (PŠENIČNÁ múka, voda, droždie, jedlá soľ), repkový olej, pekárenský prípravok (pšeničná múka, antioxidant: kyselina askorbová; voda, SÓJOVÁ drť, hroznový cukor, SÓJOVÁ múka, SÓJOVÁ krupica, PŠENIČNÝ škrob, sekané slnečnicové semienka, kukuričný napúčavý škrob, jedlá soľ, regulátor kyslosti: E263; aróma (obsahuje MLIEKO, karamel)], voda, cukor, pekárenský prípravok (repkový olej, emulgátor: E471; antioxidant: kyselina askorbová; droždie, VAJEČNÁ melanž pasterizovaná, stolný margarín (palmový tuk, čiastočne hydrogenovaný palmový tuk, voda, repkový olej, jedlá soľ, konzervačná látka: kyselina sorbová), jedlá soľ jódovaná (jedlá soľ, jodičnan draselný), konzervačná látka: kyselina sorbová.",
+      "alergeny": "SEZAM",
+      "nutricne": {
+        "energiaKj": 1445,
+        "energiaKcal": 345,
+        "tuky": "8,9 g",
+        "nasMastneKys": "1,3 g",
+        "sacharidy": "57 g",
+        "cukry": "17 g",
+        "bielkoviny": "8,9 g",
+        "sol": "0,77 g"
+      },
+      "gramaz": "200g"
+    },
+    {
+      "slug": "zavin-orechovy-400g",
+      "name": "Závin orechový 400g",
+      "category": "sladke-pecivo",
+      "image": "https://res.cloudinary.com/dl6xldrhk/image/upload/v1781535496/kralovska-pekaren/products/zavin-orechovy-200g.jpg",
+      "typVyrobku": "jemné pečivo",
+      "zlozenie": "PŠENIČNÁ múka, orechová náplň (40%) [cukor, sekané vlašské ORECHY (20%), žemľová strúhanka (PŠENIČNÁ múka, voda, droždie, jedlá soľ), repkový olej, pekárenský prípravok (pšeničná múka, antioxidant: kyselina askorbová; voda, SÓJOVÁ drť, hroznový cukor, SÓJOVÁ múka, SÓJOVÁ krupica, PŠENIČNÝ škrob, sekané slnečnicové semienka, kukuričný napúčavý škrob, jedlá soľ, regulátor kyslosti: E263; aróma (obsahuje MLIEKO, karamel)], voda, cukor, pekárenský prípravok (repkový olej, emulgátor: E471; antioxidant: kyselina askorbová; droždie, VAJEČNÁ melanž pasterizovaná, stolný margarín (palmový tuk, čiastočne hydrogenovaný palmový tuk, voda, repkový olej, jedlá soľ, konzervačná látka: kyselina sorbová), jedlá soľ jódovaná (jedlá soľ, jodičnan draselný), konzervačná látka: kyselina sorbová.",
+      "alergeny": "SEZAM",
+      "nutricne": {
+        "energiaKj": 1445,
+        "energiaKcal": 345,
+        "tuky": "8,9 g",
+        "nasMastneKys": "1,3 g",
+        "sacharidy": "57 g",
+        "cukry": "17 g",
+        "bielkoviny": "8,9 g",
+        "sol": "0,77 g"
+      },
+      "gramaz": "400g"
+    },
+    {
+      "slug": "zavin-tvarohovy-200g",
+      "name": "Závin tvarohový 200g",
+      "category": "sladke-pecivo",
+      "image": "https://res.cloudinary.com/dl6xldrhk/image/upload/v1781535497/kralovska-pekaren/products/zavin-tvarohovy-200g.jpg",
+      "typVyrobku": "jemné pečivo",
+      "zlozenie": "PŠENIČNÁ múka, TVAROHOVÁ náplň (40%) [TVAROH polotučný hrudkovitý - tuk v sušine min. 25% (65%), voda, cukor, žemľová strúhanka (PŠENIČNÁ múka, voda, droždie, jedlá soľ), pekárenský prípravok (PŠENIČNÁ múka, antioxidant: kyselina askorbová, VAJCIA, olej slnečnicový, napúčavá múka, zemiaková aróma), voda, cukor, pekárenský prípravok (olej repkový, emulgátor: E471; antioxidant: kyselina askorbová), droždie, VAJEČNÁ melanž tekutá, stolný margarín (palmový tuk, čiastočne hydrogenovaný palmový tuk, voda, olej repkový, soľ, konzervačná látka: kyselina sorbová), jedlá soľ jódovaná (jedlá soľ, jodičnan draselný), konzervačná látka: kyselina sorbová.",
+      "alergeny": "SÓJU, ORECHY, SEZAM",
+      "nutricne": {
+        "energiaKj": 1259,
+        "energiaKcal": 301,
+        "tuky": "5,9 g",
+        "nasMastneKys": "1,5 g",
+        "sacharidy": "51 g",
+        "cukry": "12 g",
+        "bielkoviny": "10 g",
+        "sol": "0,72 g"
+      },
+      "gramaz": "200g"
+    },
+    {
+      "slug": "zavin-tvarohovy-400g",
+      "name": "Závin tvarohový 400g",
+      "category": "sladke-pecivo",
+      "image": "https://res.cloudinary.com/dl6xldrhk/image/upload/v1781535497/kralovska-pekaren/products/zavin-tvarohovy-200g.jpg",
+      "typVyrobku": "jemné pečivo",
+      "zlozenie": "PŠENIČNÁ múka, TVAROHOVÁ náplň (40%) [TVAROH polotučný hrudkovitý - tuk v sušine min. 25% (65%), voda, cukor, žemľová strúhanka (PŠENIČNÁ múka, voda, droždie, jedlá soľ), pekárenský prípravok (PŠENIČNÁ múka, antioxidant: kyselina askorbová, VAJCIA, olej slnečnicový, napúčavá múka, zemiaková aróma), voda, cukor, pekárenský prípravok (olej repkový, emulgátor: E471; antioxidant: kyselina askorbová), droždie, VAJEČNÁ melanž tekutá, stolný margarín (palmový tuk, čiastočne hydrogenovaný palmový tuk, voda, olej repkový, soľ, konzervačná látka: kyselina sorbová), jedlá soľ jódovaná (jedlá soľ, jodičnan draselný), konzervačná látka: kyselina sorbová.",
+      "alergeny": "SÓJU, ORECHY, SEZAM",
+      "nutricne": {
+        "energiaKj": 1259,
+        "energiaKcal": 301,
+        "tuky": "5,9 g",
+        "nasMastneKys": "1,5 g",
+        "sacharidy": "51 g",
+        "cukry": "12 g",
+        "bielkoviny": "10 g",
+        "sol": "0,72 g"
+      },
+      "gramaz": "400g"
+    },
+    {
+      "slug": "strudla-jablko-mak",
+      "name": "Štrúdľa jablko/mak noha min. 950g",
+      "category": "strudle",
+      "image": "https://res.cloudinary.com/dl6xldrhk/image/upload/v1781533465/kralovska-pekaren/products/strudla-jablko-mak.png",
+      "gramaz": "950g"
+    },
+    {
+      "slug": "strudla-jablko-orech",
+      "name": "Štrúdľa jablko/orech noha min. 950g",
+      "category": "strudle",
+      "image": "https://res.cloudinary.com/dl6xldrhk/image/upload/v1781533465/kralovska-pekaren/products/strudla-jablko-orech.png",
+      "gramaz": "950g"
+    },
+    {
+      "slug": "strudla-mak-visna",
+      "name": "Štrúdľa mak/višňa noha min. 950g",
+      "category": "strudle",
+      "image": "https://res.cloudinary.com/dl6xldrhk/image/upload/v1781535493/kralovska-pekaren/products/strudla-mak-visna.png",
+      "gramaz": "950g"
+    },
+    {
+      "slug": "strudla-tvaroh-hrozienka",
+      "name": "Štrúdľa tvaroh s hrozienkami noha min. 950g",
+      "category": "strudle",
+      "image": "https://res.cloudinary.com/dl6xldrhk/image/upload/v1781535494/kralovska-pekaren/products/strudla-tvaroh-hrozienka.png",
+      "gramaz": "950g"
+    },
+    {
+      "slug": "strudla-tvaroh-visna",
+      "name": "Štrúdľa tvaroh/višňa noha min. 950g",
+      "category": "strudle",
+      "image": "https://res.cloudinary.com/dl6xldrhk/image/upload/v1781535488/kralovska-pekaren/products/strudla-tvaroh-visna.png",
+      "gramaz": "950g"
+    },
+    {
+      "slug": "bageta-150g",
+      "name": "Bageta 150g",
+      "category": "slane-pecivo",
+      "image": "https://placehold.co/600x400?text=Bageta+150g",
+      "_new": true,
+      "zlozenie": "PŠENIČNÁ MÚKA, voda, droždie, rastlinný olej (slnečnicový), jódovaná soľ, enzýmy (obsahujú LEPOK), múku upravujúca látka: E300",
+      "nutricne": {
+        "energiaKj": 1273,
+        "energiaKcal": 301,
+        "tuky": "3,7 g",
+        "nasMastneKys": "0,6 g",
+        "sacharidy": "56 g",
+        "cukry": "2,4 g",
+        "bielkoviny": "9,8 g",
+        "sol": "1,5 g"
+      },
+      "gramaz": "150g"
+    },
+    {
+      "slug": "zemla-100g",
+      "name": "Žemľa 100g",
+      "category": "slane-pecivo",
+      "image": "https://res.cloudinary.com/dl6xldrhk/image/upload/v1781533469/kralovska-pekaren/products/zemla-50g.png",
+      "_new": true,
+      "zlozenie": "PŠENIČNÁ MÚKA, voda, droždie, rastlinný olej (slnečnicový), soľ, jódovaná soľ, rasca, enzýmy (obsahujú LEPOK), múku upravujúca látka: E300",
+      "nutricne": {
+        "energiaKj": 1256,
+        "energiaKcal": 297,
+        "tuky": "3,7 g",
+        "nasMastneKys": "0,6 g",
+        "sacharidy": "55 g",
+        "cukry": "2,3 g",
+        "bielkoviny": "9,7 g",
+        "sol": "3,4 g"
+      },
+      "gramaz": "100g"
+    },
+    {
+      "slug": "sendvic-400g",
+      "name": "Sendvič 400g",
+      "category": "slane-pecivo",
+      "image": "https://res.cloudinary.com/dl6xldrhk/image/upload/v1781533461/kralovska-pekaren/products/sendvic.jpg",
+      "_new": true,
+      "zlozenie": "PŠENIČNÁ MÚKA, voda, droždie, rastlinný olej (slnečnicový), soľ, jódovaná soľ, rasca, enzýmy (obsahujú LEPOK), múku upravujúca látka: E300",
+      "nutricne": {
+        "energiaKj": 1256,
+        "energiaKcal": 297,
+        "tuky": "3,7 g",
+        "nasMastneKys": "0,6 g",
+        "sacharidy": "55 g",
+        "cukry": "2,3 g",
+        "bielkoviny": "9,7 g",
+        "sol": "3,4 g"
+      },
+      "gramaz": "400g"
+    },
+    {
+      "slug": "uzol-100g",
+      "name": "Uzol 100g",
+      "category": "slane-pecivo",
+      "image": "https://placehold.co/600x400?text=Uzol+100g",
+      "_new": true,
+      "zlozenie": "PŠENIČNÁ MÚKA, voda, droždie, rastlinný olej (slnečnicový), SEZAMOVÉ semená, jódovaná soľ, enzýmy (obsahujú LEPOK), múku upravujúca látka: E300",
+      "nutricne": {
+        "energiaKj": 1297,
+        "energiaKcal": 308,
+        "tuky": "4,6 g",
+        "nasMastneKys": "0,8 g",
+        "sacharidy": "55 g",
+        "cukry": "2,4 g",
+        "bielkoviny": "10 g",
+        "sol": "1,5 g"
+      },
+      "gramaz": "100g"
+    },
+    {
+      "slug": "kornspitz-50g",
+      "name": "Kornspitz 50g",
+      "category": "slane-pecivo",
+      "image": "https://res.cloudinary.com/dl6xldrhk/image/upload/v1781533438/kralovska-pekaren/products/kornspitz.png",
+      "_new": true,
+      "zlozenie": "PŠENIČNÁ múka, voda, pekársky prípravok: (RAŽNÁ a PŠENIČNÁ múka čiastočne pražená, PŠENIČNÝ šrot, RAŽNÝ šrot, PŠENIČNÁ sladová múka, kyselina: E330, emulgátor: E472e, múku upravujúca látka: E300, enzýmy, PŠENIČNÉ otruby, SÓJOVÝ šrot, ľan, sušený RAŽNÝ kvas, soľ jedlá, PŠENIČNÝ sladový šrot, korenie), droždie, soľ, rasca, jódovaná soľ",
+      "nutricne": {
+        "energiaKj": 975,
+        "energiaKcal": 231,
+        "tuky": "1,9 g",
+        "nasMastneKys": "0,5 g",
+        "sacharidy": "47 g",
+        "cukry": "1,9 g",
+        "vlaknina": "6,2 g",
+        "bielkoviny": "9,5 g",
+        "sol": "2,4 g"
+      },
+      "gramaz": "50g"
+    },
+    {
+      "slug": "jacmenne-pecivo-50g",
+      "name": "Jačmenné pečivo 50g",
+      "category": "chlieb-pecivo",
+      "image": "https://res.cloudinary.com/dl6xldrhk/image/upload/v1781533437/kralovska-pekaren/products/jacmenne-pecivo.png",
+      "_new": true,
+      "zlozenie": "PŠENIČNÁ MÚKA, voda, RAŽNÁ MÚKA, JAČMENNÉ VLOČKY (3,5%), rastlinný olej (slnečnicový), droždie, ľanové semená, SÓJOVÁ drť pražená, soľ, RAŽNÝ SLAD, JAČMENNÁ SLADOVÁ MÚKA (0,6%), PŠENIČNÝ GLUTÉN, rastlinný olej (repkový), koreniny, antioxidant: E300, enzýmy, dextróza",
+      "nutricne": {
+        "energiaKj": 983,
+        "energiaKcal": 233,
+        "tuky": "4,6 g",
+        "nasMastneKys": "0,6 g",
+        "sacharidy": "39 g",
+        "cukry": "1,7 g",
+        "vlaknina": "2,9 g",
+        "bielkoviny": "7,7 g",
+        "sol": "1,1 g"
+      },
+      "gramaz": "50g"
+    },
+    {
+      "slug": "rozok-so-syrom-a-slaninou-70g",
+      "name": "Rožok so syrom a slaninou 70g",
+      "category": "slane-pecivo",
+      "image": "https://placehold.co/600x400?text=Rožok+so+syrom+a+sla",
+      "_new": true,
+      "zlozenie": "PŠENIČNÁ MÚKA, syr 19,7% ( pasterizované mlieko, jedlá soľ, bakteriálna mliečna kultúra, stabilizátor: E509, mikrobiálne syridlo), voda, slanina 18,5% ( Bravčový bok (92 %), pitná voda, jedlá soľ, konzervačná látka (E250), cukor, stabilizátory (E450, E451), antioxidant (E301), modifikované škroby (E1420, 1414), karamelový sirup), droždie, rastlinný olej (slnečnicový), jódovaná soľ, enzýmy (obsahujú LEPOK), múku upravujúca látka: E300",
+      "nutricne": {
+        "energiaKj": 1180,
+        "energiaKcal": 282,
+        "tuky": "14 g",
+        "nasMastneKys": "5,4 g",
+        "sacharidy": "26 g",
+        "cukry": "1,2 g",
+        "bielkoviny": "13 g",
+        "sol": "1,5 g"
+      },
+      "gramaz": "70g"
+    },
+    {
+      "slug": "rozok-sladky-70g",
+      "name": "Rožok sladký 70g",
+      "category": "sladke-pecivo",
+      "image": "https://placehold.co/600x400?text=Rožok+sladký+70g",
+      "_new": true,
+      "zlozenie": "PŠENIČNÁ MÚKA, voda, cukor, pasterizovaná VAJEČNÁ MELANŽ, rastlinný olej (slnečnicový), droždie, semená maku modrého, jódovaná soľ, múku upravujúca látka: kyselina askorbová, enzýmy(amyláza, lypáza, proteáza, xylanáza) (PŠENICA)",
+      "nutricne": {
+        "energiaKj": 1258,
+        "energiaKcal": 299,
+        "tuky": "7,8 g",
+        "nasMastneKys": "1 g",
+        "sacharidy": "48 g",
+        "cukry": "10 g",
+        "bielkoviny": "8,2 g",
+        "sol": "0,56 g"
+      },
+      "gramaz": "70g"
+    },
+    {
+      "slug": "chlieb-dlhan-800g",
+      "name": "Chlieb Dlháň 800g",
+      "category": "chlieb-pecivo",
+      "image": "https://res.cloudinary.com/dl6xldrhk/image/upload/v1781533435/kralovska-pekaren/products/dlhan.png",
+      "_new": true,
+      "zlozenie": "PŠENIČNÁ múka 40%, voda, RAŽNÁ múka 10%, pekárska zmes ( bielkoviny: PŠENIČNÝ GLUTÉN, SÓJOVÝ izolát, RAŽNÁ múka, zahusťovadlo E415, pražená čakanka, PŠENIČNO - RAŽNÝ kvas, SLADOVÁ múka, koreninové extrakty, emulgátor: E472e, stabilizátor: E450, antioxidant: E300, enzýmy), droždie, jedlá kamenná soľ, PŠENIČNÝ škrob",
+      "nutricne": {
+        "energiaKj": 787,
+        "energiaKcal": 188,
+        "tuky": "0,9 g",
+        "nasMastneKys": "0,2 g",
+        "sacharidy": "37 g",
+        "cukry": "1 g",
+        "vlaknina": "1,4 g",
+        "bielkoviny": "8 g",
+        "sol": "1,1 g"
+      },
+      "gramaz": "800g"
+    },
+    {
+      "slug": "chlieb-mini-dlhan-400g",
+      "name": "Chlieb mini Dlháň 400g",
+      "category": "chlieb-pecivo",
+      "image": "https://res.cloudinary.com/dl6xldrhk/image/upload/v1781533435/kralovska-pekaren/products/dlhan.png",
+      "_new": true,
+      "zlozenie": "PŠENIČNÁ múka 40%, voda, RAŽNÁ múka 10%, pekárska zmes ( bielkoviny: PŠENIČNÝ GLUTÉN, SÓJOVÝ izolát, RAŽNÁ múka, zahusťovadlo E415, pražená čakanka, PŠENIČNO - RAŽNÝ kvas, SLADOVÁ múka, koreninové extrakty, emulgátor: E472e, stabilizátor: E450, antioxidant: E300, enzýmy), droždie, jedlá kamenná soľ, PŠENIČNÝ škrob",
+      "nutricne": {
+        "energiaKj": 787,
+        "energiaKcal": 188,
+        "tuky": "0,9 g",
+        "nasMastneKys": "0,2 g",
+        "sacharidy": "37 g",
+        "cukry": "1 g",
+        "vlaknina": "1,4 g",
+        "bielkoviny": "8 g",
+        "sol": "1,1 g"
+      },
+      "gramaz": "mini 400g"
+    },
+    {
+      "slug": "orechovy-rozok-listkovy-100g",
+      "name": "Orechový rožok lístkový 100g",
+      "category": "sladke-pecivo",
+      "image": "https://placehold.co/600x400?text=Orechový+rožok+lístk",
+      "_new": true,
+      "zlozenie": "PŠENIČNÁ MÚKA, voda, cukor, VLAŠSKÉ ORECHY (15,6%), rastlinný olej (slnečnicový), cukor krupica, pasterizovaná VAJEČNÁ MELANŽ, droždie, slepačie VAJEČNÉ bielka, konzervačná látka: E200, aróma etylvanilín, konzervačná látka: E202, regulátory kyslosti: E270, E331, stabilizátory: E415, E520",
+      "nutricne": {
+        "energiaKj": 1284,
+        "energiaKcal": 305,
+        "tuky": "13 g",
+        "nasMastneKys": "1,4 g",
+        "sacharidy": "42 g",
+        "cukry": "21 g",
+        "bielkoviny": "6 g",
+        "sol": "0,01 g"
+      },
+      "gramaz": "100g"
+    },
+    {
+      "slug": "pagac-oskvarkovy-8g",
+      "name": "Pagáč oškvarkový 8g",
+      "category": "slane-pecivo",
+      "image": "https://res.cloudinary.com/dl6xldrhk/image/upload/v1781533450/kralovska-pekaren/products/pagac-oskvarkovy-40g.png",
+      "_new": true,
+      "zlozenie": "PŠENIČNÁ MÚKA, voda, rastlinné oleje a tuky (palmové), bravčové oškvarky (12,6%), pasterizovaná VAJEČNÁ MELANŽ, droždie, SUŠENÁ SRVÁTKA, jódovaná soľ, soľ, rasca celá, emulgátor: E472e,E471, múku upravujúca látka: E300, kyselina: E330, zahusťovadlo: E412, dextróza, protihrudkovacia látka: E170, rastlinný olej (palmový olej), aróma, farbivo: E160a, enzýmy",
+      "nutricne": {
+        "energiaKj": 1535,
+        "energiaKcal": 368,
+        "tuky": "22 g",
+        "nasMastneKys": "9,9 g",
+        "sacharidy": "31 g",
+        "cukry": "2,8 g",
+        "bielkoviny": "11 g",
+        "sol": "2,2 g"
+      },
+      "gramaz": "8g"
+    },
+    {
+      "slug": "pagac-syrovy-80g",
+      "name": "Pagáč syrový 80g",
+      "category": "slane-pecivo",
+      "image": "https://placehold.co/600x400?text=Pagáč+syrový+80g",
+      "_new": true,
+      "zlozenie": "Obsah syra 10% PŠENIČNÁ MÚKA, voda, rastlinné oleje a tuky (palmové), pasterizované kravské MLIEKO, slnečnicový olej, pasterizovaná VAJEČNÁ MELANŽ, jódovaná soľ, droždie, PŠENIČNÝ GLUTÉN, emulgátor: E471, soľ, zahusťovadlo: E412, čierne korenie, bakteriálna mliečna kultúra, emulgátory: E472e, E322, jedlá soľ, predželatínovaná PŠENIČNÁ SLADOVÁ MÚKA, dextróza, cukor, PŠENIČNÁ sladová MÚKA, stabilizátor: E509 chlorid vápenatý, kypriaca látka: E500ii, enzýmy, múku upravujúca látka: E300, regulátor kyslosti: E330, aróma, syridlo, farbivo: E160a, E 160b, zemiakový škrob",
+      "nutricne": {
+        "energiaKj": 1373,
+        "energiaKcal": 328,
+        "tuky": "17 g",
+        "nasMastneKys": "7,2 g",
+        "sacharidy": "33 g",
+        "cukry": "1,5 g",
+        "bielkoviny": "9,3 g",
+        "sol": "2,0 g"
+      },
+      "gramaz": "80g"
+    },
+    {
+      "slug": "balkansky-snack-35g",
+      "name": "Balkánsky snack 35g",
+      "category": "slane-pecivo",
+      "image": "https://placehold.co/600x400?text=Balkánsky+snack+35g",
+      "_new": true,
+      "zlozenie": "náplň Balkánska 36,5% (syr Balkánskeho typu 39,5% (pasterizované kravské MLIEKO, regulátor kyslosti: glukono-delta-laktón, morská soľ, mikrobiálne syridlo), pasterizovaná VAJEČNÁ melanž, voda, modifikovaný škrob: E1422, prášková SMOTANA, sušené MLIEKO odtučnené, LAKTÓZA, sušená SRVÁTKA, soľ, kvasnicový extrakr ( obsahuje GLUTÉN), sušené koreniny, zahusťovadlo: alginát sodný, aróma), PŠENIČNÁ MÚKA, voda, rastlinné tuky a oleje (palmové), slnečnicový olej, droždie, cukor, jedlá kamenná soľ, PŠENIČNÝ GLUTÉN, zahusťovadlo: E412, emulgátor: E471, emulgátory: E472e, E322 , predželatínovaná PŠENIČNÁ SLADOVÁ MÚKA, dextróza, PŠENIČNÁ sladová múka, jedlá soľ, kypriaca látka: E500ii, enzýmy, múku upravujúca látka: E300, regulátor kyslosti: E330, aróma, farbivo: E160a, posyp (PŠENIČNÁ krupica, pasterizované kravské MLIEKO, regulátor kyslosti: glukono-delta-laktón (E575), morská soľ, mikrobiálne syridlo)",
+      "nutricne": {
+        "energiaKj": 1142,
+        "energiaKcal": 273,
+        "tuky": "14 g",
+        "nasMastneKys": "6,4 g",
+        "sacharidy": "28 g",
+        "cukry": "4,7 g",
+        "bielkoviny": "7,4 g",
+        "sol": "1,5 g"
+      },
+      "gramaz": "35g"
+    },
+    {
+      "slug": "brownie-so-slanym-karamelom-a-arasidmi-95g",
+      "name": "Brownie so slaným karamelom a arašidmi 95g",
+      "category": "sladke-pecivo",
+      "image": "https://placehold.co/600x400?text=Brownie+so+slaným+ka",
+      "_new": true,
+      "zlozenie": "cukor, pasterizovaná VAJEČNÁ MELANŽ, slnečnicový olej, PŠENIČNÁ MÚKA, náplň slaný karamel 8,6% (glukózo fruktózový sirup, voda, cukor, SUŠENÉ MLIEKO ODTUČNENÉ, rastlinné tuky /palmový, kokosový, v rôznom pomere/, modifikovaný škrob, soľ, zahusťovadlo: E440, sirup z karamelizovaného cukru, konzervačná látka: E202, aróma (obsahuje JAČMEŇ a MLIEKO), emulgátor: E472c, farbivo: kurkumín), voda, ARAŠIDY 4,3%, modifikovaný škrob: E1414, kakaový prášok so zníženým množstvom tuku, soľ, kakaová vláknina, aróma, kypriaca látka: E450 Difosforečnany, E500 Uhličitany sodné, emulgátory- E475 Estery polyglycerolu s mastnými kyselinami, E471 mono- a diglyceridy mastných kyselín, E481 stearoyl-2-laktylát sodný",
+      "nutricne": {
+        "energiaKj": 1545,
+        "energiaKcal": 369,
+        "tuky": "19 g",
+        "nasMastneKys": "3 g",
+        "sacharidy": "44 g",
+        "cukry": "31 g",
+        "bielkoviny": "5,6 g",
+        "sol": "0,41 g"
+      },
+      "gramaz": "95g"
+    },
+    {
+      "slug": "strudla-jablko-mak-80g",
+      "name": "Štrúdľa jablko – mak 80g",
+      "category": "strudle",
+      "image": "https://res.cloudinary.com/dl6xldrhk/image/upload/v1781533465/kralovska-pekaren/products/strudla-jablko-mak.png",
+      "_new": true,
+      "zlozenie": "Jablkové kúsky (30,6%), semená maku modrého (19,1%), PŠENIČNÁ MÚKA, cukor, voda, rastlinný olej (slnečnicový), strúhanka (PŠENIČNÁ MÚKA, soľ, droždie), pasterizovaná VAJEČNÁ MELANŽ, cukor krupica, ocot liehový (voda, kvasný liehový ocot 8%, amoniakový karamel), jódovaná soľ, aróma etylvanilín",
+      "nutricne": {
+        "energiaKj": 1248,
+        "energiaKcal": 299,
+        "tuky": "14 g",
+        "nasMastneKys": "1,6 g",
+        "sacharidy": "35 g",
+        "cukry": "19 g",
+        "bielkoviny": "6,9 g",
+        "sol": "0,22 g"
+      },
+      "gramaz": "80g"
+    },
+    {
+      "slug": "strudla-jablko-mak-1000g",
+      "name": "Štrúdľa jablko – mak 1000g",
+      "category": "strudle",
+      "image": "https://res.cloudinary.com/dl6xldrhk/image/upload/v1781533465/kralovska-pekaren/products/strudla-jablko-mak.png",
+      "_new": true,
+      "zlozenie": "Jablkové kúsky (30,6%), semená maku modrého (19,1%), PŠENIČNÁ MÚKA, cukor, voda, rastlinný olej (slnečnicový), strúhanka (PŠENIČNÁ MÚKA, soľ, droždie), pasterizovaná VAJEČNÁ MELANŽ, cukor krupica, ocot liehový (voda, kvasný liehový ocot 8%, amoniakový karamel), jódovaná soľ, aróma etylvanilín",
+      "nutricne": {
+        "energiaKj": 1248,
+        "energiaKcal": 299,
+        "tuky": "14 g",
+        "nasMastneKys": "1,6 g",
+        "sacharidy": "35 g",
+        "cukry": "19 g",
+        "bielkoviny": "6,9 g",
+        "sol": "0,22 g"
+      },
+      "gramaz": "1000g"
+    },
+    {
+      "slug": "strudla-jablko-orech-80g",
+      "name": "Štrúdľa jablko – orech 80g",
+      "category": "strudle",
+      "image": "https://res.cloudinary.com/dl6xldrhk/image/upload/v1781533465/kralovska-pekaren/products/strudla-jablko-orech.png",
+      "_new": true,
+      "zlozenie": "Jablká (30,6%), PŠENIČNÁ MÚKA, cukor, strúhané VLAŠSKÉ ORECHY (11,5%), voda, rastlinný olej (slnečnicový), dextróza, PŠENIČNÁ KRUPICA, SÓJOVÁ KRUPICA, mleté slnečnicové semienka, kukuričná bobtnavá múka, PŠENIČNÉ klíčky, kukuričný škrob, pasterizovaná VAJEČNÁ MELANŽ, glukózový sirup, cukor krupica, ocot liehový (voda, kvasný liehový ocot 8%, amoniakový karamel), PŠENIČNÝ GLUTÉN, škorica, aróma, jódovaná soľ, antioxidant: kyselina askorbová, aróma etylvanilín",
+      "nutricne": {
+        "energiaKj": 1293,
+        "energiaKcal": 309,
+        "tuky": "14 g",
+        "nasMastneKys": "1,6 g",
+        "sacharidy": "39 g",
+        "cukry": "23 g",
+        "bielkoviny": "5,8 g",
+        "sol": "0,20 g"
+      },
+      "gramaz": "80g"
+    },
+    {
+      "slug": "strudla-jablko-orech-1000g",
+      "name": "Štrúdľa jablko – orech 1000g",
+      "category": "strudle",
+      "image": "https://res.cloudinary.com/dl6xldrhk/image/upload/v1781533465/kralovska-pekaren/products/strudla-jablko-orech.png",
+      "_new": true,
+      "zlozenie": "Jablká (30,6%), PŠENIČNÁ MÚKA, cukor, strúhané VLAŠSKÉ ORECHY (11,5%), voda, rastlinný olej (slnečnicový), dextróza, PŠENIČNÁ KRUPICA, SÓJOVÁ KRUPICA, mleté slnečnicové semienka, kukuričná bobtnavá múka, PŠENIČNÉ klíčky, kukuričný škrob, pasterizovaná VAJEČNÁ MELANŽ, glukózový sirup, cukor krupica, ocot liehový (voda, kvasný liehový ocot 8%, amoniakový karamel), PŠENIČNÝ GLUTÉN, škorica, aróma, jódovaná soľ, antioxidant: kyselina askorbová, aróma etylvanilín",
+      "nutricne": {
+        "energiaKj": 1293,
+        "energiaKcal": 309,
+        "tuky": "14 g",
+        "nasMastneKys": "1,6 g",
+        "sacharidy": "39 g",
+        "cukry": "23 g",
+        "bielkoviny": "5,8 g",
+        "sol": "0,20 g"
+      },
+      "gramaz": "1000g"
+    },
+    {
+      "slug": "strudla-tvaroh-hrozienka-80g",
+      "name": "Štrúdľa tvaroh - hrozienka 80g",
+      "category": "strudle",
+      "image": "https://res.cloudinary.com/dl6xldrhk/image/upload/v1781535494/kralovska-pekaren/products/strudla-tvaroh-hrozienka.png",
+      "_new": true,
+      "zlozenie": "Tvarohová náplň 69,4% ( TVAROH hrudkovitý 65,7% (pasterizované kravské MLIEKO, bakteriálne kultúry), cukor, zemiakové vločky, prírodná vláknina, pasterizovaná VAJEČNÁ MELANŽ, slnečnicový olej, sušené hrozienka 3%, arómy), PŠENIČNÁ MÚKA, voda, rastlinný olej (slnečnicový), pasterizovaná VAJEČNÁ MELANŽ, cukor krupica, cukor, modifikovaný škrob: E1414, ocot liehový (voda, kvasný liehový ocot 8%, amoniakový karamel), fruktóza, jódovaná soľ, rastlinný olej (palmový olej), LAKTÓZA, sušená sladká SRVÁTKA, glukózový sirup, stabilizátory: E450i, E401, E450, kyselina: E516, MLIEČNA bielkovina, farbivo: E160a, emulgátor: E472a, soľ, aróma, aróma etylvanilín",
+      "nutricne": {
+        "energiaKj": 1074,
+        "energiaKcal": 257,
+        "tuky": "11 g",
+        "nasMastneKys": "2,4 g",
+        "sacharidy": "30 g",
+        "cukry": "16 g",
+        "bielkoviny": "10 g",
+        "sol": "0,24 g"
+      },
+      "gramaz": "80g"
+    },
+    {
+      "slug": "strudla-tvaroh-hrozienka-1000g",
+      "name": "Štrúdľa tvaroh - hrozienka 1000g",
+      "category": "strudle",
+      "image": "https://res.cloudinary.com/dl6xldrhk/image/upload/v1781535494/kralovska-pekaren/products/strudla-tvaroh-hrozienka.png",
+      "_new": true,
+      "zlozenie": "Tvarohová náplň 69,4% ( TVAROH hrudkovitý 65,7% (pasterizované kravské MLIEKO, bakteriálne kultúry), cukor, zemiakové vločky, prírodná vláknina, pasterizovaná VAJEČNÁ MELANŽ, slnečnicový olej, sušené hrozienka 3%, arómy), PŠENIČNÁ MÚKA, voda, rastlinný olej (slnečnicový), pasterizovaná VAJEČNÁ MELANŽ, cukor krupica, cukor, modifikovaný škrob: E1414, ocot liehový (voda, kvasný liehový ocot 8%, amoniakový karamel), fruktóza, jódovaná soľ, rastlinný olej (palmový olej), LAKTÓZA, sušená sladká SRVÁTKA, glukózový sirup, stabilizátory: E450i, E401, E450, kyselina: E516, MLIEČNA bielkovina, farbivo: E160a, emulgátor: E472a, soľ, aróma, aróma etylvanilín",
+      "nutricne": {
+        "energiaKj": 1074,
+        "energiaKcal": 257,
+        "tuky": "11 g",
+        "nasMastneKys": "2,4 g",
+        "sacharidy": "30 g",
+        "cukry": "16 g",
+        "bielkoviny": "10 g",
+        "sol": "0,24 g"
+      },
+      "gramaz": "1000g"
+    },
+    {
+      "slug": "strudla-tvaroh-visna-80g",
+      "name": "Štrúdľa tvaroh - višňa 80g",
+      "category": "strudle",
+      "image": "https://res.cloudinary.com/dl6xldrhk/image/upload/v1781535488/kralovska-pekaren/products/strudla-tvaroh-visna.png",
+      "_new": true,
+      "zlozenie": "Tvarohovo -višňová náplň 69,4% ( TVAROH hrudkovitý 65,7% (pasterizované kravské MLIEKO, bakteriálne kultúry), cukor, zemiakové vločky, prírodná vláknina, pasterizovaná VAJEČNÁ MELANŽ, slnečnicový olej, sušené hrozienka, voda, višne 8,8%, modifikovaný škrob E1422, maltodextrin, želírovacia látka: E450, E516, E339, zahusťovadlo: E401, arómy), PŠENIČNÁ MÚKA, voda, rastlinný olej (slnečnicový), pasterizovaná VAJEČNÁ MELANŽ, cukor krupica, cukor, modifikovaný škrob: E1414, ocot liehový (voda, kvasný liehový ocot 8%, amoniakový karamel), fruktóza, jódovaná soľ, rastlinný olej (palmový olej), LAKTÓZA, sušená sladká SRVÁTKA, glukózový sirup, stabilizátory: E450i, E40, E450, kyselina: E516, MLIEČNA bielkovina, farbivo: E160a, emulgátor: E472a, soľ, aróma, aróma etylvanilín",
+      "nutricne": {
+        "energiaKj": 1025,
+        "energiaKcal": 245,
+        "tuky": "9,7 g",
+        "nasMastneKys": "2,1 g",
+        "sacharidy": "30 g",
+        "cukry": "16 g",
+        "bielkoviny": "8,9 g",
+        "sol": "0,24 g"
+      },
+      "gramaz": "80g"
+    },
+    {
+      "slug": "strudla-tvaroh-visna-1000g",
+      "name": "Štrúdľa tvaroh - višňa 1000g",
+      "category": "strudle",
+      "image": "https://res.cloudinary.com/dl6xldrhk/image/upload/v1781535488/kralovska-pekaren/products/strudla-tvaroh-visna.png",
+      "_new": true,
+      "zlozenie": "Tvarohovo -višňová náplň 69,4% ( TVAROH hrudkovitý 65,7% (pasterizované kravské MLIEKO, bakteriálne kultúry), cukor, zemiakové vločky, prírodná vláknina, pasterizovaná VAJEČNÁ MELANŽ, slnečnicový olej, sušené hrozienka, voda, višne 8,8%, modifikovaný škrob E1422, maltodextrin, želírovacia látka: E450, E516, E339, zahusťovadlo: E401, arómy), PŠENIČNÁ MÚKA, voda, rastlinný olej (slnečnicový), pasterizovaná VAJEČNÁ MELANŽ, cukor krupica, cukor, modifikovaný škrob: E1414, ocot liehový (voda, kvasný liehový ocot 8%, amoniakový karamel), fruktóza, jódovaná soľ, rastlinný olej (palmový olej), LAKTÓZA, sušená sladká SRVÁTKA, glukózový sirup, stabilizátory: E450i, E40, E450, kyselina: E516, MLIEČNA bielkovina, farbivo: E160a, emulgátor: E472a, soľ, aróma, aróma etylvanilín",
+      "nutricne": {
+        "energiaKj": 1025,
+        "energiaKcal": 245,
+        "tuky": "9,7 g",
+        "nasMastneKys": "2,1 g",
+        "sacharidy": "30 g",
+        "cukry": "16 g",
+        "bielkoviny": "8,9 g",
+        "sol": "0,24 g"
+      },
+      "gramaz": "1000g"
+    },
+    {
+      "slug": "strudla-mak-visna-80g",
+      "name": "Štrúdľa mak - višňa 80g",
+      "category": "strudle",
+      "image": "https://res.cloudinary.com/dl6xldrhk/image/upload/v1781535493/kralovska-pekaren/products/strudla-mak-visna.png",
+      "_new": true,
+      "zlozenie": "Semená maku modrého (29,2%), cukor, PŠENIČNÁ MÚKA, strúhanka (PŠENIČNÁ MÚKA, soľ, droždie), voda, višne 6%, rastlinný olej (slnečnicový), pasterizovaná VAJEČNÁ MELANŽ, cukor krupica, ocot liehový (voda, kvasný liehový ocot 8%, amoniakový karamel), modifikovaný škrob: E1422, maltodextrin, želírovacia látka: E450, E516, E339, zahusťovadlo: E401, jódovaná soľ, aróma etylvanilín",
+      "nutricne": {
+        "energiaKj": 1606,
+        "energiaKcal": 385,
+        "tuky": "18 g",
+        "nasMastneKys": "2,1 g",
+        "sacharidy": "43 g",
+        "cukry": "25 g",
+        "bielkoviny": "9,3 g",
+        "sol": "0,26 g"
+      },
+      "gramaz": "80g"
+    },
+    {
+      "slug": "strudla-mak-visna-1000g",
+      "name": "Štrúdľa mak - višňa 1000g",
+      "category": "strudle",
+      "image": "https://res.cloudinary.com/dl6xldrhk/image/upload/v1781535493/kralovska-pekaren/products/strudla-mak-visna.png",
+      "_new": true,
+      "zlozenie": "Semená maku modrého (29,2%), cukor, PŠENIČNÁ MÚKA, strúhanka (PŠENIČNÁ MÚKA, soľ, droždie), voda, višne 6%, rastlinný olej (slnečnicový), pasterizovaná VAJEČNÁ MELANŽ, cukor krupica, ocot liehový (voda, kvasný liehový ocot 8%, amoniakový karamel), modifikovaný škrob: E1422, maltodextrin, želírovacia látka: E450, E516, E339, zahusťovadlo: E401, jódovaná soľ, aróma etylvanilín",
+      "nutricne": {
+        "energiaKj": 1606,
+        "energiaKcal": 385,
+        "tuky": "18 g",
+        "nasMastneKys": "2,1 g",
+        "sacharidy": "43 g",
+        "cukry": "25 g",
+        "bielkoviny": "9,3 g",
+        "sol": "0,26 g"
+      },
+      "gramaz": "1000g"
+    },
+    {
+      "slug": "slivkovy-kolac-100g",
+      "name": "Slivkový koláč 100g",
+      "category": "sladke-pecivo",
+      "image": "https://placehold.co/600x400?text=Slivkový+koláč+100g",
+      "_new": true,
+      "zlozenie": "PŠENIČNÁ MÚKA, slivka (27,6%), voda, cukor, rastlinný olej (slnečnicový), droždie, MASLO, cukor krupica, zvlhčovadlo: sorbitoly; sušená SRVÁTKA; emulgátor: mono- a diglyceridy mastných kyselín; sušené VAJEČNÉ žĺtka; PŠENIČNÝ glutén; sušené VAJEČNÉ bielka; zemiakové vločky; aróma; sušený PŠENIČNÝ kvas; dextróza; maltodextrín; stabilizátor: guarová guma; farbivo: karotény; múku upravujúca látka: kyselina askorbová; enzýmy, jódovaná soľ, škorica mletá, konzervačná látka: Kyselina sorbová",
+      "nutricne": {
+        "energiaKj": 973,
+        "energiaKcal": 223,
+        "tuky": "5,7 g",
+        "nasMastneKys": "2 g",
+        "sacharidy": "38 g",
+        "cukry": "10 g",
+        "bielkoviny": "5,2 g",
+        "sol": "0,59 g"
+      },
+      "gramaz": "100g"
+    },
+    {
+      "slug": "mrkvovy-kolac-180g",
+      "name": "Mrkvový koláč 180g",
+      "category": "sladke-pecivo",
+      "image": "https://placehold.co/600x400?text=Mrkvový+koláč+180g",
+      "_new": true,
+      "zlozenie": "PŠENIČNÁ múka (obsahuje vápnik, železo, vitamín B3, vitamín B1); cukor; rastlinný olej repkový; dextróza; modifikovaný škrob (PŠENIČNÝ); kypriaca látka (hydrogénuhličitan sodný, fosforečnany vápenaté, dihydrogénfosforečnan sodný); sušený VAJEČNÝ žĺtok; sušený VAJEČNÝ bielok; koreniny; soľ; trstinová melasa; maltodextrín; farbivo: obyčajný karamel (E150a); sušená SRVÁTKA, voda, PŠENIČNÁ MÚKA, MASLO, sušená mrkva (3,86%), rastlinný olej slnečnicový",
+      "nutricne": {
+        "energiaKj": 1365,
+        "energiaKcal": 323,
+        "tuky": "10 g",
+        "nasMastneKys": "2,1 g",
+        "sacharidy": "53 g",
+        "cukry": "28 g",
+        "bielkoviny": "7,2 g",
+        "sol": "1,0 g"
+      },
+      "gramaz": "180g"
+    },
+    {
+      "slug": "citronova-babeta-120g",
+      "name": "Citrónová babeta 120g",
+      "category": "sladke-pecivo",
+      "image": "https://placehold.co/600x400?text=Citrónová+babeta+120",
+      "_new": true,
+      "zlozenie": "Voda, cukor, PŠENIČNÁ MÚKA, pasterizovaná VAJEČNÁ MELANŽ, kukuričný škrob, olej slnečnicový, modifikovaný škrob: Acetylovaný diškrobfosfát, SUŠENÉ VAJEČNÉ BIELKA, rastlinný tuk (palmový) RSPO SG, rastlinný olej (kokosový), LAKTÓZA, citrónová aróma 0,5%, kypriace látky: dihydrogénfosforečnan sodný, hydrogénuhličitan sodný , emulgátory: E472b, E477, glukózový sirup, SUŠENÉ MLIEKO ODTUČNENÉ, soľ, zahusťovadlo: Xantánová guma, SUŠENÁ SRVÁTKA, farbivo: Betakarotén, KAZEINÁT sodný, emulgátory: sorbitan tristearát, SÓJOVÝ lecitín, prírodná citrónová aróma, farbivo E160a",
+      "nutricne": {
+        "energiaKj": 1288,
+        "energiaKcal": 308,
+        "tuky": "12 g",
+        "nasMastneKys": "3,0 g",
+        "sacharidy": "45 g",
+        "cukry": "25 g",
+        "bielkoviny": "4,0 g",
+        "sol": "0,95 g"
+      },
+      "gramaz": "120g"
+    },
+    {
+      "slug": "spaldova-pochutka-80g",
+      "name": "Špaldová pochúťka 80g",
+      "category": "sladke-pecivo",
+      "image": "https://placehold.co/600x400?text=Špaldová+pochúťka+80",
+      "_new": true,
+      "zlozenie": "PŠENIČNÁ MÚKA, voda, napučané zrná ŠPALDY (16,0%), rastlinné oleje a tuky (palmový), ŠPALDOVÁ MÚKA (6,4%), RAŽNÁ MÚKA, ŠPALDOVÁ celozrnná múka (2,4%), droždie, PŠENIČNÝ GLUTÉN, hnedé ľanové semená, sušený RAŽNÝ KVAS, jódovaná soľ, zemiakové vločky, SEZAMOVÉ semená, celozrnná PŠENIČNÁ MÚKA, sladová JAČMENNÁ MÚKA, zahusťovadlo: E412, OVSENÁ MÚKA, cukor, soľ, múku upravujúca látka: E300, SUŠENÁ SRVÁTKA, emulgátor: E471, aróma (jačmenný slad), regulátory kyslosti: E330, E327, E270, sušený glukózový sirup, enzýmy (obsahujú PŠENICU), emulgátory: E472e, E322 lecitín, predželatínovaná PŠENIČNÁ SLADOVÁ MÚKA, dextróza, PŠENIČNÁ sladová MÚKA, kypriaca látka: E500ii, enzýmy, farbivo: karotény",
+      "nutricne": {
+        "energiaKj": 1180,
+        "energiaKcal": 282,
+        "tuky": "13 g",
+        "nasMastneKys": "5,6 g",
+        "sacharidy": "31 g",
+        "cukry": "1,3 g",
+        "bielkoviny": "7,8 g",
+        "sol": "1,3 g"
+      },
+      "gramaz": "80g"
+    },
+    {
+      "slug": "croissant-maslovy-50g",
+      "name": "Croissant maslový 50g",
+      "category": "sladke-pecivo",
+      "image": "https://placehold.co/600x400?text=Croissant+maslový+50",
+      "_new": true,
+      "zlozenie": "PŠENIČNÁ MÚKA, voda, rastlinné oleje a tuky (palmové), cukor, droždie, pasterizovaná VAJEČNÁ MELANŽ, predželatinovaná PŠENIČNÁ MÚKA, MASLO (2,4%), PŠENIČNÝ GLUTÉN, MASLOVÝ prášok (2%), jódovaná soľ, rastlinný olej (repkový, palmový RSPO-SG), emulgátor: E471,E472e, sušený glukózový sirup, maslová aróma, kyselina: E330, enzýmy (obsahujú PŠENICU), farbivo: E160a Betakarotén, múku upravujúca látka: E300, aróma",
+      "nutricne": {
+        "energiaKj": 1419,
+        "energiaKcal": 340,
+        "tuky": "19 g",
+        "nasMastneKys": "9,9 g",
+        "sacharidy": "34 g",
+        "cukry": "5,1 g",
+        "bielkoviny": "7,5 g",
+        "sol": "0,74 g"
+      },
+      "gramaz": "50g"
+    },
+    {
+      "slug": "knedla-parena-600g",
+      "name": "Knedľa parená 600g",
+      "category": "chlieb-pecivo",
+      "image": "https://res.cloudinary.com/dl6xldrhk/image/upload/v1781534265/kralovska-pekaren/products/knedla-parena-600g.png",
+      "typVyrobku": "ostatný pekársky výrobok",
+      "zlozenie": "PŠENIČNÁ múka, voda, VAJEČNÁ melanž pasterizovaná, rastlinný olej slnečnicový, PŠENIČNÁ múka - tepelne upravená, droždie, jedlá soľ [jedlá kamenná soľ (99,6%), jodičnan draselný], enzýmy.",
+      "alergeny": "ORECHY, SEZAM, MLIEKO, SÓJU",
+      "nutricne": {
+        "energiaKj": 1172,
+        "energiaKcal": 280,
+        "tuky": "5,9 g",
+        "nasMastneKys": "0,6 g",
+        "sacharidy": "48 g",
+        "cukry": "1,0 g",
+        "bielkoviny": "8,6 g",
+        "sol": "1,2 g"
+      },
+      "skladovanie": "Skladujte pri teplote do + 7°C.",
+      "gramaz": "600g"
+    },
+    {
+      "slug": "knedla-parena-300g",
+      "name": "Knedľa parená 300g",
+      "category": "chlieb-pecivo",
+      "image": "https://res.cloudinary.com/dl6xldrhk/image/upload/v1781534265/kralovska-pekaren/products/knedla-parena-600g.png",
+      "_new": true,
+      "typVyrobku": "ostatný pekársky výrobok",
+      "zlozenie": "PŠENIČNÁ múka, voda, VAJEČNÁ melanž pasterizovaná, rastlinný olej slnečnicový, PŠENIČNÁ múka - tepelne upravená, droždie, jedlá soľ [jedlá kamenná soľ (99,6%), jodičnan draselný], enzýmy.",
+      "alergeny": "ORECHY, SEZAM, MLIEKO, SÓJU",
+      "nutricne": {
+        "energiaKj": 1172,
+        "energiaKcal": 280,
+        "tuky": "5,9 g",
+        "nasMastneKys": "0,6 g",
+        "sacharidy": "48 g",
+        "cukry": "1,0 g",
+        "bielkoviny": "8,6 g",
+        "sol": "1,2 g"
+      },
+      "skladovanie": "Skladujte pri teplote do + 7°C.",
+      "gramaz": "300g"
+    },
+    {
+      "slug": "knedla-parena-500g",
+      "name": "Knedľa parená 500g",
+      "category": "chlieb-pecivo",
+      "image": "https://res.cloudinary.com/dl6xldrhk/image/upload/v1781534265/kralovska-pekaren/products/knedla-parena-600g.png",
+      "_new": true,
+      "typVyrobku": "ostatný pekársky výrobok",
+      "zlozenie": "PŠENIČNÁ múka, voda, VAJEČNÁ melanž pasterizovaná, rastlinný olej slnečnicový, PŠENIČNÁ múka - tepelne upravená, droždie, jedlá soľ [jedlá kamenná soľ (99,6%), jodičnan draselný], enzýmy.",
+      "alergeny": "ORECHY, SEZAM, MLIEKO, SÓJU",
+      "nutricne": {
+        "energiaKj": 1172,
+        "energiaKcal": 280,
+        "tuky": "5,9 g",
+        "nasMastneKys": "0,6 g",
+        "sacharidy": "48 g",
+        "cukry": "1,0 g",
+        "bielkoviny": "8,6 g",
+        "sol": "1,2 g"
+      },
+      "skladovanie": "Skladujte pri teplote do + 7°C.",
+      "gramaz": "500g"
+    },
+    {
+      "slug": "knedla-zemlova",
+      "name": "Knedľa žemľová parená 600g",
+      "category": "chlieb-pecivo",
+      "image": "https://res.cloudinary.com/dl6xldrhk/image/upload/v1781534266/kralovska-pekaren/products/knedla-zemlova.png",
+      "typVyrobku": "ostatný pekársky výrobok",
+      "zlozenie": "PŠENIČNÁ múka, voda, VAJEČNÁ melanž pasterizovaná, rastlinný olej slnečnicový, PŠENIČNÁ múka - tepelne upravená, droždie, jedlá soľ [jedlá kamenná soľ (99,6%), jodičnan draselný], žemľové kocky (PŠENIČNÁ múka, voda, droždie, soľ), enzýmy.",
+      "alergeny": "ORECHY, SEZAM, MLIEKO, SÓJU",
+      "nutricne": {
+        "energiaKj": 1172,
+        "energiaKcal": 280,
+        "tuky": "5,9 g",
+        "nasMastneKys": "0,6 g",
+        "sacharidy": "48 g",
+        "cukry": "1,0 g",
+        "bielkoviny": "8,6 g",
+        "sol": "1,2 g"
+      },
+      "skladovanie": "Skladujte pri teplote do + 7°C.",
+      "gramaz": "600g"
+    },
+    {
+      "slug": "chlieb-zemiakovy-400g",
+      "name": "Chlieb zemiakový 400g",
+      "category": "chlieb-pecivo",
+      "image": "https://res.cloudinary.com/dl6xldrhk/image/upload/v1781533468/kralovska-pekaren/products/zemiakovy-chlieb.png",
+      "_new": true,
+      "typVyrobku": "chlieb",
+      "zlozenie": "PŠENIČNÁ múka (49%), voda, RAŽNÁ múka (11%), jedlá soľ, droždie, zemiaková múka (1%), pekársky prípravok (modifikovaný škrob E1414, enzýmy, antioxidant: E300; rastlinný olej repkový).",
+      "alergeny": "ORECHY, SEZAM, VAJCIA a MLIEKO",
+      "nutricne": {
+        "energiaKj": 1059,
+        "energiaKcal": 253,
+        "tuky": "1,1 g",
+        "nasMastneKys": "0,17 g",
+        "sacharidy": "53 g",
+        "cukry": "2 g",
+        "vlaknina": "3,1 g",
+        "bielkoviny": "8,1 g",
+        "sol": "1,5 g"
+      },
+      "gramaz": "400g"
+    },
+    {
+      "slug": "chlieb-tmavy-400g",
+      "name": "Chlieb tmavý 400g",
+      "category": "chlieb-pecivo",
+      "image": "https://res.cloudinary.com/dl6xldrhk/image/upload/v1781533467/kralovska-pekaren/products/tmavy-chlieb.png",
+      "_new": true,
+      "typVyrobku": "chlieb",
+      "zlozenie": "PŠENIČNÁ múka (36%), RAŽNÁ múka (20,5%), voda, jedlá soľ, droždie, sušená SRVÁTKA, pekársky prípravok (modifikovaný škrob E1414, enzýmy, antioxidant: E300; rastlinný olej repkový), pražený jačmenný slad, rasca.",
+      "alergeny": "VAJCIA, SÓJU, SEZAM",
+      "nutricne": {
+        "energiaKj": 1088,
+        "energiaKcal": 241,
+        "tuky": "1 g",
+        "nasMastneKys": "0,15 g",
+        "sacharidy": "51 g",
+        "cukry": "2,8 g",
+        "vlaknina": "3,5 g",
+        "bielkoviny": "7,3 g",
+        "sol": "1,5 g"
+      },
+      "gramaz": "400g"
+    },
+    {
+      "slug": "chlieb-dlhan-300g",
+      "name": "Chlieb DLHÁŇ 300g",
+      "category": "chlieb-pecivo",
+      "image": "https://res.cloudinary.com/dl6xldrhk/image/upload/v1781533435/kralovska-pekaren/products/dlhan.png",
+      "_new": true,
+      "typVyrobku": "chlieb",
+      "zlozenie": "PŠENIČNÁ múka (40%), voda, RAŽNÁ múka (10%), pekársky prípravok (bielkoviny, GLUTÉN, SÓJOVÝ izolát, zahusťovadlo: E415; pražená čakanka, PŠENIČNO - RAŽNÝ kvas, SLADOVÁ múka, koreninové extrakty, emulgátor: E472e; stabilizátor: E450; antioxidant: E300; enzýmy), droždie, jedlá soľ.",
+      "posyp": "PŠENIČNÝ škrob.",
+      "alergeny": "SEZAM, VAJCIA a MLIEKO",
+      "nutricne": {
+        "energiaKj": 787,
+        "energiaKcal": 188,
+        "tuky": "0,9 g",
+        "nasMastneKys": "0,2 g",
+        "sacharidy": "37 g",
+        "cukry": "1 g",
+        "vlaknina": "1,4 g",
+        "bielkoviny": "8 g",
+        "sol": "1,1 g"
+      },
+      "gramaz": "300g"
+    },
+    {
+      "slug": "chlieb-dlhan-600g",
+      "name": "Chlieb DLHÁŇ 600g",
+      "category": "chlieb-pecivo",
+      "image": "https://res.cloudinary.com/dl6xldrhk/image/upload/v1781533435/kralovska-pekaren/products/dlhan.png",
+      "_new": true,
+      "typVyrobku": "chlieb",
+      "zlozenie": "PŠENIČNÁ múka (40%), voda, RAŽNÁ múka (10%), pekársky prípravok (bielkoviny, GLUTÉN, SÓJOVÝ izolát, zahusťovadlo: E415; pražená čakanka, PŠENIČNO - RAŽNÝ kvas, SLADOVÁ múka, koreninové extrakty, emulgátor: E472e; stabilizátor: E450; antioxidant: E300; enzýmy), droždie, jedlá soľ.",
+      "posyp": "PŠENIČNÝ škrob.",
+      "alergeny": "SEZAM, VAJCIA a MLIEKO",
+      "nutricne": {
+        "energiaKj": 787,
+        "energiaKcal": 188,
+        "tuky": "0,9 g",
+        "nasMastneKys": "0,2 g",
+        "sacharidy": "37 g",
+        "cukry": "1 g",
+        "vlaknina": "1,4 g",
+        "bielkoviny": "8 g",
+        "sol": "1,1 g"
+      },
+      "gramaz": "600g"
+    },
+    {
+      "slug": "chlieb-lanovy-250g",
+      "name": "Chlieb ľanový 250g",
+      "category": "chlieb-pecivo",
+      "image": "https://res.cloudinary.com/dl6xldrhk/image/upload/v1781533443/kralovska-pekaren/products/lanovy-chlieb.png",
+      "_new": true,
+      "typVyrobku": "chlieb",
+      "zlozenie": "PŠENIČNÁ múka (49%), RAŽNÁ múka (7%), ľan (3%), voda, jedlá soľ [jedlá kamenná soľ (99,6%), jodičnan draselný], droždie, pekársky prípravok (PŠENIČNÁ múka, PŠENIČNÝ lepok, emulgátor: E471; múku upravujúca látka: kyselina askorbová).",
+      "alergeny": "SÓJU, SEZAM,MLIEKO",
+      "nutricne": {
+        "energiaKj": 921,
+        "energiaKcal": 220,
+        "tuky": "2,5 g",
+        "nasMastneKys": "0,27 g",
+        "sacharidy": "43 g",
+        "cukry": "2,2 g",
+        "vlaknina": "3,3 g",
+        "bielkoviny": "8 g",
+        "sol": "1,4 g"
+      },
+      "gramaz": "250g"
+    },
+    {
+      "slug": "buchta-makova-320g",
+      "name": "Buchta maková 320g",
+      "category": "sladke-pecivo",
+      "image": "https://placehold.co/600x400?text=Buchta+maková+320g",
+      "_new": true,
+      "typVyrobku": "jemné pečivo",
+      "zlozenie": "PŠENIČNÁ múka, maková náplň (30%) [voda, cukor, mak modrý (25,2%), strúhanka (PŠENIČNÁ múka, voda, cukor, droždie, soľ), cukor vanilínový (cukor, aróma), konzervačná látka: E 200], voda, kryštálový cukor, pekársky prípravok (sušené MLIEKO, emulgátor: E471; regulátor kyslosti: kyselina octová; farbivá: karotény, kurkumín; múku upravujúca látka: kyselina askorbová; aróma, droždie, margarín (rastlinný tuk palmový, rastlinný tuk palmový hydrogenovaný, rastlinný olej repkový, emulgátory: E471, lecitíny; konzervačná látka: kyselina sorbová, antioxidant: kyselina askorbová; enzýmy), soľ jedlá ( jedlá kamenná soľ 99,6%, jodičnan draselný), kyselina: kyselina citrónová, VAJCIA.",
+      "alergeny": "ORECHY, SEZAM, SÓJU",
+      "nutricne": {
+        "energiaKj": 1466,
+        "energiaKcal": 338,
+        "tuky": "10 g",
+        "nasMastneKys": "3,6 g",
+        "sacharidy": "53 g",
+        "cukry": "19 g",
+        "vlaknina": "4,2 g",
+        "bielkoviny": "9,5 g",
+        "sol": "0,63 g"
+      },
+      "gramaz": "320g"
+    },
+    {
+      "slug": "buchta-tvarohova-320g",
+      "name": "Buchta tvarohová 320g",
+      "category": "sladke-pecivo",
+      "image": "https://placehold.co/600x400?text=Buchta+tvarohová+320",
+      "_new": true,
+      "typVyrobku": "jemné pečivo",
+      "zlozenie": "PŠENIČNÁ múka, TVAROHOVÁ náplň (30%) [pasterizované MLIEKO odtučnené, syridlo, bakteriálna kultúra, cukor, modifikovaný škrob, fruktóza, rastlinný olej (palmový), laktóza, sušená SRVÁTKA, glukózový sirup, stabilizátory: E450i, dihydrogenfosforečnan sodný, alginát sodný, difosforečnany, síran vápenatý; MLIEČNA bielkovina, farbivo: karotény; emulgátor: E472a; soľ, aróma, rastlinný olej slnečnicový, tekutá VAJEČNÁ melanž, VAJEČNÉ bielka], voda, kryštálový cukor, pekársky prípravok (sušené MLIEKO, emulgátory: E471, E481; regulátor kyslosti: kyselina octová; farbivá: karotény, kurkumín; múku upravujúca látka: kyselina askorbová; aróma), droždie, margarín (rastlinný tuk, palmový, hydrogenovaný tuk palmový rastlinný olej repkový, emulgátory: E471, lecitíny; konzervačná látka: kyselina sorbová; antioxidant: kyselina askorbová; enzýmy), soľ jedlá [jedlá kamenná soľ (99,6%), jodičnan draselný].",
+      "alergeny": "ORECHY, SEZAM, SÓJU",
+      "nutricne": {
+        "energiaKj": 1261,
+        "energiaKcal": 301,
+        "tuky": "7,2 g",
+        "nasMastneKys": "3,7 g",
+        "sacharidy": "49 g",
+        "cukry": "16 g",
+        "vlaknina": "1,7 g",
+        "bielkoviny": "9,7 g",
+        "sol": "0,66 g"
+      },
+      "gramaz": "320g"
+    },
+    {
+      "slug": "buchta-slivkova-320g",
+      "name": "Buchta slivková 320g",
+      "category": "sladke-pecivo",
+      "image": "https://placehold.co/600x400?text=Buchta+slivková+320g",
+      "_new": true,
+      "typVyrobku": "jemné pečivo",
+      "zlozenie": "PŠENIČNÁ múka, slivková náplň 30% [slivkový lekvár (54,5% sliviek/ 1 kg hotového výrobok), pitná voda, cukor, jablkové pyré, modifikovaný škrob; farbivo: obyčajný kulér; zahusťovadlo: celulózy; kyselina: kyselina citrónová; aróma, konzervačná látka: sorban draselný], pitná voda, cukor, margarín [rastlinné tuky (palmový, kokosový), pitná voda, repkový olej, MASLOVÝ tuk 4%, odstredené MLIEKO, jedlá soľ (0,1%), emulgátory: E471, E322; konzervačná látka: sorban draselný; kyselina: kyselina citrónová; aróma, farbivo: beta -karotén], pekársky prípravok (PŠENIČNÝ glutén, sušené odtučnené MLIEKO, emulgátory: E471, E481; aróma, farbivá: E160a, E100; múku upravujúca látka: kyselina askorbová), pekársky prípravok (pitná voda, emulgátor: E471; regulátor kyslosti: kyselina octová), droždie, slnečnicový olej, jedlá soľ.",
+      "alergeny": "ORECHY, SEZAM, VAJCIA a SÓJU",
+      "nutricne": {
+        "energiaKj": 1252,
+        "energiaKcal": 299,
+        "tuky": "6 g",
+        "nasMastneKys": "2,9 g",
+        "sacharidy": "54 g",
+        "cukry": "21 g",
+        "vlaknina": "1,7 g",
+        "bielkoviny": "6,6 g",
+        "sol": "0,61 g"
+      },
+      "gramaz": "320g"
+    },
+    {
+      "slug": "spicka-slivkova-220g",
+      "name": "Špička slivková 220g",
+      "category": "sladke-pecivo",
+      "image": "https://placehold.co/600x400?text=Špička+slivková+220g",
+      "_new": true,
+      "typVyrobku": "jemné pečivo",
+      "zlozenie": "Slivková náplň (40%) [voda, cukor, slivkové pyré (9,4%), modifikovaný škrob, PŠENIČNÁ vláknina, farbivo: amoniakový sulfitový karamel; zahusťovadlá: celulóza, xantánová guma; regulátor kyslosti: kyselina citrónová; konzervačná látka: E202; aróma, korenie], aróma, PŠENIČNÁ múka, voda, rastlinné tuky (palmové), rastlinný olej (repkový, slnečnicový), cukor, droždie, glycerol, sušená SRVÁTKA, soľ, emulgátory: E481, E472e, E322; LAKTÓZA, PŠENIČNÝ glutén, dextróza, kypriace látky: E341i, E500ii; sušené VAJEČNÉ žĺtka, sušené VAJEČNÉ bielka, zahusťovadlo: E412; koreniny, enzým, aróma (vanilín), múku upravujúca látka: E300; emulgátor: E471; konzervačná látka: E200; VAJEČNÁ melanž.",
+      "alergeny": "SÓJU, ORECHY",
+      "nutricne": {
+        "energiaKj": 1149,
+        "energiaKcal": 272,
+        "tuky": "4 g",
+        "nasMastneKys": "1,5 g",
+        "sacharidy": "54 g",
+        "cukry": "33 g",
+        "bielkoviny": "4 g",
+        "sol": "0,50 g"
+      },
+      "gramaz": "220g"
+    },
+    {
+      "slug": "spicka-orechova-220g",
+      "name": "Špička orechová 220g",
+      "category": "sladke-pecivo",
+      "image": "https://placehold.co/600x400?text=Špička+orechová+220g",
+      "_new": true,
+      "typVyrobku": "jemné pečivo",
+      "zlozenie": "PŠENIČNÁ múka, voda, vlašské ORECHY (18, 8%), cukor, rastlinné tuky (palmové), rastlinný olej (repkový, slnečnicový), sušená SRVÁTKA, droždie, VAJEČNÝ bielok, glycerol, soľ, emulgátory: E481, E472e, E322; škorica mletá, LAKTÓZA, PŠENIČNÝ glutén, dextróza, kypriace látky: E341i, E500ii; sušené VAJEČNÉ žĺtka, sušené VAJEČNÉ bielka, zahusťovadlo: E412; koreniny, enzým, aróma (vanilín), múku upravujúca látka: E300; konzervačné látky: E202, E200; regulátory kyslosti: E270, E331; emulgátor: E471; stabilizátory: E415, E520; aróma (etylvanilín), regulátor kyslosti: E330; VAJEČNÁ melanž.",
+      "alergeny": "SÓJU",
+      "nutricne": {
+        "energiaKj": 1483,
+        "energiaKcal": 353,
+        "tuky": "16 g",
+        "nasMastneKys": "2,7 g",
+        "sacharidy": "45 g",
+        "cukry": "21 g",
+        "bielkoviny": "7,5 g",
+        "sol": "0,59 g"
+      },
+      "gramaz": "220g"
+    },
+    {
+      "slug": "kvaskova-spicka-so-skoricovou-naplnou-220g",
+      "name": "Kvásková špička so škoricovou náplňou 220g",
+      "category": "sladke-pecivo",
+      "image": "https://placehold.co/600x400?text=Kvásková+špička+so+š",
+      "_new": true,
+      "typVyrobku": "jemné pečivo",
+      "zlozenie": "Škoricová náplň (40%) [cukor, voda, sušená SRVÁTKA, PŠENIČNÁ vláknina, modifikovaný zemiakový škrob, sušená VAJEČNÁ melanž, cukor vanilínový (cukor, aróma etylvanilín), škorica mletá (3%), instantná ryžová múka, konzervačná látka: kyselina sorbová], PŠENIČNÁ MÚKA, voda, cukor, rastlinný olej (slnečnicový), PŠENIČNÝ glutén, jódovaná soľ, aróma, prášok z aceroly, enzýmy, kvasné kultúry (kvasinky, baktérie).",
+      "nutricne": {
+        "energiaKj": 1225,
+        "energiaKcal": 290,
+        "tuky": "4,0 g",
+        "nasMastneKys": "0,6 g",
+        "sacharidy": "56 g",
+        "cukry": "29 g",
+        "vlaknina": "1,7 g",
+        "bielkoviny": "6,7 g",
+        "sol": "0,45 g"
+      },
+      "gramaz": "220g"
+    }
+  ],
+  "varianty": [
+    {
+      "canonicalSlug": "banquet-pagac-slany-50ks",
+      "members": [
+        "banquet-pagac-slany-100ks",
+        "banquet-pagac-slany-50ks"
+      ]
+    },
+    {
+      "canonicalSlug": "chlieb-dlhan-300g",
+      "members": [
+        "chlieb-dlhan-300g",
+        "chlieb-dlhan-600g",
+        "chlieb-dlhan-800g",
+        "chlieb-mini-dlhan-400g"
+      ]
+    },
+    {
+      "canonicalSlug": "jacmenne-pecivo-50g",
+      "members": [
+        "jacmenne-pecivo",
+        "jacmenne-pecivo-50g"
+      ]
+    },
+    {
+      "canonicalSlug": "knedla-parena-300g",
+      "members": [
+        "knedla-parena-300g",
+        "knedla-parena-500g",
+        "knedla-parena-600g"
+      ]
+    },
+    {
+      "canonicalSlug": "kornspitz-50g",
+      "members": [
+        "kornspitz",
+        "kornspitz-50g"
+      ]
+    },
+    {
+      "canonicalSlug": "lanovy-chlieb",
+      "members": [
+        "chlieb-lanovy-250g",
+        "lanovy-chlieb"
+      ]
+    },
+    {
+      "canonicalSlug": "pagac-oskvarkovy-8g",
+      "members": [
+        "pagac-oskvarkovy-40g",
+        "pagac-oskvarkovy-85g",
+        "pagac-oskvarkovy-8g"
+      ]
+    },
+    {
+      "canonicalSlug": "parene-buchty-1ks",
+      "members": [
+        "parene-buchty-1ks",
+        "parene-buchty-3ks",
+        "parene-buchty-6ks"
+      ]
+    },
+    {
+      "canonicalSlug": "sendvic-400g",
+      "members": [
+        "sendvic",
+        "sendvic-400g"
+      ]
+    },
+    {
+      "canonicalSlug": "strudla-jablko-mak-80g",
+      "members": [
+        "strudla-jablko-mak",
+        "strudla-jablko-mak-1000g",
+        "strudla-jablko-mak-80g"
+      ]
+    },
+    {
+      "canonicalSlug": "strudla-jablko-orech-80g",
+      "members": [
+        "strudla-jablko-orech",
+        "strudla-jablko-orech-1000g",
+        "strudla-jablko-orech-80g"
+      ]
+    },
+    {
+      "canonicalSlug": "strudla-mak-visna",
+      "members": [
+        "strudla-mak-visna",
+        "strudla-mak-visna-1000g",
+        "strudla-mak-visna-80g"
+      ]
+    },
+    {
+      "canonicalSlug": "strudla-tvaroh-hrozienka-80g",
+      "members": [
+        "strudla-tvaroh-hrozienka",
+        "strudla-tvaroh-hrozienka-1000g",
+        "strudla-tvaroh-hrozienka-80g"
+      ]
+    },
+    {
+      "canonicalSlug": "strudla-tvaroh-visna",
+      "members": [
+        "strudla-tvaroh-visna",
+        "strudla-tvaroh-visna-1000g",
+        "strudla-tvaroh-visna-80g"
+      ]
+    },
+    {
+      "canonicalSlug": "tmavy-chlieb",
+      "members": [
+        "chlieb-tmavy-400g",
+        "tmavy-chlieb"
+      ]
+    },
+    {
+      "canonicalSlug": "zavin-makovy-200g",
+      "members": [
+        "zavin-makovy-200g",
+        "zavin-makovy-400g"
+      ]
+    },
+    {
+      "canonicalSlug": "zavin-orechovy-200g",
+      "members": [
+        "zavin-orechovy-200g",
+        "zavin-orechovy-400g"
+      ]
+    },
+    {
+      "canonicalSlug": "zavin-tvarohovy-200g",
+      "members": [
+        "zavin-tvarohovy-200g",
+        "zavin-tvarohovy-400g"
+      ]
+    },
+    {
+      "canonicalSlug": "zemiakovy-chlieb",
+      "members": [
+        "chlieb-zemiakovy-400g",
+        "zemiakovy-chlieb"
+      ]
+    },
+    {
+      "canonicalSlug": "zemla-50g",
+      "members": [
+        "zemla-100g",
+        "zemla-50g",
+        "zemla-70g"
+      ]
+    }
   ]
 }

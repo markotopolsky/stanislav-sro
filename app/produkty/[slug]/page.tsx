@@ -2,13 +2,18 @@ import { notFound } from 'next/navigation'
 import Image from 'next/image'
 import Link from 'next/link'
 import Footer from '../../components/Footer'
-import { products, getProductBySlug, getCategoryBySlug } from '../../data/produkty'
+import {
+  products,
+  getProductBySlug,
+  getCategoryBySlug,
+  getVariantsForProduct,
+  type NutricneHodnoty,
+} from '../../data/produkty'
 
 type Props = {
   params: Promise<{ slug: string }>
 }
 
-// Statické parametre pre všetky produkty
 export async function generateStaticParams() {
   return products.map((p) => ({ slug: p.slug }))
 }
@@ -19,21 +24,28 @@ export async function generateMetadata({ params }: Props) {
   if (!produkt) return {}
   return {
     title: `${produkt.name} — Kráľovská pekáreň`,
-    description: `Detailné informácie o produkte ${produkt.name}. B2B prezentácia sortimentu Kráľovskej pekárne.`,
+    description: `Zloženie, alergény a nutričné hodnoty pre ${produkt.name}. B2B prezentácia sortimentu Kráľovskej pekárne.`,
   }
 }
 
-// Placeholder nutričné hodnoty na 100 g
-const nutricneHodnoty = [
-  { nazov: 'Energetická hodnota', hodnota: '1 050 kJ / 251 kcal' },
-  { nazov: 'Tuky', hodnota: '3,2 g' },
-  { nazov: 'z toho nasýtené mastné kyseliny', hodnota: '0,7 g' },
-  { nazov: 'Sacharidy', hodnota: '46 g' },
-  { nazov: 'z toho cukry', hodnota: '2,1 g' },
-  { nazov: 'Vláknina', hodnota: '3,4 g' },
-  { nazov: 'Bielkoviny', hodnota: '8,2 g' },
-  { nazov: 'Soľ', hodnota: '1,1 g' },
-]
+// Mapovanie nutričných polí z dát na riadky tabuľky
+function nutricneRiadky(n: NutricneHodnoty) {
+  const r: { nazov: string; hodnota: string }[] = []
+  if (n.energiaKj || n.energiaKcal) {
+    const parts: string[] = []
+    if (n.energiaKj) parts.push(`${n.energiaKj} kJ`)
+    if (n.energiaKcal) parts.push(`${n.energiaKcal} kcal`)
+    r.push({ nazov: 'Energetická hodnota', hodnota: parts.join(' / ') })
+  }
+  if (n.tuky) r.push({ nazov: 'Tuky', hodnota: n.tuky })
+  if (n.nasMastneKys) r.push({ nazov: 'z toho nasýtené mastné kyseliny', hodnota: n.nasMastneKys })
+  if (n.sacharidy) r.push({ nazov: 'Sacharidy', hodnota: n.sacharidy })
+  if (n.cukry) r.push({ nazov: 'z toho cukry', hodnota: n.cukry })
+  if (n.vlaknina) r.push({ nazov: 'Vláknina', hodnota: n.vlaknina })
+  if (n.bielkoviny) r.push({ nazov: 'Bielkoviny', hodnota: n.bielkoviny })
+  if (n.sol) r.push({ nazov: 'Soľ', hodnota: n.sol })
+  return r
+}
 
 export default async function ProduktDetailPage({ params }: Props) {
   const { slug } = await params
@@ -42,10 +54,13 @@ export default async function ProduktDetailPage({ params }: Props) {
   if (!produkt) notFound()
 
   const kategoria = getCategoryBySlug(produkt.category)
+  const nutricne = produkt.nutricne ? nutricneRiadky(produkt.nutricne) : []
+  const malDoPlnenia = !produkt.zlozenie && !produkt.nutricne && !produkt.alergeny
+  const varianty = getVariantsForProduct(produkt.slug)
 
   return (
     <main>
-      {/* Breadcrumb a späť */}
+      {/* Breadcrumb a hlavička */}
       <div
         style={{
           background: 'var(--color-bg-subtle)',
@@ -65,10 +80,7 @@ export default async function ProduktDetailPage({ params }: Props) {
             }}
             aria-label="Navigačná cesta"
           >
-            <Link
-              href="/"
-              style={{ color: 'var(--color-text-muted)', textDecoration: 'none' }}
-            >
+            <Link href="/" style={{ color: 'var(--color-text-muted)', textDecoration: 'none' }}>
               Domov
             </Link>
             <span>›</span>
@@ -82,7 +94,6 @@ export default async function ProduktDetailPage({ params }: Props) {
             <span style={{ color: 'var(--color-text-secondary)' }}>{produkt.name}</span>
           </nav>
 
-          {/* Hlavička produktu */}
           <div
             style={{
               display: 'grid',
@@ -93,15 +104,74 @@ export default async function ProduktDetailPage({ params }: Props) {
             }}
           >
             <div>
-              {kategoria && (
-                <span className="eyebrow">{kategoria.name}</span>
+              {kategoria && <span className="eyebrow">{kategoria.name}</span>}
+              {produkt.typVyrobku && !kategoria && (
+                <span className="eyebrow">{produkt.typVyrobku}</span>
               )}
-              <h1
-                className="h-section lg"
-                style={{ marginTop: '8px' }}
-              >
+              <h1 className="h-section lg" style={{ marginTop: '8px' }}>
                 {produkt.name}
               </h1>
+              {produkt.typVyrobku && kategoria && (
+                <p
+                  style={{
+                    marginTop: '12px',
+                    fontSize: 'var(--text-sm)',
+                    color: 'var(--color-text-muted)',
+                    textTransform: 'uppercase',
+                    letterSpacing: 'var(--tracking-wide)',
+                  }}
+                >
+                  {produkt.typVyrobku}
+                </p>
+              )}
+
+              {varianty && varianty.length > 1 && (
+                <div style={{ marginTop: '28px' }}>
+                  <div
+                    style={{
+                      fontSize: 'var(--text-xs)',
+                      color: 'var(--color-text-muted)',
+                      letterSpacing: 'var(--tracking-wide)',
+                      textTransform: 'uppercase',
+                      marginBottom: '10px',
+                    }}
+                  >
+                    Dostupné varianty
+                  </div>
+                  <div style={{ display: 'flex', flexWrap: 'wrap', gap: '8px' }}>
+                    {varianty.map((v) => {
+                      const isActive = v.slug === produkt.slug
+                      return (
+                        <Link
+                          key={v.slug}
+                          href={`/produkty/${v.slug}`}
+                          aria-current={isActive ? 'page' : undefined}
+                          style={{
+                            display: 'inline-block',
+                            padding: '8px 16px',
+                            fontSize: 'var(--text-sm)',
+                            fontWeight: 'var(--weight-medium)',
+                            textDecoration: 'none',
+                            border: '1px solid',
+                            borderColor: isActive
+                              ? 'var(--color-brand-primary)'
+                              : 'var(--color-border)',
+                            background: isActive
+                              ? 'var(--color-brand-primary)'
+                              : 'var(--color-bg-surface)',
+                            color: isActive
+                              ? 'var(--color-text-primary)'
+                              : 'var(--color-text-secondary)',
+                            transition: 'all var(--dur-base) var(--ease-out)',
+                          }}
+                        >
+                          {v.gramaz ?? v.name}
+                        </Link>
+                      )
+                    })}
+                  </div>
+                </div>
+              )}
             </div>
             <div
               style={{
@@ -120,7 +190,7 @@ export default async function ProduktDetailPage({ params }: Props) {
         </div>
       </div>
 
-      {/* Hlavný obsah: fotka + info */}
+      {/* Hlavný obsah */}
       <section
         style={{
           background: 'var(--color-bg-primary)',
@@ -137,7 +207,7 @@ export default async function ProduktDetailPage({ params }: Props) {
             alignItems: 'start',
           }}
         >
-          {/* Ľavý stĺpec: fotka */}
+          {/* Ľavý stĺpec: fotka + zloženie */}
           <div>
             <div
               style={{
@@ -159,95 +229,174 @@ export default async function ProduktDetailPage({ params }: Props) {
                 priority
               />
             </div>
-          </div>
 
-          {/* Pravý stĺpec: popis + nutričná tabuľka + CTA */}
-          <div>
-            {/* Popis produktu — lorem ipsum placeholder */}
-            <div
-              style={{
-                fontSize: 'var(--text-base)',
-                color: 'var(--color-text-secondary)',
-                lineHeight: 'var(--leading-normal)',
-              }}
-            >
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pečivo je pripravované
-                z prvotriednych surovín podľa overených receptúr. Pravidelná kvalita a konzistentná
-                chuť sú zárukou spokojnosti vašich zákazníkov.
-              </p>
-              <p style={{ marginTop: '16px' }}>
-                Výrobok spĺňa prísne hygienické normy (HACCP, IFS, ISO 22000). Balenie a minimálne
-                odberné množstvo prispôsobujeme potrebám každého odberateľa individuálne.
-              </p>
-            </div>
-
-            {/* Nutričná tabuľka — placeholder hodnoty */}
-            <div
-              style={{
-                marginTop: '40px',
-                border: '1px solid var(--color-border)',
-                background: 'var(--color-bg-surface)',
-              }}
-            >
-              <div
-                style={{
-                  padding: '16px 24px',
-                  borderBottom: '1px solid var(--color-border)',
-                  display: 'flex',
-                  justifyContent: 'space-between',
-                  alignItems: 'baseline',
-                }}
-              >
-                <span
+            {produkt.zlozenie && (
+              <div style={{ marginTop: '40px' }}>
+                <h2
                   style={{
                     fontFamily: 'var(--font-display)',
                     fontStyle: 'italic',
                     fontSize: 'var(--text-xl)',
                     color: 'var(--color-text-primary)',
+                    marginBottom: '12px',
                   }}
                 >
-                  Nutričné hodnoty
-                </span>
-                <span
+                  Zloženie
+                </h2>
+                <p
+                  style={{
+                    fontSize: 'var(--text-sm)',
+                    color: 'var(--color-text-secondary)',
+                    lineHeight: 'var(--leading-relaxed)',
+                  }}
+                >
+                  {produkt.zlozenie}
+                </p>
+                {produkt.posyp && (
+                  <p
+                    style={{
+                      marginTop: '12px',
+                      fontSize: 'var(--text-sm)',
+                      color: 'var(--color-text-secondary)',
+                      lineHeight: 'var(--leading-relaxed)',
+                    }}
+                  >
+                    <strong style={{ color: 'var(--color-text-primary)' }}>Posyp:</strong>{' '}
+                    {produkt.posyp}
+                  </p>
+                )}
+              </div>
+            )}
+
+            {produkt.alergeny && (
+              <div
+                style={{
+                  marginTop: '32px',
+                  padding: '20px 24px',
+                  background: 'var(--color-bg-surface)',
+                  border: '1px solid var(--color-border)',
+                }}
+              >
+                <div
                   style={{
                     fontSize: 'var(--text-xs)',
                     color: 'var(--color-text-muted)',
                     letterSpacing: 'var(--tracking-wide)',
                     textTransform: 'uppercase',
+                    marginBottom: '8px',
                   }}
                 >
-                  na 100 g
-                </span>
-              </div>
-              {nutricneHodnoty.map((riadok, i) => (
-                <div
-                  key={riadok.nazov}
+                  Výrobok môže obsahovať
+                </div>
+                <p
                   style={{
+                    fontSize: 'var(--text-sm)',
+                    color: 'var(--color-text-primary)',
+                    fontWeight: 'var(--weight-medium)',
+                  }}
+                >
+                  {produkt.alergeny}
+                </p>
+              </div>
+            )}
+
+            {produkt.skladovanie && (
+              <p
+                style={{
+                  marginTop: '20px',
+                  fontSize: 'var(--text-sm)',
+                  color: 'var(--color-text-secondary)',
+                }}
+              >
+                <strong style={{ color: 'var(--color-text-primary)' }}>Skladovanie:</strong>{' '}
+                {produkt.skladovanie}
+              </p>
+            )}
+          </div>
+
+          {/* Pravý stĺpec: nutričná tabuľka + CTA */}
+          <div>
+            {nutricne.length > 0 ? (
+              <div
+                style={{
+                  border: '1px solid var(--color-border)',
+                  background: 'var(--color-bg-surface)',
+                }}
+              >
+                <div
+                  style={{
+                    padding: '16px 24px',
+                    borderBottom: '1px solid var(--color-border)',
                     display: 'flex',
                     justifyContent: 'space-between',
-                    padding: '10px 24px',
-                    borderBottom: i < nutricneHodnoty.length - 1 ? '1px dashed var(--color-border)' : undefined,
-                    fontSize: 'var(--text-sm)',
-                    color: riadok.nazov.startsWith('z toho')
-                      ? 'var(--color-text-muted)'
-                      : 'var(--color-text-secondary)',
-                    paddingLeft: riadok.nazov.startsWith('z toho') ? '40px' : '24px',
+                    alignItems: 'baseline',
                   }}
                 >
-                  <span>{riadok.nazov}</span>
                   <span
                     style={{
+                      fontFamily: 'var(--font-display)',
+                      fontStyle: 'italic',
+                      fontSize: 'var(--text-xl)',
                       color: 'var(--color-text-primary)',
-                      fontVariantNumeric: 'tabular-nums',
-                      fontWeight: 'var(--weight-medium)',
                     }}
                   >
-                    {riadok.hodnota}
+                    Nutričné hodnoty
+                  </span>
+                  <span
+                    style={{
+                      fontSize: 'var(--text-xs)',
+                      color: 'var(--color-text-muted)',
+                      letterSpacing: 'var(--tracking-wide)',
+                      textTransform: 'uppercase',
+                    }}
+                  >
+                    na 100 g
                   </span>
                 </div>
-              ))}
-            </div>
+                {nutricne.map((riadok, i) => (
+                  <div
+                    key={riadok.nazov}
+                    style={{
+                      display: 'flex',
+                      justifyContent: 'space-between',
+                      padding: '10px 24px',
+                      borderBottom:
+                        i < nutricne.length - 1 ? '1px dashed var(--color-border)' : undefined,
+                      fontSize: 'var(--text-sm)',
+                      color: riadok.nazov.startsWith('z toho')
+                        ? 'var(--color-text-muted)'
+                        : 'var(--color-text-secondary)',
+                      paddingLeft: riadok.nazov.startsWith('z toho') ? '40px' : '24px',
+                    }}
+                  >
+                    <span>{riadok.nazov}</span>
+                    <span
+                      style={{
+                        color: 'var(--color-text-primary)',
+                        fontVariantNumeric: 'tabular-nums',
+                        fontWeight: 'var(--weight-medium)',
+                      }}
+                    >
+                      {riadok.hodnota}
+                    </span>
+                  </div>
+                ))}
+              </div>
+            ) : malDoPlnenia ? (
+              <div
+                style={{
+                  border: '1px dashed var(--color-border)',
+                  background: 'var(--color-bg-surface)',
+                  padding: '24px',
+                  fontSize: 'var(--text-sm)',
+                  color: 'var(--color-text-muted)',
+                  lineHeight: 'var(--leading-normal)',
+                }}
+              >
+                Detailné údaje (zloženie, alergény, nutričné hodnoty) k tomuto produktu doplníme.
+                Pre technický list nás kontaktujte priamo.
+              </div>
+            ) : null}
 
             {/* B2B CTA */}
             <div
