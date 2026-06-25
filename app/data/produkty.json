@@ -2,8 +2,16 @@
   "_poznamka": "Produkty z webu doplnené o zloženie/alergény/nutričné údaje z dvoch dokumentov (balené aj nebalené výrobky). Nové produkty z dokumentov majú _new: true a chýbajúcu kategóriu a obrázok — doplnia sa neskôr.",
   "categories": [
     {
-      "slug": "chlieb-pecivo",
-      "name": "Chlieb a pečivo"
+      "slug": "chlieb",
+      "name": "Chlieb"
+    },
+    {
+      "slug": "pecivo",
+      "name": "Pečivo"
+    },
+    {
+      "slug": "slane-pecivo",
+      "name": "Slané pečivo"
     },
     {
       "slug": "sladke-pecivo",
@@ -14,14 +22,6 @@
       "name": "Štrúdle"
     },
     {
-      "slug": "slane-pecivo",
-      "name": "Slané pečivo"
-    },
-    {
-      "slug": "specialne-pecivo",
-      "name": "Špeciálne pečivo"
-    },
-    {
       "slug": "potraviny",
       "name": "Potraviny"
     }
@@ -30,7 +30,7 @@
     {
       "slug": "celozrnny-rozok",
       "name": "Celozrnný rožok 50g",
-      "category": "chlieb-pecivo",
+      "category": "pecivo",
       "image": "https://res.cloudinary.com/dl6xldrhk/image/upload/v1781533432/kralovska-pekaren/products/celozrnny-rozok.png",
       "zlozenie": "PŠENIČNÁ MÚKA, voda, pekársky prípravok ( ľanové semeno, kukuričná zmes, SÓJOVÁ drť pražená, OVSENÉ vločky, SÓJOVÁ múka, jódovaná soľ, slnečnicové semeno, kukuričná vláknina, PŠENIČNÁ múka sladová, PŠENIČNÁ múka, SEZAM, cukor, emulgátory: E472e, E471, E322, slad JAČMENNÝ pražený, enzýmy ( PŠENIČNÁ múka), protihrudkujúca látka: E341, múku upravujúca látka: E300, regulátor kyslosti: E330) , droždie, jódovaná soľ, cukor, enzýmy (obsahujú LEPOK), múku upravujúca látka: E300",
       "nutricne": {
@@ -49,7 +49,7 @@
     {
       "slug": "grahamovy-rohlik",
       "name": "Grahamový rohlík 50g",
-      "category": "chlieb-pecivo",
+      "category": "pecivo",
       "image": "https://res.cloudinary.com/dl6xldrhk/image/upload/v1781533436/kralovska-pekaren/products/grahamovy-rohlik.png",
       "zlozenie": "PŠENIČNÁ MÚKA, voda, PŠENIČNÁ múka grahamová 11,6%, droždie, rastlinný olej (slnečnicový), jódovaná soľ, cukor, enzýmy (obsahujú LEPOK), múku upravujúca látka: E300",
       "nutricne": {
@@ -67,14 +67,14 @@
     {
       "slug": "jacmenne-pecivo",
       "name": "Jačmenné pečivo 60g",
-      "category": "chlieb-pecivo",
+      "category": "pecivo",
       "image": "https://res.cloudinary.com/dl6xldrhk/image/upload/v1781533437/kralovska-pekaren/products/jacmenne-pecivo.png",
       "gramaz": "60g"
     },
     {
       "slug": "lanovy-spic",
       "name": "Ľanový špic 60g",
-      "category": "chlieb-pecivo",
+      "category": "pecivo",
       "image": "https://res.cloudinary.com/dl6xldrhk/image/upload/v1781533442/kralovska-pekaren/products/lanovy-spic.png",
       "zlozenie": "PŠENIČNÁ múka, voda, pekársky prípravok: (ľanové semeno žlté (min.25%), PŠENIČNÁ múka, kukuričná krupica, PŠENIČNÝ glutén, JAČMENNÝ sladový extrakt, PŠENIČNÉ klíčky, stabilizátor: E412, glukózový sirup, glukóza, pražená PŠENIČNÁ sladová múka, emulgátor: E472e, JAČMENNÁ sladová múka, regulátor kyslosti: E263, kyselina: E270, múku upravujúca látka: E300, enzýmy), posyp ( kukuričná krupica, ľanové semeno – žlté (34%). SEZAMOVÉ semeno, OVSENÉ vločky, PŠENIČNÁ vláknina), olej slnečnicový, droždie, jódovaná soľ",
       "nutricne": {
@@ -93,7 +93,7 @@
     {
       "slug": "spaldovy-chlieb",
       "name": "Špaldový chlieb 500g",
-      "category": "chlieb-pecivo",
+      "category": "chlieb",
       "image": "https://res.cloudinary.com/dl6xldrhk/image/upload/v1781533464/kralovska-pekaren/products/spaldovy-chlieb.jpg",
       "typVyrobku": "chlieb",
       "zlozenie": "PŠENIČNÁ múka (36%), voda, pekárska zmes [ŠPALDOVÁ múka (40%), RAŽNÁ múka, celozrnná ŠPALDOVÁ múka (15%), sušený RAŽNÝ kvas, PŠENIČNÁ celozrnná múka, JAČMENNÁ sladová múka, sušená SRVÁTKA, zahusťovadlo: guarová guma; emulgátor: E471; sladová aróma, regulátory kyslosti: kyselina citrónová, kyselina pšeničná, kyselina mliečna, mliečnan vápenatý; glukózový sirup sušený, enzým, múku upravujúca látka: kyselina askorbová], zápara (19,4%) [nabobtnané zrná špaldy jodidovaná soľ], droždie, soľ jedlá [jedlá kamenná soľ (99,6%), jodičnan draselný], zlepšujúci prípravok (PŠENIČNÁ múka, PŠENIČNÝ lepok, emulgátor: E471; múku upravujúca látka: kyselina askorbová).",
@@ -115,7 +115,7 @@
     {
       "slug": "tmavy-chlieb",
       "name": "Tmavý chlieb",
-      "category": "chlieb-pecivo",
+      "category": "chlieb",
       "image": "https://res.cloudinary.com/dl6xldrhk/image/upload/v1781533467/kralovska-pekaren/products/tmavy-chlieb.png",
       "typVyrobku": "chlieb",
       "zlozenie": "PŠENIČNÁ múka (36%), RAŽNÁ múka (20,5%), voda, jedlá soľ, droždie, sušená SRVÁTKA, pekársky prípravok (modifikovaný škrob E1414, enzýmy, antioxidant: E300; rastlinný olej repkový), pražený jačmenný slad, rasca.",
@@ -136,7 +136,7 @@
     {
       "slug": "lanovy-chlieb",
       "name": "Ľanový chlieb 500g/300g",
-      "category": "chlieb-pecivo",
+      "category": "chlieb",
       "image": "https://res.cloudinary.com/dl6xldrhk/image/upload/v1781533443/kralovska-pekaren/products/lanovy-chlieb.png",
       "typVyrobku": "chlieb",
       "zlozenie": "PŠENIČNÁ múka (49%), RAŽNÁ múka (7%), ľan (3%), voda, jedlá soľ [jedlá kamenná soľ (99,6%), jodičnan draselný], droždie, pekársky prípravok (PŠENIČNÁ múka, PŠENIČNÝ lepok, emulgátor: E471; múku upravujúca látka: kyselina askorbová).",
@@ -157,7 +157,7 @@
     {
       "slug": "rozok-rovny",
       "name": "Rožok rovný 50g",
-      "category": "chlieb-pecivo",
+      "category": "pecivo",
       "image": "https://res.cloudinary.com/dl6xldrhk/image/upload/v1781533461/kralovska-pekaren/products/rozok-rovny.png",
       "zlozenie": "PŠENIČNÁ MÚKA, voda, droždie, rastlinný olej (slnečnicový), jódovaná soľ, enzýmy (obsahujú LEPOK), múku upravujúca látka: E300",
       "nutricne": {
@@ -175,7 +175,7 @@
     {
       "slug": "chlieb-vitamineral",
       "name": "Chlieb Vitamineral 250g",
-      "category": "specialne-pecivo",
+      "category": "chlieb",
       "image": "https://res.cloudinary.com/dl6xldrhk/image/upload/v1781533434/kralovska-pekaren/products/chlieb-vitamineral.png",
       "typVyrobku": "chlieb",
       "zlozenie": "PŠENIČNÁ múka (36%), voda, pekárska zmes [RAŽNÁ múka, JAČMENNÝ slad, PŠENIČNÉ vločky, sušený RAŽNÝ kvas, slnečnicové semená, ľanové semená, SEZAMOVÉ semená, OVSENÉ vločky, RAŽNÉ vločky, kukuričná krupica, ŠPALDOVÉ vločky, tekvicové semená, chlebové korenie, zmes vitamínov a minerálov (fosforečnan železitý, maltodextrín, síran zinočnatý monohydrát, vitamín B3 (niacín), vitamín B5 (kyselina pantoténová), vitamín B6 (pyridoxín hydrochlorid), vitamín B9 (kyselina listová), vitamín B7 (biotín), vitamín B12 (kyanokobalamín)], droždie, soľ jedlá [jedlá soľ (99,6%), jodičnan draselný], zlepšujúci pekársky prípravok (PŠENIČNÁ múka, PŠENIČNÝ lepok, emulgátor: E471; múku upravujúca látka: kyselina askorbová; enzýmy).",
@@ -196,14 +196,14 @@
     {
       "slug": "sendvic",
       "name": "Sendvič 320g",
-      "category": "specialne-pecivo",
+      "category": "slane-pecivo",
       "image": "https://res.cloudinary.com/dl6xldrhk/image/upload/v1781533461/kralovska-pekaren/products/sendvic.jpg",
       "gramaz": "320g"
     },
     {
       "slug": "sezamovy-bochnik",
       "name": "Sezamový bochník 125g",
-      "category": "specialne-pecivo",
+      "category": "pecivo",
       "image": "https://res.cloudinary.com/dl6xldrhk/image/upload/v1781533462/kralovska-pekaren/products/sezamovy-bochnik.jpg",
       "zlozenie": "PŠENIČNÁ MÚKA, voda, droždie, rastlinný olej (slnečnicový), SEZAMOVÉ semená, jódovaná soľ, enzýmy (obsahujú LEPOK), múku upravujúca látka: E300",
       "nutricne": {
@@ -221,7 +221,7 @@
     {
       "slug": "zemiakovy-chlieb",
       "name": "Zemiakový chlieb",
-      "category": "specialne-pecivo",
+      "category": "chlieb",
       "image": "https://res.cloudinary.com/dl6xldrhk/image/upload/v1781533468/kralovska-pekaren/products/zemiakovy-chlieb.png",
       "typVyrobku": "chlieb",
       "zlozenie": "PŠENIČNÁ múka (49%), voda, RAŽNÁ múka (11%), jedlá soľ, droždie, zemiaková múka (1%), pekársky prípravok (modifikovaný škrob E1414, enzýmy, antioxidant: E300; rastlinný olej repkový).",
@@ -1142,7 +1142,7 @@
     {
       "slug": "jacmenne-pecivo-50g",
       "name": "Jačmenné pečivo 50g",
-      "category": "chlieb-pecivo",
+      "category": "pecivo",
       "image": "https://res.cloudinary.com/dl6xldrhk/image/upload/v1781533437/kralovska-pekaren/products/jacmenne-pecivo.png",
       "_new": true,
       "zlozenie": "PŠENIČNÁ MÚKA, voda, RAŽNÁ MÚKA, JAČMENNÉ VLOČKY (3,5%), rastlinný olej (slnečnicový), droždie, ľanové semená, SÓJOVÁ drť pražená, soľ, RAŽNÝ SLAD, JAČMENNÁ SLADOVÁ MÚKA (0,6%), PŠENIČNÝ GLUTÉN, rastlinný olej (repkový), koreniny, antioxidant: E300, enzýmy, dextróza",
@@ -1200,7 +1200,7 @@
     {
       "slug": "chlieb-dlhan-800g",
       "name": "Chlieb Dlháň 800g",
-      "category": "chlieb-pecivo",
+      "category": "chlieb",
       "image": "https://res.cloudinary.com/dl6xldrhk/image/upload/v1781533435/kralovska-pekaren/products/dlhan.png",
       "_new": true,
       "zlozenie": "PŠENIČNÁ múka 40%, voda, RAŽNÁ múka 10%, pekárska zmes ( bielkoviny: PŠENIČNÝ GLUTÉN, SÓJOVÝ izolát, RAŽNÁ múka, zahusťovadlo E415, pražená čakanka, PŠENIČNO - RAŽNÝ kvas, SLADOVÁ múka, koreninové extrakty, emulgátor: E472e, stabilizátor: E450, antioxidant: E300, enzýmy), droždie, jedlá kamenná soľ, PŠENIČNÝ škrob",
@@ -1220,7 +1220,7 @@
     {
       "slug": "chlieb-mini-dlhan-400g",
       "name": "Chlieb mini Dlháň 400g",
-      "category": "chlieb-pecivo",
+      "category": "chlieb",
       "image": "https://res.cloudinary.com/dl6xldrhk/image/upload/v1781533435/kralovska-pekaren/products/dlhan.png",
       "_new": true,
       "zlozenie": "PŠENIČNÁ múka 40%, voda, RAŽNÁ múka 10%, pekárska zmes ( bielkoviny: PŠENIČNÝ GLUTÉN, SÓJOVÝ izolát, RAŽNÁ múka, zahusťovadlo E415, pražená čakanka, PŠENIČNO - RAŽNÝ kvas, SLADOVÁ múka, koreninové extrakty, emulgátor: E472e, stabilizátor: E450, antioxidant: E300, enzýmy), droždie, jedlá kamenná soľ, PŠENIČNÝ škrob",
@@ -1542,63 +1542,6 @@
       "gramaz": "100g"
     },
     {
-      "slug": "mrkvovy-kolac-180g",
-      "name": "Mrkvový koláč 180g",
-      "category": "sladke-pecivo",
-      "image": "https://placehold.co/600x400?text=Mrkvový+koláč+180g",
-      "_new": true,
-      "zlozenie": "PŠENIČNÁ múka (obsahuje vápnik, železo, vitamín B3, vitamín B1); cukor; rastlinný olej repkový; dextróza; modifikovaný škrob (PŠENIČNÝ); kypriaca látka (hydrogénuhličitan sodný, fosforečnany vápenaté, dihydrogénfosforečnan sodný); sušený VAJEČNÝ žĺtok; sušený VAJEČNÝ bielok; koreniny; soľ; trstinová melasa; maltodextrín; farbivo: obyčajný karamel (E150a); sušená SRVÁTKA, voda, PŠENIČNÁ MÚKA, MASLO, sušená mrkva (3,86%), rastlinný olej slnečnicový",
-      "nutricne": {
-        "energiaKj": 1365,
-        "energiaKcal": 323,
-        "tuky": "10 g",
-        "nasMastneKys": "2,1 g",
-        "sacharidy": "53 g",
-        "cukry": "28 g",
-        "bielkoviny": "7,2 g",
-        "sol": "1,0 g"
-      },
-      "gramaz": "180g"
-    },
-    {
-      "slug": "citronova-babeta-120g",
-      "name": "Citrónová babeta 120g",
-      "category": "sladke-pecivo",
-      "image": "https://placehold.co/600x400?text=Citrónová+babeta+120",
-      "_new": true,
-      "zlozenie": "Voda, cukor, PŠENIČNÁ MÚKA, pasterizovaná VAJEČNÁ MELANŽ, kukuričný škrob, olej slnečnicový, modifikovaný škrob: Acetylovaný diškrobfosfát, SUŠENÉ VAJEČNÉ BIELKA, rastlinný tuk (palmový) RSPO SG, rastlinný olej (kokosový), LAKTÓZA, citrónová aróma 0,5%, kypriace látky: dihydrogénfosforečnan sodný, hydrogénuhličitan sodný , emulgátory: E472b, E477, glukózový sirup, SUŠENÉ MLIEKO ODTUČNENÉ, soľ, zahusťovadlo: Xantánová guma, SUŠENÁ SRVÁTKA, farbivo: Betakarotén, KAZEINÁT sodný, emulgátory: sorbitan tristearát, SÓJOVÝ lecitín, prírodná citrónová aróma, farbivo E160a",
-      "nutricne": {
-        "energiaKj": 1288,
-        "energiaKcal": 308,
-        "tuky": "12 g",
-        "nasMastneKys": "3,0 g",
-        "sacharidy": "45 g",
-        "cukry": "25 g",
-        "bielkoviny": "4,0 g",
-        "sol": "0,95 g"
-      },
-      "gramaz": "120g"
-    },
-    {
-      "slug": "spaldova-pochutka-80g",
-      "name": "Špaldová pochúťka 80g",
-      "category": "sladke-pecivo",
-      "image": "https://placehold.co/600x400?text=Špaldová+pochúťka+80",
-      "_new": true,
-      "zlozenie": "PŠENIČNÁ MÚKA, voda, napučané zrná ŠPALDY (16,0%), rastlinné oleje a tuky (palmový), ŠPALDOVÁ MÚKA (6,4%), RAŽNÁ MÚKA, ŠPALDOVÁ celozrnná múka (2,4%), droždie, PŠENIČNÝ GLUTÉN, hnedé ľanové semená, sušený RAŽNÝ KVAS, jódovaná soľ, zemiakové vločky, SEZAMOVÉ semená, celozrnná PŠENIČNÁ MÚKA, sladová JAČMENNÁ MÚKA, zahusťovadlo: E412, OVSENÁ MÚKA, cukor, soľ, múku upravujúca látka: E300, SUŠENÁ SRVÁTKA, emulgátor: E471, aróma (jačmenný slad), regulátory kyslosti: E330, E327, E270, sušený glukózový sirup, enzýmy (obsahujú PŠENICU), emulgátory: E472e, E322 lecitín, predželatínovaná PŠENIČNÁ SLADOVÁ MÚKA, dextróza, PŠENIČNÁ sladová MÚKA, kypriaca látka: E500ii, enzýmy, farbivo: karotény",
-      "nutricne": {
-        "energiaKj": 1180,
-        "energiaKcal": 282,
-        "tuky": "13 g",
-        "nasMastneKys": "5,6 g",
-        "sacharidy": "31 g",
-        "cukry": "1,3 g",
-        "bielkoviny": "7,8 g",
-        "sol": "1,3 g"
-      },
-      "gramaz": "80g"
-    },
-    {
       "slug": "croissant-maslovy-50g",
       "name": "Croissant maslový 50g",
       "category": "sladke-pecivo",
@@ -1620,7 +1563,7 @@
     {
       "slug": "knedla-parena-600g",
       "name": "Knedľa parená 600g",
-      "category": "chlieb-pecivo",
+      "category": "pecivo",
       "image": "https://res.cloudinary.com/dl6xldrhk/image/upload/v1781534265/kralovska-pekaren/products/knedla-parena-600g.png",
       "typVyrobku": "ostatný pekársky výrobok",
       "zlozenie": "PŠENIČNÁ múka, voda, VAJEČNÁ melanž pasterizovaná, rastlinný olej slnečnicový, PŠENIČNÁ múka - tepelne upravená, droždie, jedlá soľ [jedlá kamenná soľ (99,6%), jodičnan draselný], enzýmy.",
@@ -1641,7 +1584,7 @@
     {
       "slug": "knedla-parena-300g",
       "name": "Knedľa parená 300g",
-      "category": "chlieb-pecivo",
+      "category": "pecivo",
       "image": "https://res.cloudinary.com/dl6xldrhk/image/upload/v1781534265/kralovska-pekaren/products/knedla-parena-600g.png",
       "_new": true,
       "typVyrobku": "ostatný pekársky výrobok",
@@ -1663,7 +1606,7 @@
     {
       "slug": "knedla-parena-500g",
       "name": "Knedľa parená 500g",
-      "category": "chlieb-pecivo",
+      "category": "pecivo",
       "image": "https://res.cloudinary.com/dl6xldrhk/image/upload/v1781534265/kralovska-pekaren/products/knedla-parena-600g.png",
       "_new": true,
       "typVyrobku": "ostatný pekársky výrobok",
@@ -1685,7 +1628,7 @@
     {
       "slug": "knedla-zemlova",
       "name": "Knedľa žemľová parená 600g",
-      "category": "chlieb-pecivo",
+      "category": "pecivo",
       "image": "https://res.cloudinary.com/dl6xldrhk/image/upload/v1781534266/kralovska-pekaren/products/knedla-zemlova.png",
       "typVyrobku": "ostatný pekársky výrobok",
       "zlozenie": "PŠENIČNÁ múka, voda, VAJEČNÁ melanž pasterizovaná, rastlinný olej slnečnicový, PŠENIČNÁ múka - tepelne upravená, droždie, jedlá soľ [jedlá kamenná soľ (99,6%), jodičnan draselný], žemľové kocky (PŠENIČNÁ múka, voda, droždie, soľ), enzýmy.",
@@ -1706,7 +1649,7 @@
     {
       "slug": "chlieb-zemiakovy-400g",
       "name": "Chlieb zemiakový 400g",
-      "category": "chlieb-pecivo",
+      "category": "chlieb",
       "image": "https://res.cloudinary.com/dl6xldrhk/image/upload/v1781533468/kralovska-pekaren/products/zemiakovy-chlieb.png",
       "_new": true,
       "typVyrobku": "chlieb",
@@ -1728,7 +1671,7 @@
     {
       "slug": "chlieb-tmavy-400g",
       "name": "Chlieb tmavý 400g",
-      "category": "chlieb-pecivo",
+      "category": "chlieb",
       "image": "https://res.cloudinary.com/dl6xldrhk/image/upload/v1781533467/kralovska-pekaren/products/tmavy-chlieb.png",
       "_new": true,
       "typVyrobku": "chlieb",
@@ -1750,7 +1693,7 @@
     {
       "slug": "chlieb-dlhan-300g",
       "name": "Chlieb DLHÁŇ 300g",
-      "category": "chlieb-pecivo",
+      "category": "chlieb",
       "image": "https://res.cloudinary.com/dl6xldrhk/image/upload/v1781533435/kralovska-pekaren/products/dlhan.png",
       "_new": true,
       "typVyrobku": "chlieb",
@@ -1773,7 +1716,7 @@
     {
       "slug": "chlieb-dlhan-600g",
       "name": "Chlieb DLHÁŇ 600g",
-      "category": "chlieb-pecivo",
+      "category": "chlieb",
       "image": "https://res.cloudinary.com/dl6xldrhk/image/upload/v1781533435/kralovska-pekaren/products/dlhan.png",
       "_new": true,
       "typVyrobku": "chlieb",
@@ -1796,7 +1739,7 @@
     {
       "slug": "chlieb-lanovy-250g",
       "name": "Chlieb ľanový 250g",
-      "category": "chlieb-pecivo",
+      "category": "chlieb",
       "image": "https://res.cloudinary.com/dl6xldrhk/image/upload/v1781533443/kralovska-pekaren/products/lanovy-chlieb.png",
       "_new": true,
       "typVyrobku": "chlieb",
@@ -1920,27 +1863,6 @@
         "cukry": "21 g",
         "bielkoviny": "7,5 g",
         "sol": "0,59 g"
-      },
-      "gramaz": "220g"
-    },
-    {
-      "slug": "kvaskova-spicka-so-skoricovou-naplnou-220g",
-      "name": "Kvásková špička so škoricovou náplňou 220g",
-      "category": "sladke-pecivo",
-      "image": "https://placehold.co/600x400?text=Kvásková+špička+so+š",
-      "_new": true,
-      "typVyrobku": "jemné pečivo",
-      "zlozenie": "Škoricová náplň (40%) [cukor, voda, sušená SRVÁTKA, PŠENIČNÁ vláknina, modifikovaný zemiakový škrob, sušená VAJEČNÁ melanž, cukor vanilínový (cukor, aróma etylvanilín), škorica mletá (3%), instantná ryžová múka, konzervačná látka: kyselina sorbová], PŠENIČNÁ MÚKA, voda, cukor, rastlinný olej (slnečnicový), PŠENIČNÝ glutén, jódovaná soľ, aróma, prášok z aceroly, enzýmy, kvasné kultúry (kvasinky, baktérie).",
-      "nutricne": {
-        "energiaKj": 1225,
-        "energiaKcal": 290,
-        "tuky": "4,0 g",
-        "nasMastneKys": "0,6 g",
-        "sacharidy": "56 g",
-        "cukry": "29 g",
-        "vlaknina": "1,7 g",
-        "bielkoviny": "6,7 g",
-        "sol": "0,45 g"
       },
       "gramaz": "220g"
     }

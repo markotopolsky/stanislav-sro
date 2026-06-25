@@ -5,8 +5,8 @@ import Products from './components/Products'
 import Process from './components/Process'
 import Certifications from './components/Certifications'
 import WhyUs from './components/WhyUs'
-import About from './components/About'
 import CtaBand from './components/CtaBand'
+import LocationMap from './components/LocationMap'
 import Footer from './components/Footer'
 
 export default function HomePage() {
@@ -20,7 +20,7 @@ export default function HomePage() {
       <Process />
       <Certifications />
       <WhyUs />
-      <About />
+      <LocationMap />
       <CtaBand />
       <Footer />
     </main>

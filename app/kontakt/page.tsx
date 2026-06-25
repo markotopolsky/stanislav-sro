@@ -1,6 +1,7 @@
 'use client'
 
 import { useState } from 'react'
+import LocationMap from '../components/LocationMap'
 import Footer from '../components/Footer'
 
 export default function KontaktPage() {
@@ -8,6 +9,8 @@ export default function KontaktPage() {
 
   return (
     <main>
+      <LocationMap />
+
       <section
         style={{
           background: 'var(--color-bg-dark)',
@@ -69,7 +72,7 @@ export default function KontaktPage() {
                   fontWeight: 'var(--weight-medium)',
                 }}
               >
-                Obchodný manažér
+                Priamy kontakt na obchod
               </span>
               <p
                 style={{
@@ -81,7 +84,7 @@ export default function KontaktPage() {
                   lineHeight: 1,
                 }}
               >
-                Ing. Martin Král
+                Kontakt
               </p>
               <div
                 style={{
@@ -100,10 +103,10 @@ export default function KontaktPage() {
                   +421 918 562 092
                 </a>
                 <a
-                  href="mailto:info@kralovska-pekaren.sk"
+                  href="mailto:dusan.nagy@kralovska-pekaren.sk"
                   style={{ color: 'inherit', textDecoration: 'none' }}
                 >
-                  info@kralovska-pekaren.sk
+                  dusan.nagy@kralovska-pekaren.sk
                 </a>
               </div>
             </div>
@@ -120,7 +123,7 @@ export default function KontaktPage() {
               }}
             >
               STANISLAV, s. r. o.<br />
-              Kráľová pri Senci 61<br />
+              Krmeš 61<br />
               900 50 Kráľová pri Senci
             </div>
           </div>

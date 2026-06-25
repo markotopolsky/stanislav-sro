@@ -3,8 +3,16 @@
 import Image from 'next/image'
 import { useEffect, useState } from 'react'
 
-const images = ['/b1.png', '/b2.png']
-const badges = ['IFS FOOD', 'ZNAČKA KVALITY', 'HACCP', 'ISO 22000']
+// AI-upscale (gen_restore) — zdrojové produktové fotky sú len 270×270 px
+const CLOUDINARY = 'https://res.cloudinary.com/dl6xldrhk/image/upload/e_gen_restore,w_1400,q_auto,f_auto'
+
+const images = [
+  '/b1.png',
+  '/b2.png',
+  `${CLOUDINARY}/v1781533465/kralovska-pekaren/products/strudla-jablko-mak.png`,
+  `${CLOUDINARY}/v1781533435/kralovska-pekaren/products/dlhan.png`,
+  `${CLOUDINARY}/v1781533424/kralovska-pekaren/products/bratislavsky-rozok-makovy.png`,
+]
 
 export default function Hero() {
   const [activeIndex, setActiveIndex] = useState(0)
@@ -34,15 +42,19 @@ export default function Hero() {
 
         <div className="hero-buttons">
           <a href="#kontakt" className="hero-cta-primary">Vyžiadať ponuku</a>
-          <a href="#produkty" className="hero-cta-secondary">
+          <a href="/produkty" className="hero-cta-secondary">
             Náš sortiment <span aria-hidden>→</span>
           </a>
         </div>
 
         <div className="hero-badges">
-          {badges.map((b) => (
-            <span key={b} className="hero-badge">{b}</span>
-          ))}
+          <Image
+            src="/ifs-food-logo.png"
+            alt="IFS Food certifikácia"
+            width={2605}
+            height={1592}
+            className="hero-cert-logo"
+          />
         </div>
       </div>
 

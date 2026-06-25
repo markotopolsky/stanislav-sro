@@ -25,9 +25,7 @@ export default function Footer() {
         <div className="footer-new-col">
           <h4>Pre partnerov</h4>
           <a href="#">Katalóg (PDF)</a>
-          <a href="#">Technické listy</a>
           <a href="#">Certifikáty</a>
-          <a href="#">B2B portál</a>
         </div>
         <div className="footer-new-col">
           <h4>O spoločnosti</h4>
@@ -39,14 +37,17 @@ export default function Footer() {
         <div className="footer-new-col">
           <h4>Kontakt</h4>
           <a href="/kontakt">STANISLAV, s. r. o.</a>
-          <a href="/kontakt">Kráľová pri Senci 61</a>
+          <a href="/kontakt">Krmeš 61</a>
           <a href="/kontakt">900 50 Kráľová pri Senci</a>
           <a href="tel:+421918562092">+421 918 562 092</a>
         </div>
       </div>
       <div className="footer-new-bottom">
         <span>© 2026 STANISLAV, s. r. o. · Všetky práva vyhradené.</span>
-        <span>GDPR · Obchodné podmienky · Cookies</span>
+        <span>
+          <a href="/ochrana-osobnych-udajov">Ochrana osobných údajov</a> ·{' '}
+          <a href="/obchodne-podmienky">Obchodné podmienky</a> · Cookies
+        </span>
       </div>
     </footer>
   )

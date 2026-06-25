@@ -1,21 +1,27 @@
-const stats = [
-  { value: '1991', label: 'rok založenia', meta: 'tradičný slovenský výrobca' },
-  { value: 'IFS Food', label: 'certifikácia', meta: 'procesné riadenie a hygiena' },
-  { value: 'Značka kvality', label: 'národné označenie', meta: 'dôveryhodnosť pre spotrebiteľa' },
-  { value: 'ZTŠ', label: 'Bratislavské rožky', meta: 'zaručená tradičná špecialita' },
-]
+import Image from 'next/image'
 
 export default function Stats() {
   return (
     <section className="stats-new" id="stats">
       <div className="stats-new-inner">
-        {stats.map((s) => (
-          <div className="stat" key={s.label}>
-            <div className="stat-num">{s.value}</div>
-            <div className="stat-label">{s.label}</div>
-            <div className="stat-meta">{s.meta}</div>
-          </div>
-        ))}
+        <div className="logo-badge">
+          <Image
+            src="https://res.cloudinary.com/dl6xldrhk/image/upload/v1782388524/Logos_Food_qbe0od.png"
+            alt="IFS Food"
+            width={220}
+            height={120}
+            unoptimized
+          />
+        </div>
+        <div className="logo-badge">
+          <Image
+            src="/logo-nav-XL.svg"
+            alt="Kráľovská pekáreň"
+            width={220}
+            height={120}
+            unoptimized
+          />
+        </div>
       </div>
     </section>
   )

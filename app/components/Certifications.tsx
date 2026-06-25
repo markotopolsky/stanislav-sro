@@ -1,23 +1,4 @@
-const certs = [
-  {
-    seal: 'IFS',
-    code: 'IFS Food',
-    name: 'IFS Food',
-    text: 'Silný dôkaz procesného riadenia, hygieny a pripravenosti na náročné odberateľské požiadavky.',
-  },
-  {
-    seal: 'ZK',
-    code: 'Národné označenie',
-    name: 'Značka kvality',
-    text: 'Spotrebiteľsky zrozumiteľný signál dôveryhodnosti a kvality slovenských potravín.',
-  },
-  {
-    seal: 'ZTŠ',
-    code: 'Bratislavské rožky',
-    name: 'Zaručená tradičná špecialita',
-    text: 'Prvok tradície, autenticity a špeciality, ktorý posilňuje odlíšenie značky.',
-  },
-]
+import Image from 'next/image'
 
 export default function Certifications() {
   return (
@@ -30,27 +11,54 @@ export default function Certifications() {
             výrobca.
           </h2>
           <p className="section-lede">
-            Pri vývoji procesov využívame skúsenosti externých audítorov a konzultantov. Dôraz na bezpečnosť, hygienu a opakovateľný výsledok v každej fáze výroby.
+            Sme držiteľom medzinárodného certifikátu IFS Food. Dôraz na bezpečnosť, hygienu a opakovateľný výsledok kladieme v každej fáze výroby.
           </p>
         </div>
 
-        <div className="certs-grid">
-          {certs.map((c) => (
-            <div className="cert" key={c.name}>
-              <div className="cert-seal">{c.seal}</div>
-              <span className="cert-code">{c.code}</span>
-              <h3 className="cert-name">{c.name}</h3>
-              <p className="cert-text">{c.text}</p>
-            </div>
-          ))}
+        <div className="ifs-panel">
+          <div className="ifs-panel-logo">
+            <Image
+              src="https://res.cloudinary.com/dl6xldrhk/image/upload/v1782388524/Logos_Food_qbe0od.png"
+              alt="IFS Food"
+              width={240}
+              height={130}
+              unoptimized
+            />
+          </div>
+
+          <div className="ifs-panel-body">
+            <span className="cert-code">Medzinárodný štandard · GFSI</span>
+            <h3 className="cert-name">Sme držiteľom certifikátu IFS&nbsp;Food</h3>
+            <p className="cert-text">
+              IFS Food je medzinárodne uznávaný štandard pre bezpečnosť a kvalitu potravín. Certifikácia potvrdzuje, že naša výroba spĺňa prísne požiadavky na hygienu, sledovateľnosť a procesné riadenie — rovnaké, aké vyžadujú najnáročnejšie reťazce a odberatelia.
+            </p>
+            <a
+              className="ifs-panel-link"
+              href="https://www.ifs-certification.com/en/ifs-portfolio/standards/food-standard"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Zistiť viac o IFS Food →
+            </a>
+          </div>
         </div>
 
-        <div className="certs-footer">
-          <div className="certs-footer-l">
-            Dokumentácia<br />
-            <span>Certifikáty a technické listy zasielame na vyžiadanie.</span>
+        <div className="ifs-note">
+          <span className="ifs-note-badge">
+            <Image
+              src="https://res.cloudinary.com/dl6xldrhk/image/upload/v1782389824/sk_stg_4c-e1615290830910-300x300_fqtijb.png"
+              alt="Zaručená tradičná špecialita"
+              width={64}
+              height={64}
+              unoptimized
+            />
+          </span>
+          <div className="ifs-note-text">
+            <span className="ifs-note-label">Zaujímavosť</span>
+            <p>
+              Naše <strong>Bratislavské rožky</strong> sú zapísané v registri EÚ ako <em>Zaručená tradičná špecialita</em> — pečieme ich podľa chránenej receptúry, plnené orechovou alebo makovou náplňou.
+            </p>
           </div>
-          <a href="#kontakt">Vyžiadať dokumentáciu →</a>
         </div>
       </div>
     </section>

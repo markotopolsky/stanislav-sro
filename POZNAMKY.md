@@ -1,90 +1,160 @@
-# Stav dát — Kráľovská pekáreň
+# Prehľad práce na sortimente — Kráľovská pekáreň
 
-Aktualizované po importe dát z 2× docx + Cloudinary uploade fotiek + zoskupení variantov podľa gramáže.
+Tento dokument zhrňuje všetko čo bolo spravené počas práce na sortimente: import dát, fotky, varianty a aktuálny stav.
 
-## Sumár
+---
+
+## 1. Východiskový stav
+
+Predtým bolo na webe:
+
+- **66 produktov** v `app/data/produkty.json`
+- Každý produkt mal len: `slug`, `name`, `price`, `category`, `image` (placeholder z `placehold.co`)
+- Žiadne zloženie, alergény ani nutričné hodnoty
+- Detail stránka (`/produkty/[slug]`) zobrazovala hardcoded placeholder hodnoty (rovnaké pre každý produkt)
+
+---
+
+## 2. Čo sa spravilo
+
+### 2.1 Import dát z dvoch docx dokumentov
+
+Naparsovali sa dva dokumenty od pekárne:
+
+- `Zloženia nebalených výrobkov.docx`
+- `Zloženia_vsetky komplet_FINAL_18_05_2025 balené výrobky.docx`
+
+Z nich sa extrahovalo (pre každý produkt):
+
+- **Zloženie** (kompletný zoznam ingrediencií)
+- **Posyp** (ak existuje)
+- **Alergény** ("Výrobok môže obsahovať: ORECHY, SEZAM, MLIEKO, SÓJU")
+- **Nutričné hodnoty na 100 g** (energia kJ/kcal, tuky, nas. mastné kys., sacharidy, cukry, vláknina, bielkoviny, soľ)
+- **Skladovanie** (napr. "do +7°C")
+- **Typ výrobku** ("Pekársky výrobok – chlieb" / "jemné pečivo" atď.)
+
+### 2.2 Zmeny v dátovom modeli
+
+- Z `Product` typu odstránené pole `price` (B2B web, ceny tam nepatria)
+- Pridané polia: `gramaz`, `typVyrobku`, `zlozenie`, `posyp`, `alergeny`, `nutricne`, `skladovanie`, `_new`
+- Nový typ `VariantGroup` pre zoskupenie produktov podľa gramáže
+- Helper funkcie: `getVariantsForProduct(slug)`, `getProductsByCategory()` filtruje canonicalne varianty
+
+### 2.3 Detail stránka produktu
+
+Predtým len placeholder. Teraz zobrazuje:
+
+- **Hero hlavička** s názvom, kategóriou, typom výrobku
+- **Variant selector** (pill-buttony 50g | 60g | 100g) ak je produkt v skupine
+- **Fotka produktu** (z Cloudinary)
+- **Sekcia Zloženie** + posyp
+- **Box "Výrobok môže obsahovať"** s alergénmi
+- **Nutričná tabuľka** na 100 g
+- **Skladovanie** (ak je definované)
+- **B2B CTA** "Vyžiadať ponuku"
+- Fallback "doplníme" pre produkty bez dát
+
+### 2.4 Listing stránka `/produkty`
+
+- Po zoskupení variantov zobrazuje len **1 kartu na skupinu** (canonical variant)
+- Žemľa 50g/70g/100g = 1 karta, kliknutie cez detail → pill-selector na prepnutie
+
+### 2.5 Cloudinary integrácia
+
+- Vytvorený upload script: `scripts/upload-photos.mjs`
+- Konfigurácia: `scripts/photo-mapping.json` (manuálne overrides foto→slug)
+- Cloudinary credentials v `.env.local` (mimo gitu)
+- npm scripts: `upload-photos` a `upload-photos:dry`
+
+Script:
+- Skenuje `stanislav-fotky/` aj jeho subfoldery (napr. `updated/`)
+- Mapuje súbor → produkt (auto match alebo manuálne override)
+- Preskočí produkty čo už majú Cloudinary fotku (úsporne)
+- Súbory v subfolderoch (`updated/`) majú prednosť — vždy prepíšu existujúce
+- Nahrá pod `kralovska-pekaren/products/<slug>`
+- Aktualizuje `image` URL v `produkty.json`
+
+### 2.6 Variant skupiny (gramáže)
+
+Detekované **20 skupín** produktov, kde rovnaký produkt existuje v rôznych gramážach. Na listingu sa zobrazí 1 karta, na detaile pill-selector.
+
+Zoznam skupín:
+
+| Produkt | Varianty |
+|---|---|
+| Chlieb DLHÁŇ | 300g / mini 400g / 600g / 800g ★ |
+| Chlieb tmavý | 400g / "Tmavý chlieb" ★ |
+| Chlieb zemiakový | 400g / "Zemiakový chlieb" ★ |
+| Chlieb ľanový | 250g / 500g ★ |
+| Žemľa | 50g ★ / 70g / 100g |
+| Pagáč oškvarkový | 8g / 40g ★ / 85g |
+| Banquet pagáč slaný | 50ks x 8g ★ / 100ks |
+| Sendvič | 320g ★ / 400g |
+| Kornspitz | 50g / 60g ★ |
+| Jačmenné pečivo | 50g / 60g ★ |
+| Knedľa parená | 300g / 500g / 600g ★ |
+| Parené buchty so slivkovou náplňou | 1ks / 3ks ★ / 6ks |
+| Závin makový | 200g ★ / 400g |
+| Závin orechový | 200g ★ / 400g |
+| Závin tvarohový | 200g ★ / 400g |
+| Štrúdľa jablko–mak | 80g / 950g ★ / 1000g |
+| Štrúdľa jablko–orech | 80g / 950g ★ / 1000g |
+| Štrúdľa mak–višňa | 80g / 950g ★ / 1000g |
+| Štrúdľa tvaroh–višňa | 80g / 950g ★ / 1000g |
+| Štrúdľa tvaroh–hrozienka | 80g / 950g ★ / 1000g |
+
+Pri varianoch som propagoval fotku z canonical na zvyšné varianty bez vlastnej fotky.
+
+### 2.7 Manuálne doplnené produkty (od teba)
+
+Tieto produkty nie sú v žiadnom docx — dáta si poslal priamo do chatu:
+
+- **Šiška marhuľová 60g** — zloženie, posyp (cukor), alergény, nutričné (1224 kJ / 292 kcal) + fotka
+- **Šiška kakaová 60g** — zloženie, kakaová poleva, alergény, nutričné (1041 kJ / 247 kcal)
+- **Sladký makový rožok 60g** — zloženie, posyp (mak), alergény, nutričné (1546 kJ / 368 kcal) + fotka
+- **Sladký makový uzol 60g** — rovnaké dáta ako rožok + fotka
+
+---
+
+## 3. Aktuálny stav
 
 | Metrika | Počet | Hotovo |
 |---|---|---|
 | Celkom produktov | 110 | — |
-| Kariet na listingu (po zoskupení variantov) | 82 | — |
-| Variant skupín | 19 | — |
-| S fotkou (Cloudinary) | 53 | 49 % |
-| **Bez fotky** | **56** | — |
-| So zložením + nutričnými + alergénmi | 86 | 79 % |
-| **Bez docx-dát** (zloženie/alergény/nutričné) | **23** | — |
-| Nové produkty z docx | 43 | — |
+| Kariet na listingu (po zoskupení) | 79 | — |
+| Variant skupín | 20 | — |
+| S fotkou (Cloudinary) | 91 | **83 %** |
+| Bez fotky | 19 | — |
+| So zložením / alergénmi / nutričnými | 91 | **83 %** |
+| Bez docx-dát | 19 | — |
 
-## Variant skupiny (gramáže)
+### Distribúcia podľa kategórie
 
-Produkty s rovnakým základom v rôznych gramážach sú teraz zoskupené. Na listingu sa zobrazí 1 karta na skupinu (canonical variant), na detaile je pill-selector na prepínanie. Detail URL ostávajú zachované pre každý variant.
-
-Aktuálne skupiny (★ = canonical zobrazený na listingu):
-- **Žemľa** — 50g ★ / 70g / 100g
-- **Pagáč oškvarkový** — 8g / 40g ★ / 85g
-- **Banquet pagáč slaný** — 50ks x 8g ★ / 100ks
-- **Jačmenné pečivo** — 50g / 60g ★
-- **Kornspitz** — 50g / 60g ★
-- **Sendvič** — 320g ★ / 400g
-- **Chlieb DLHÁŇ** — 300g / mini 400g / 600g / 800g ★
-- **Knedľa parená** — 300g / 500g / 600g ★
-- **Chlieb tmavý** — 400g / "Tmavý chlieb" ★
-- **Chlieb zemiakový** — 400g / "Zemiakový chlieb" ★
-- **Chlieb ľanový** — 250g / 500g ★
-- **Parené buchty so slivkovou náplňou** — 1ks / 3ks ★ / 6ks
-- **Závin makový** — 200g ★ / 400g
-- **Závin orechový** — 200g ★ / 400g
-- **Závin tvarohový** — 200g ★ / 400g
-- **Štrúdľa jablko–mak** — 80g / 950g ★ / 1000g
-- **Štrúdľa jablko–orech** — 80g / 950g ★ / 1000g
-- **Štrúdľa tvaroh-hrozienka** — 80g / 950g ★ / 1000g
-- **Štrúdľa tvaroh-višňa** — 80g ★ / 950g / 1000g
-- **Štrúdľa mak-višňa** — 80g ★ / 950g / 1000g
-
-**Pozn.:** Niektoré skupiny obsahujú nezhody (napr. 950g a 1000g sú asi to isté — slovenský "noha 950g" zaokrúhlený). Ak to chceš čisté, zlúč ich ručne v `produkty.json` (vymaž jeden a presuň dáta).
+| Kategória | Produktov | Kariet na listingu |
+|---|---|---|
+| Chlieb a pečivo | 20 | 12 |
+| Sladké pečivo | 47 | 42 |
+| Štrúdle | 15 | 5 |
+| Slané pečivo | 24 | 18 |
+| Špeciálne pečivo | 4 | 4 |
+| Potraviny | 0 | 0 |
 
 ---
 
-## 🔴 Čo zostáva dofotiť
+## 4. Čo ešte chýba
 
-### Existujúce produkty bez fotky (13)
+### 4.1 Produkty bez fotky (19 kariet na listingu)
 
-Boli na webe predtým, ale v `stanislav-fotky/` k nim nič nebolo.
+Musíš ich dofotiť a vložiť do `stanislav-fotky/updated/` s názvom presne ako slug. Script ich automaticky nahrá pri ďalšom behu.
 
-- Parené buchty so slivkovou náplňou 1ks 60g
-- Šiška marhuľová 60g
-- Sladký makový rožok 60g
-- Sladký makový uzol 60g
-- Vianočka 320g
-- Závin makový 200g / 400g
-- Závin orechový 200g / 400g
-- Závin tvarohový 200g / 400g
-- Štrúdľa mak/višňa noha min. 950g
-- Štrúdľa tvaroh/višňa noha min. 950g
-
-### Nové produkty z docx bez fotky (43)
-
-#### Chlieb a pečivo (10)
-- Jačmenné pečivo 50g
-- Chlieb Dlháň 800g / mini 400g / 300g / 600g
-- Chlieb zemiakový 400g
-- Chlieb tmavý 400g
-- Chlieb ľanový 250g
-- Knedľa parená
-- Knedľa žemľová
-
-#### Slané pečivo (9)
+**Slané pečivo (5):**
 - Bageta 150g
-- Žemľa 100g
-- Sendvič 400g
 - Uzol 100g
-- Kornspitz 50g
 - Rožok so syrom a slaninou 70g
-- Pagáč oškvarkový 8g
 - Pagáč syrový 80g
 - Balkánsky snack 35g
 
-#### Sladké pečivo (14)
+**Sladké pečivo (14):**
 - Rožok sladký 70g
 - Orechový rožok lístkový 100g
 - Brownie so slaným karamelom a arašidmi 95g
@@ -100,81 +170,87 @@ Boli na webe predtým, ale v `stanislav-fotky/` k nim nič nebolo.
 - Špička orechová 220g
 - Kvásková špička so škoricovou náplňou 220g
 
-#### Štrúdle (10)
-- Štrúdľa jablko–mak 80g / 1000g
-- Štrúdľa jablko–orech 80g / 1000g
-- Štrúdľa tvaroh-hrozienka 80g / 1000g
-- Štrúdľa tvaroh-višňa 80g / 1000g
-- Štrúdľa mak-višňa 80g / 1000g
+### 4.2 Produkty bez údajov (19)
 
----
+Nie sú v žiadnom z dvoch docx. Buď doplniť dáta ručne (pošleš text ako pre Šišky), alebo zmazať z webu.
 
-## 🟡 Existujúce produkty bez docx-dát (23)
+**Pravdepodobne preklepy v gramáži** (existuje variant v docx s blízkou gramážou):
+- Jačmenné pečivo 60g *(v docx 50g)*
+- Sendvič 320g *(v docx 400g)*
+- Kornspitz 60g *(v docx 50g)*
+- Žemľa 70g *(v docx 50g a 100g)*
 
-Nie sú v žiadnom z dvoch dokumentov — zostávajú bez zloženia / alergénov / nutričných hodnôt. Buď doplniť ručne, alebo zmazať z webu.
-
-### Pravdepodobne preklepy v gramáži (porovnaj s existujúcimi v docx)
-- **Jačmenné pečivo 60g** → docx má 50g
-- **Sendvič 320g** → docx má 400g
-- **Kornspitz 60g** → docx má 50g
-- **Žemľa 70g** → docx má 50g a 100g
-
-### Chýbajú úplne v docx
+**Chýbajú úplne v docx:**
+- Francúzska bageta 150g
 - Anglický rožok 70g
-- Banquet pagáč slaný 100ks
-- Banquet pagáč slaný 50ks x 8g
+- Banquet pagáč slaný 100ks / 50ks x 8g
+- Buchtičky makové 320g
+- Buchtičky slivkové 320g
+- Buchtičky tvarohové 320g
 - Buchtičky tvarohovo/marhuľové 320g
-- Šiška kakaová 60g
-- Šiška marhuľová 60g
-- Sladký makový rožok 60g
 
-### Štrúdle "noha min. 950g" (rôzne gramáže od docx 80g / 1000g)
-- Štrúdľa jablko/mak noha min. 950g
-- Štrúdľa jablko/orech noha min. 950g
-- Štrúdľa mak/višňa noha min. 950g
-- Štrúdľa tvaroh s hrozienkami noha min. 950g
-- Štrúdľa tvaroh/višňa noha min. 950g
+**Parené buchty (rôzne počty kusov):**
+- 3ks 180g
+- 6ks 360g
 
-### Parené buchty (rôzne počty kusov)
-- Parené buchty so slivkovou náplňou 3ks 180g
-- Parené buchty so slivkovou náplňou 6ks 360g
+**Štrúdle "noha 950g" canonicals:**
+- Štrúdľa jablko/mak noha 950g
+- Štrúdľa jablko/orech noha 950g
+- Štrúdľa mak/višňa noha 950g
+- Štrúdľa tvaroh s hrozienkami noha 950g
+- Štrúdľa tvaroh/višňa noha 950g
 
----
+  *(Pozn.: 80g a 1000g varianty týchto štrúdlí majú v docx kompletné dáta — len 950g canonical ich nemá kvôli odlišnému názvu v zdroji.)*
 
-## 🟠 Pravdepodobné duplikáty (zvážiť zlúčenie)
+### 4.3 Pravdepodobné duplikáty na zlúčenie
 
-Po importe z docx vznikli položky, ktoré sú s veľkou pravdepodobnosťou rovnaké ako existujúce, len iné meno.
+Stále existujú niektoré pravdepodobné duplikáty (nevyriešené pre potrebu manuálneho rozhodnutia):
 
-| Existujúci slug | Nový slug (z docx) | Poznámka |
-|---|---|---|
-| `dlhan` (Dlháň 800g) | `chlieb-dlhan-800g` (Chlieb Dlháň 800g) | **Určite duplikát** |
-| `buchticky-makove` | `buchta-makova-320g` | Rovnaký produkt, iný názov |
-| `buchticky-slivkove` | `buchta-slivkova-320g` | Rovnaký produkt |
-| `buchticky-tvarohove` | `buchta-tvarohova-320g` | Rovnaký produkt |
-| `parene-buchty-3ks` | `parene-buchty-so-slivkovou-naplnou` | Doc1 popisuje generický variant |
-| `strudla-jablko-mak` (950g) | `strudla-jablko-mak-1000g` | Rovnaká receptúra, zaokrúhlenie |
-| `strudla-jablko-orech` (950g) | `strudla-jablko-orech-1000g` | To isté |
-| `strudla-mak-visna` (950g) | `strudla-mak-visna-1000g` | To isté |
-| `strudla-tvaroh-visna` (950g) | `strudla-tvaroh-visna-1000g` | To isté |
-| `strudla-tvaroh-hrozienka` (950g) | `strudla-tvaroh-hrozienka-1000g` | To isté |
-| `makovy-rozok` (60g) | `rozok-sladky-70g` | Možno rovnaký, iná gramáž |
-| `makovy-uzol` (60g) | súčasť `rozok-sladky-70g` | Doc1 ich popisuje spoločne |
+- `buchticky-makove` ↔ `buchta-makova-320g` (rovnaký produkt, iný názov)
+- `buchticky-slivkove` ↔ `buchta-slivkova-320g`
+- `buchticky-tvarohove` ↔ `buchta-tvarohova-320g`
+- `parene-buchty-3ks` ↔ `parene-buchty-so-slivkovou-naplnou` *(generický variant z docx, podobný popis)*
+- Štrúdľa 950g vs 1000g varianty *(pravdepodobne rovnaké, len iné zaokrúhlenie)*
 
 ---
 
-## 🟢 Hotovo
+## 5. Ako pokračovať
 
-- ✅ Naparsované zloženia / alergény / nutričné hodnoty z 2× docx
-- ✅ Detail produktu zobrazuje skutočné dáta (nie placeholder)
-- ✅ 54 fotiek nahraných do Cloudinary (`kralovska-pekaren/products/<slug>`)
-- ✅ `produkty.json` aktualizovaný s Cloudinary URL
-- ✅ 86 produktov má kompletné údaje (foto + zloženie + nutričné + alergény)
+### Pridať fotku k existujúcemu produktu
+
+1. Daj `.jpg` alebo `.png` do `stanislav-fotky/updated/`
+2. Pomenuj presne ako slug produktu (napr. `bageta-150g.jpg`)
+3. Spusti: `npm run upload-photos`
+
+### Aktualizovať fotku (nahradiť existujúcu)
+
+1. Daj novú fotku do `stanislav-fotky/updated/`
+2. Script ju automaticky prepíše (subfoldery majú prednosť pred root)
+
+### Pridať dáta (zloženie/alergény/nutričné)
+
+Pošli text v podobnom formáte ako pri šiškach — ja to zaparsujem a vložím do JSON.
+
+### Manuálne editovať produkt
+
+`app/data/produkty.json` — môžeš upravovať ručne. Pred deployom: `npm run build` overí TypeScript a vygeneruje statické stránky.
 
 ---
 
-## Ďalšie akcie
+## 6. Súbory ktoré vznikli / boli upravené
 
-1. **Rozhodnúť o duplikátoch** (oranžová tabuľka) — zmazať novšie alebo nechať ako rôzne SKU
-2. **Dofotiť 56 produktov** (zoznam vyššie)
-3. Spustiť `npm run upload-photos` pre nové fotky (script ich automaticky pripojí k správnemu produktu, ak budú pomenované presne ako slug — napr. `vianocka.jpg`)
-4. **Doplniť zloženia** pre 23 produktov bez docx-dát (alebo poslať aktualizovaný dokument a znovu naparsovať)
+```
+app/data/produkty.json       ← všetky produkty + varianty
+app/data/produkty.ts         ← TypeScript typy + helpery
+app/produkty/page.tsx        ← listing
+app/produkty/[slug]/page.tsx ← detail + variant selector
+next.config.ts               ← Cloudinary hostname (už bol povolený)
+
+scripts/upload-photos.mjs    ← Cloudinary upload script
+scripts/photo-mapping.json   ← override mapping foto→slug
+scripts/README.txt           ← návod
+package.json                 ← npm run upload-photos / upload-photos:dry
+.env.local                   ← Cloudinary credentials (NIE V GITE)
+
+POZNAMKY.md                  ← tento dokument
+```

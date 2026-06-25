@@ -1,13 +1,15 @@
 import Image from 'next/image'
 import Link from 'next/link'
 
+const CLOUDINARY = 'https://res.cloudinary.com/dl6xldrhk/image/upload'
+
 const categories = [
   {
-    image: '/b1.png',
+    image: `${CLOUDINARY}/v1781533435/kralovska-pekaren/products/dlhan.png`,
     tag: 'Balené & krájané',
-    name: 'Chlieb a bochníky',
-    href: '/produkty#chlieb-pecivo',
-    skus: 11,
+    name: 'Chlieb',
+    href: '/produkty#chlieb',
+    skus: 6,
     meta: 'Trvanl. 3–5 dní',
     items: [
       { name: 'Dlháň 800 g', note: 'krájaný, balený' },
@@ -15,67 +17,62 @@ const categories = [
       { name: 'Špaldový chlieb 500 g', note: 'špaldová múka' },
       { name: 'Chlieb Vitamineral 250 g', note: 'semienka & obilniny' },
     ],
-    more: 'Zobraziť katalóg chlebov →',
   },
   {
-    image: '/b2.png',
+    image: `${CLOUDINARY}/v1781533432/kralovska-pekaren/products/celozrnny-rozok.png`,
     tag: 'Čerstvá dodávka',
-    name: 'Bagety a rožky',
-    href: '/produkty#slane-pecivo',
-    skus: 13,
+    name: 'Pečivo',
+    href: '/produkty#pecivo',
+    skus: 8,
     meta: 'Dodáv. denne 4:30',
     items: [
-      { name: 'Francúzska bageta 150 g', note: 'pšeničná múka' },
-      { name: 'Bageta tmavá 200 g', note: 'ražný podiel' },
       { name: 'Celozrnný rožok 50 g', note: 'celozrnná múka' },
-      { name: 'Anglický rožok 70 g', note: 'mäkký, balený' },
+      { name: 'Grahamový rohlík 50 g', note: 'pšeničná múka' },
+      { name: 'Jačmenné pečivo 60 g', note: 'jačmenný slad' },
+      { name: 'Rožok rovný 50 g', note: 'klasický' },
     ],
-    more: 'Zobraziť katalóg bagiet →',
   },
   {
-    image: '/b1.png',
+    image: `${CLOUDINARY}/v1781533451/kralovska-pekaren/products/pagac-oskvarkovy-85g.png`,
     tag: 'Gastro & catering',
-    name: 'Slané špeciality',
+    name: 'Slané pečivo',
     href: '/produkty#slane-pecivo',
-    skus: 12,
+    skus: 18,
     meta: 'MOQ 200 ks',
     items: [
+      { name: 'Francúzska bageta 150 g', note: 'pšeničná múka' },
       { name: 'Pagáč oškvarkový 85 g', note: 'bravčové oškvarky' },
-      { name: 'Banquet pagáč slaný 100 ks', note: 'balenie 100 ks' },
       { name: 'Cesnakový uzol 100 g', note: 'čerstvý cesnak' },
       { name: 'Pizza rožok 70 g', note: 'paradajka & syr' },
     ],
-    more: 'Zobraziť gastro katalóg →',
   },
   {
-    image: '/b2.png',
+    image: `${CLOUDINARY}/v1781533424/kralovska-pekaren/products/bratislavsky-rozok-makovy.png`,
     tag: 'Vlastná receptúra',
     name: 'Sladké pečivo',
     href: '/produkty#sladke-pecivo',
     skus: 38,
     meta: 'Vlastná receptúra',
     items: [
-      { name: 'Bratislavský Rožok orechový 50 g', note: 'orechová náplň' },
-      { name: 'Štrúdľa jablko/mak noha min. 950 g', note: 'jablko / mak' },
+      { name: 'Bratislavský rožok orechový 50 g', note: 'orechová náplň' },
       { name: 'Vianočka 320 g', note: 'sezónna edícia' },
       { name: 'Buchtičky tvarohové 320 g', note: 'tvarohová náplň' },
+      { name: 'Závin makový 200 g', note: 'maková náplň' },
     ],
-    more: 'Vytvoriť privátnu značku →',
   },
   {
-    image: '/b1.png',
-    tag: 'Špeciálne zloženie',
-    name: 'Špeciálne pečivo',
-    href: '/produkty#specialne-pecivo',
-    skus: 4,
-    meta: 'Funkčné zloženie',
+    image: `${CLOUDINARY}/v1781533465/kralovska-pekaren/products/strudla-jablko-mak.png`,
+    tag: 'Ručne rolované',
+    name: 'Štrúdle',
+    href: '/produkty#strudle',
+    skus: 5,
+    meta: 'Noha min. 950 g',
     items: [
-      { name: 'Chlieb Vitamineral 250 g', note: 'semienka & obilniny' },
-      { name: 'Sezamový bochník 125 g', note: 'sezamové semienka' },
-      { name: 'Zemiakový chlieb', note: 'zemiakový podiel' },
-      { name: 'Sendvič 320 g', note: 'balený, krájený' },
+      { name: 'Štrúdľa jablko/mak', note: 'noha min. 950 g' },
+      { name: 'Štrúdľa jablko/orech', note: 'noha min. 950 g' },
+      { name: 'Štrúdľa mak/višňa', note: 'noha min. 950 g' },
+      { name: 'Štrúdľa tvaroh/višňa', note: 'noha min. 950 g' },
     ],
-    more: 'Zobraziť špeciálne pečivo →',
   },
 ]
 
@@ -86,14 +83,9 @@ export default function Products() {
         <div>
           <span className="eyebrow">Sortiment</span>
           <h2 className="h-section lg">
-            Pečivo podľa<br />
-            <em>vašej prevádzky</em>
+            Kompletný<br />
+            <em>sortiment</em>
           </h2>
-        </div>
-        <div className="products-new-header-right">
-          <div><strong>Balené sladké a slané pečivo,</strong> mrazené pečivo na dopek alebo rozmraz, čerstvé pečivo, chlieb a štrúdle.</div>
-          <div><strong>Privátne značky</strong> a vývoj noviniek podľa potrieb odberateľa.</div>
-          <div><strong>Sezónne a limitované edície</strong> pre Vianoce, Veľkú noc a ďalšie obdobia.</div>
         </div>
       </div>
 
@@ -123,7 +115,7 @@ export default function Products() {
                   </li>
                 ))}
               </ul>
-              <span className="product-col-more">{c.more}</span>
+              <span className="product-col-more">Zobraziť →</span>
             </div>
           </Link>
         ))}
@@ -131,9 +123,9 @@ export default function Products() {
 
       <div className="products-new-footer">
         <div className="products-new-footer-copy">
-          <strong>Kompletný B2B katalóg</strong> vrátane technických listov, alergénov a balenia zasielame na vyžiadanie.
+          <strong>Celý sortiment</strong> v jednom katalógu.
         </div>
-        <a href="#kontakt" className="btn-dark">Vyžiadať katalóg →</a>
+        <Link href="/produkty" className="btn-dark">Zobraziť katalóg →</Link>
       </div>
     </section>
   )

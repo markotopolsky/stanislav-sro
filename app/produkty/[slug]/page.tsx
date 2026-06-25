@@ -2,6 +2,7 @@ import { notFound } from 'next/navigation'
 import Image from 'next/image'
 import Link from 'next/link'
 import Footer from '../../components/Footer'
+import InquiryForm from '../../components/InquiryForm'
 import {
   products,
   getProductBySlug,
@@ -398,7 +399,7 @@ export default async function ProduktDetailPage({ params }: Props) {
               </div>
             ) : null}
 
-            {/* B2B CTA */}
+            {/* B2B CTA — dopytový formulár */}
             <div
               style={{
                 marginTop: '40px',
@@ -413,7 +414,7 @@ export default async function ProduktDetailPage({ params }: Props) {
                   fontStyle: 'italic',
                   fontSize: 'var(--text-xl)',
                   lineHeight: 'var(--leading-snug)',
-                  marginBottom: '20px',
+                  marginBottom: '8px',
                 }}
               >
                 Mám záujem o tento produkt
@@ -428,22 +429,7 @@ export default async function ProduktDetailPage({ params }: Props) {
               >
                 Kontaktujte nás pre cenovú ponuku, minimálne odberné množstvo a podmienky dodávky.
               </p>
-              <a
-                href="/#kontakt"
-                style={{
-                  display: 'inline-block',
-                  background: 'var(--color-brand-primary)',
-                  color: 'var(--color-text-primary)',
-                  padding: '14px 28px',
-                  fontSize: 'var(--text-sm)',
-                  fontWeight: 'var(--weight-medium)',
-                  letterSpacing: 'var(--tracking-wide)',
-                  textDecoration: 'none',
-                  transition: 'background var(--dur-base) var(--ease-out)',
-                }}
-              >
-                Vyžiadať ponuku →
-              </a>
+              <InquiryForm produkt={produkt.name} />
             </div>
           </div>
         </div>

@@ -5,9 +5,9 @@ import { useState } from 'react'
 
 const navLinks = [
   { label: 'Sortiment', href: '/produkty' },
-  { label: 'O nás', href: '/#o-nas' },
   { label: 'Certifikáty', href: '/#certifikaty' },
   { label: 'Kontakt', href: '/kontakt' },
+  { label: 'E-shop', href: 'https://www.kralovskapekaren.sk', external: true },
 ]
 
 export default function Navbar() {
@@ -21,8 +21,13 @@ export default function Navbar() {
         </a>
 
         <nav className="navbar-links" aria-label="Hlavná navigácia">
-          {navLinks.map(({ label, href }) => (
-            <a key={href} href={href} className="nav-link">
+          {navLinks.map(({ label, href, external }) => (
+            <a
+              key={href}
+              href={href}
+              className="nav-link"
+              {...(external && { target: '_blank', rel: 'noreferrer' })}
+            >
               {label}
             </a>
           ))}
@@ -46,12 +51,13 @@ export default function Navbar() {
       </div>
 
       <div id="mobile-nav" className="navbar-mobile" hidden={!open}>
-        {navLinks.map(({ label, href }) => (
+        {navLinks.map(({ label, href, external }) => (
           <a
             key={href}
             href={href}
             className="navbar-mobile-link"
             onClick={() => setOpen(false)}
+            {...(external && { target: '_blank', rel: 'noreferrer' })}
           >
             {label}
           </a>

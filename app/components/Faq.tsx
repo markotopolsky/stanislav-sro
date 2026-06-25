@@ -34,7 +34,7 @@ const items = [
   },
   {
     q: 'Čo musím poslať, ak chcem pilotnú dodávku?',
-    a: <>Stačí vyplniť formulár nižšie — meno, typ prevádzky, odhadované denné množstvo a mesto. Do 4 pracovných hodín sa vám ozve Martin Král s cenníkom pre váš segment a návrhom pilotnej dodávky.</>,
+    a: <>Stačí vyplniť formulár nižšie — meno, typ prevádzky, odhadované denné množstvo a mesto. Do 4 pracovných hodín sa vám ozve naša kontaktná osoba s cenníkom pre váš segment a návrhom pilotnej dodávky.</>,
   },
 ]
 
@@ -55,14 +55,14 @@ export default function Faq() {
 
           <div className="faq-contact">
             <span className="faq-contact-label">Priamy kontakt na obchod</span>
-            <h3 className="faq-contact-title">Ing. Martin Král</h3>
+            <h3 className="faq-contact-title">Kontakt</h3>
             <div className="faq-contact-row">
               <Phone size={18} weight="regular" aria-hidden />
-              <strong>+421 903 123 456</strong>
+              <strong>+421 918 562 092</strong>
             </div>
             <div className="faq-contact-row">
               <EnvelopeSimple size={18} weight="regular" aria-hidden />
-              <strong>obchod@kralovskapekaren.sk</strong>
+              <strong>dusan.nagy@kralovska-pekaren.sk</strong>
             </div>
             <div className="faq-contact-row faq-contact-row-note">Odpovedáme do 4 pracovných hodín</div>
           </div>
