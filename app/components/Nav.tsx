@@ -7,6 +7,7 @@ const navLinks = [
   { label: 'Sortiment', href: '/produkty' },
   { label: 'Certifikáty', href: '/#certifikaty' },
   { label: 'Kontakt', href: '/kontakt' },
+  { label: 'GDPR', href: '/gdpr' },
   { label: 'E-shop', href: 'https://www.kralovskapekaren.sk', external: true },
 ]
 

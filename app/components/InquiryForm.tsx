@@ -52,7 +52,7 @@ export default function InquiryForm({ produkt }: Props) {
       </button>
       <p className="cta-form-small">
         Odoslaním súhlasíte so spracúvaním údajov podľa{' '}
-        <a href="/ochrana-osobnych-udajov">zásad ochrany osobných údajov</a>. Údaje nezdieľame
+        <a href="/gdpr#ochrana-osobnych-udajov">zásad ochrany osobných údajov</a>. Údaje nezdieľame
         s tretími stranami.
       </p>
     </form>

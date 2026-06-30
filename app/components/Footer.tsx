@@ -45,8 +45,9 @@ export default function Footer() {
       <div className="footer-new-bottom">
         <span>© 2026 STANISLAV, s. r. o. · Všetky práva vyhradené.</span>
         <span>
-          <a href="/ochrana-osobnych-udajov">Ochrana osobných údajov</a> ·{' '}
-          <a href="/obchodne-podmienky">Obchodné podmienky</a> · Cookies
+          <a href="/gdpr#ochrana-osobnych-udajov">Ochrana osobných údajov</a> ·{' '}
+          <a href="/gdpr#obchodne-podmienky">Obchodné podmienky</a> ·{' '}
+          <a href="/gdpr#cookies">Cookies</a>
         </span>
       </div>
     </footer>

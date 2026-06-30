@@ -950,6 +950,17 @@ body {
   padding: 96px var(--section-pad-x) 64px;
 }
 .legal-hero-inner { max-width: var(--container-max); margin-inline: auto; }
+.legal-toc {
+  display: flex; flex-wrap: wrap; gap: 12px;
+  margin-top: 32px;
+}
+.legal-toc a {
+  font-size: var(--text-sm); color: var(--white-65);
+  border: 1px solid var(--white-20); padding: 8px 16px;
+  text-decoration: none; letter-spacing: var(--tracking-wide);
+  transition: border-color var(--dur-base) var(--ease-out), color var(--dur-base) var(--ease-out);
+}
+.legal-toc a:hover { color: var(--color-white); border-color: var(--color-brand-primary); }
 
 .legal { background: var(--color-bg-primary); padding: var(--section-pad-y) var(--section-pad-x); }
 .legal-inner { max-width: 760px; margin-inline: auto; }
@@ -957,13 +968,44 @@ body {
 .legal strong { color: var(--color-text-primary); font-weight: var(--weight-medium); }
 .legal a { color: var(--color-brand-primary); text-decoration: none; }
 .legal a:hover { text-decoration: underline; }
-.legal h2 {
+.legal h3 {
   font-family: var(--font-display); font-style: italic;
-  font-size: var(--text-3xl); color: var(--color-text-primary);
-  line-height: var(--leading-snug); margin: 48px 0 16px;
+  font-size: var(--text-2xl); color: var(--color-text-primary);
+  line-height: var(--leading-snug); margin: 40px 0 14px;
 }
 .legal ul { margin: 0 0 20px; padding-left: 20px; }
 .legal li { color: var(--color-text-secondary); font-size: var(--text-base); line-height: var(--leading-normal); margin-bottom: 8px; }
+
+/* Hlavné oddeľovače troch dokumentov */
+.legal-divider {
+  margin: 80px 0 28px; padding-top: 48px;
+  border-top: 1px solid var(--color-border);
+  scroll-margin-top: 104px;
+}
+.legal-divider:first-child { margin-top: 0; padding-top: 0; border-top: none; }
+.legal-divider-h {
+  font-family: var(--font-display); font-style: italic;
+  font-size: var(--text-5xl); color: var(--color-text-primary);
+  line-height: var(--leading-tight); letter-spacing: -0.01em; margin-top: 8px;
+}
+
+/* Cookies tabuľka */
+.legal-table {
+  width: 100%; border-collapse: collapse; margin: 8px 0 24px;
+  background: var(--color-bg-surface); border: 1px solid var(--color-border);
+}
+.legal-table th, .legal-table td {
+  text-align: left; padding: 14px 16px; vertical-align: top;
+  border-bottom: 1px solid var(--color-border);
+  font-size: var(--text-sm); line-height: var(--leading-normal);
+}
+.legal-table th {
+  font-size: var(--text-xs); letter-spacing: var(--tracking-wide);
+  text-transform: uppercase; color: var(--color-text-muted); font-weight: var(--weight-medium);
+  background: var(--color-bg-subtle);
+}
+.legal-table td { color: var(--color-text-secondary); }
+.legal-table tr:last-child td { border-bottom: none; }
 
 .legal-callout {
   background: var(--color-bg-surface);
@@ -978,7 +1020,7 @@ body {
   border: 1px solid var(--color-border);
   padding: 28px 32px; margin: 24px 0;
 }
-.legal-ucel h2 { font-size: var(--text-2xl); margin: 0 0 20px; }
+.legal-ucel h3 { font-size: var(--text-xl); margin: 0 0 20px; }
 .legal-ucel dl {
   display: grid; grid-template-columns: 200px 1fr;
   gap: 12px 24px; margin: 0;
@@ -1252,6 +1294,20 @@ body {
   .legal-ucel dl { grid-template-columns: 1fr; gap: 4px 0; }
   .legal-ucel dt { margin-top: 12px; }
   .legal-ucel dt:first-child { margin-top: 0; }
+  .legal-divider-h { font-size: var(--text-4xl); }
+
+  /* Cookies tabuľka — karty namiesto riadkov. */
+  .legal-table, .legal-table tbody, .legal-table tr, .legal-table td { display: block; width: 100%; }
+  .legal-table thead { display: none; }
+  .legal-table tr { border-bottom: 1px solid var(--color-border); padding: 8px 0; }
+  .legal-table tr:last-child { border-bottom: none; }
+  .legal-table td { border: none; padding: 6px 16px; }
+  .legal-table td::before {
+    content: attr(data-label); display: block;
+    font-size: var(--text-xs); letter-spacing: var(--tracking-wide);
+    text-transform: uppercase; color: var(--color-text-muted);
+    margin-bottom: 2px;
+  }
 }
 
 /* Small phone (≤ 380px) */
